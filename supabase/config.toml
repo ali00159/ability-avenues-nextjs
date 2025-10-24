@@ -1,0 +1,10 @@
+project_id = "hyloptejcvmsxmkfitux"
+
+[functions.send-form-notification]
+verify_jwt = false
+
+[functions.send-referral-notification]
+verify_jwt = false
+
+[functions.send-career-notification]
+verify_jwt = false

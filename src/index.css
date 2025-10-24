@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=block');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ability Avenues Design System - Tech-forward Healthcare */
+
+@layer base {
+  :root {
+    /* Brand Colors - Ability Avenues Palette */
+    --yellow-green: 79 75% 48%;        /* Softer green - Growth, energy */
+    --pacific-cyan: 186 87% 41%;       /* #08A9C9 - Trust, calm */
+    --xanthous: 45 88% 52%;            /* #EFB718 - Optimism, highlights */
+    
+    /* Neutral Base */
+    --cornsilk: 46 82% 89%;            /* #FCF3D9 - Warm backgrounds */
+    --raisin-black: 345 13% 19%;       /* #382E30 - Primary text */
+    
+    /* System Colors */
+    --background: 0 0% 100%;            /* Pure white for main background */
+    --foreground: 345 13% 19%;          /* Raisin black for text */
+    
+    --card: 0 0% 100%;
+    --card-foreground: 345 13% 19%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 345 13% 19%;
+    
+    /* Primary - Pacific Cyan */
+    --primary: 186 87% 41%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary - Yellow Green */
+    --secondary: 79 75% 48%;
+    --secondary-foreground: 345 13% 19%;
+    
+    /* Accent - Xanthous */
+    --accent: 45 88% 52%;
+    --accent-foreground: 186 87% 60%;
+    
+    /* Muted - Cornsilk */
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 186 87% 41%;
+    
+    --radius: 0.5rem;
+    
+    /* Custom Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--pacific-cyan)), hsl(var(--secondary)));
+    --gradient-hero: linear-gradient(135deg, rgba(8, 169, 201, 0.65) 0%, rgba(125, 208, 4, 0.60) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--xanthous)), hsl(var(--pacific-cyan)));
+    --gradient-light: linear-gradient(180deg, hsl(var(--cornsilk)) 0%, rgba(255, 255, 255, 0.95) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px hsl(345 13% 19% / 0.08);
+    --shadow-md: 0 4px 16px hsl(345 13% 19% / 0.12);
+    --shadow-lg: 0 8px 32px hsl(345 13% 19% / 0.16);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 345 13% 15%;
+    --foreground: 46 82% 89%;
+    
+    --card: 345 13% 18%;
+    --card-foreground: 46 82% 89%;
+    
+    --popover: 345 13% 18%;
+    --popover-foreground: 46 82% 89%;
+    
+    --primary: 186 87% 51%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 79 98% 55%;
+    --secondary-foreground: 345 13% 19%;
+    
+    --accent: 45 88% 62%;
+    --accent-foreground: 345 13% 19%;
+    
+    --muted: 345 13% 25%;
+    --muted-foreground: 46 82% 79%;
+    
+    --border: 345 13% 25%;
+    --input: 345 13% 25%;
+    --ring: 186 87% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground font-light overflow-x-hidden;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.035em;
+    line-height: 1.6;
+  }
+
+  #root {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+    letter-spacing: -0.05em;
+    line-height: 1.2;
+  }
+  
+  h1 {
+    @apply text-5xl md:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out;
+  }
+  
+  .hover-lift {
+    @apply transition-transform duration-300 ease-out;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
