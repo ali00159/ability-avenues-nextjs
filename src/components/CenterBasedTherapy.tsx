@@ -14,9 +14,13 @@ import therapyImage from "@/assets/therapy-session.jpg";
 
 // Lazy load service sections for better performance
 const ContactForm = lazy(() => import("@/components/contact/ContactForm"));
+const WhatIsCenterBasedABA = lazy(() => import("@/components/services/WhatIsCenterBasedABA"));
 const ProgramOverviewSection = lazy(() => import("@/components/services/ProgramOverviewSection"));
 const WhyCenterBased = lazy(() => import("@/components/services/WhyCenterBased"));
 const DailyScheduleSection = lazy(() => import("@/components/services/DailyScheduleSection"));
+const InsuranceCoverage = lazy(() => import("@/components/services/InsuranceCoverage"));
+const MinneapolisLocation = lazy(() => import("@/components/services/MinneapolisLocation"));
+const CenterBasedFAQ = lazy(() => import("@/components/services/CenterBasedFAQ"));
 
 const Services = () => {
   const pathname = usePathname();
@@ -79,14 +83,14 @@ const Services = () => {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                <span className="text-secondary">ABA therapy</span>{" "}
-                <span className="text-raisin-black">at Ability Avenues</span>
+                <span className="text-secondary">Center-Based ABA Therapy</span>{" "}
+                <span className="text-raisin-black">in Minneapolis for Children & Teens with Autism</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                At Ability Avenues, we provide applied behavior analysis (ABA) therapy, a gold-standard, 
-                evidence-based approach for helping children with autism reach milestone moments. Our clinically 
-                excellent ABA therapy takes place in bright, playful environments designed to encourage growth, 
-                play, and learning.
+                At Ability Avenues, we provide evidence-based center-based ABA therapy for children and teens ages 1-18 with autism in Minneapolis. 
+                Our BCBA-supervised programs offer four specialized tracks: Early Steps (ages 1-3), Foundations (ages 4-7), Skills Builder (ages 8-12), 
+                and Transition (ages 13-18). We accept EIDBI coverage and are committed to helping your child reach their milestone moments in our 
+                bright, playful, clinically excellent autism center.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="text-lg px-8" asChild>
@@ -113,10 +117,12 @@ const Services = () => {
               <div className="relative w-full aspect-square max-w-md mx-auto">
                 <Image
                   src={therapyImage}
-                  alt="ABA Therapy Session"
+                  alt="Children receiving center-based ABA therapy in Minneapolis autism center"
                   className="w-full h-full object-cover rounded-full shadow-2xl"
                   width={500}
                   height={500}
+                  loading="eager"
+                  priority
                 />
               </div>
               
@@ -161,8 +167,12 @@ const Services = () => {
       {/* New Sections Following Design System */}
       <Suspense fallback={<div className="h-screen" />}>
         <ProgramOverviewSection />
+        <WhatIsCenterBasedABA />
         <WhyCenterBased />
         <DailyScheduleSection />
+        <InsuranceCoverage />
+        <MinneapolisLocation />
+        <CenterBasedFAQ />
 
         {/* Contact Form */}
         <div id="contact">

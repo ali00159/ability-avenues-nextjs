@@ -36,8 +36,8 @@ const DailyScheduleSection = () => {
               Our Daily Schedule
             </h2>
             <p className="text-lg text-muted-foreground font-light">
-              A typical day in our Center-Based ABA Program is structured to provide a balance of group activities, 
-              individualized learning, and play-based development.
+              A typical day in our structured early intervention Center-Based ABA Program provides age-appropriate activities 
+              with a balance of group learning, individualized therapy, and play-based development for children and teens ages 1-18.
             </p>
           </motion.div>
 

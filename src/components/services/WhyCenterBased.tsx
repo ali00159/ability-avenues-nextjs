@@ -37,7 +37,9 @@ const WhyCenterBased = () => {
             
             <p className="text-base md:text-lg text-center mb-8 md:mb-12 text-muted-foreground leading-relaxed max-w-3xl mx-auto px-4">
               At Ability Avenues, we customize our curriculum to the unique learning needs of every child. 
-              We use a variety of evidence-based techniques based on principles of behavior and developmental science.
+              We use a variety of evidence-based techniques based on principles of behavior and developmental science. 
+              Center-based therapy vs in-home offers structured peer interactions, specialized equipment, and research-backed 
+              benefits for children with autism spectrum disorder.
             </p>
 
             {/* Badge Container with Border Bottom - Atlas Style - Desktop Only */}
@@ -103,7 +105,8 @@ const WhyCenterBased = () => {
             <div className="text-center max-w-3xl mx-auto px-4">
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed font-light">
                 Our specialized environments are designed to maximize learning potential through structured peer interactions, 
-                consistent routines, and access to professional-grade therapeutic equipment.
+                consistent routines, and access to professional-grade therapeutic equipment. Research shows that center-based 
+                ABA therapy can accelerate social skill development and communication milestones compared to in-home therapy alone.
               </p>
             </div>
           </motion.div>

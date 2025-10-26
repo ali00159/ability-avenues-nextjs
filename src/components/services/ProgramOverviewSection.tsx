@@ -45,20 +45,20 @@ const ProgramOverviewSection = () => {
             <span className="text-raisin-black">milestone moments</span>
             <br />
             <span className="text-raisin-black">with our </span>
-            <span className="text-yellow-green">ABA center</span>
+            <span className="text-yellow-green">Evidence-Based ABA center</span>
           </h2>
 
           {/* Body Text */}
           <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              At Ability Avenues, children with autism benefit from one-on-one support from energetic and highly-trained
-              clinicians. Together with families, these professionals set individual goals that honor each child's
+              At Ability Avenues, children ages 1-18 with autism benefit from BCBA-supervised one-on-one support from energetic and highly-trained
+              clinicians in our evidence-based ABA programs. Together with families, these professionals set individual goals that honor each child's
               unique way of learning and communicating.
             </p>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
               Whether you're researching autism, already have an autism diagnosis, or are looking to start applied
-              behavior analysis (ABA) therapy, we're here to help. We provide no-cost diagnostic support online or in
-              person at one of our joyful and welcoming autism care centers.
+              behavior analysis (ABA) therapy, we're here to help. Our Minneapolis autism center provides BCBA-supervised, evidence-based ABA therapy in
+              our joyful and welcoming center environment.
             </p>
           </div>
 
