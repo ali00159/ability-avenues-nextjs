@@ -2,21 +2,27 @@
 
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { MapPin, Phone, Mail, Navigation } from "lucide-react";
+import { MapPin, Phone, Mail, Navigation, Clock, Map } from "lucide-react";
 import Link from 'next/link';
 
 const MinneapolisLocation = () => {
-  const neighborhoods = [
-    'Downtown Minneapolis',
-    'Uptown',
-    'South Minneapolis',
-    'North Minneapolis',
-    'Northeast Minneapolis',
-    'Southwest Minneapolis',
-    'Minneapolis Metro Area',
+  const cities = [
+    'Minneapolis',
     'St. Paul',
     'Bloomington',
+    'Brooklyn Park',
+    'Plymouth',
+    'Lakeville',
+    'Eagan',
+    'Maple Grove',
     'Eden Prairie',
+    'Burnsville',
+    'Apple Valley',
+    'Minnetonka',
+    'Edina',
+    'St. Louis Park',
+    'Shakopee',
+    'Maplewood',
   ];
 
   return (
@@ -53,13 +59,13 @@ const MinneapolisLocation = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-raisin-black mb-4">Service Areas</h3>
                 <p className="text-muted-foreground mb-6">
-                  We proudly serve families from the following Minneapolis neighborhoods and surrounding communities:
+                  We proudly serve families from the following Twin Cities metro communities:
                 </p>
                 <div className="grid grid-cols-2 gap-3">
-                  {neighborhoods.map((neighborhood, index) => (
+                  {cities.map((city, index) => (
                     <div key={index} className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-pacific-cyan rounded-full" />
-                      <span className="text-sm text-muted-foreground">{neighborhood}</span>
+                      <span className="text-sm text-muted-foreground">{city}</span>
                     </div>
                   ))}
                 </div>
@@ -88,9 +94,8 @@ const MinneapolisLocation = () => {
                     <div>
                       <p className="text-raisin-black font-semibold">Address</p>
                       <p className="text-muted-foreground">
-                        Ability Avenues<br />
-                        Minneapolis Autism Center<br />
-                        Minneapolis, MN 55401
+                        6385 Old Shady Oak Rd Suite 250<br />
+                        Eden Prairie, MN 55344
                       </p>
                     </div>
                   </div>
@@ -99,8 +104,8 @@ const MinneapolisLocation = () => {
                     <Phone className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
                     <div>
                       <p className="text-raisin-black font-semibold">Phone</p>
-                      <Link href="tel:" className="text-muted-foreground hover:text-secondary transition-colors">
-                        Call us today
+                      <Link href="tel:9529002344" className="text-muted-foreground hover:text-secondary transition-colors">
+                        (952) 900-2344
                       </Link>
                     </div>
                   </div>
@@ -109,31 +114,61 @@ const MinneapolisLocation = () => {
                     <Mail className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
                     <div>
                       <p className="text-raisin-black font-semibold">Email</p>
-                      <Link href="/contact" className="text-muted-foreground hover:text-secondary transition-colors">
-                        Contact us online
+                      <Link href="mailto:info@abilityavenues.com" className="text-muted-foreground hover:text-secondary transition-colors">
+                        info@abilityavenues.com
                       </Link>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-4 bg-pacific-cyan/5 rounded-xl border border-pacific-cyan/20">
-                  <p className="text-sm text-raisin-black">
-                    <strong>Hours:</strong> Monday - Friday, 8:30 AM - 4:30 PM
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    Tours and consultations available by appointment.
-                  </p>
+                <div className="flex items-start gap-3">
+                  <Clock className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-raisin-black font-semibold">Hours</p>
+                    <p className="text-muted-foreground">
+                      Monday - Friday: 8:00 AM - 6:00 PM<br />
+                      Saturday - Sunday: 10:00 AM - 4:00 PM
+                    </p>
+                  </div>
                 </div>
               </Card>
             </motion.div>
           </div>
+
+          {/* Map Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-8 w-full"
+          >
+            <Card className="p-8 bg-white border-2 border-gray-100">
+              <div className="relative w-full h-[400px] rounded-2xl overflow-hidden border-2 border-gray-100">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2823.67786712345!2d-93.26891916537508!3d44.975705198235715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!1s0x0%3A0x0!5e0!3m2!1sen!2sus!4v1734567890&q=44.975705198235715,-93.26891916537508&t=m&z=12"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Minneapolis Service Area Map"
+                  className="w-full h-full"
+                />
+              </div>
+              <p className="text-sm text-muted-foreground text-center mt-6">
+                Serving families across the Minneapolis metro area and surrounding Twin Cities communities
+              </p>
+            </Card>
+          </motion.div>
 
           {/* Accessibility Note */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-8 max-w-3xl mx-auto"
           >
             <Card className="p-6 bg-yellow-green/5 border-2 border-yellow-green/20">

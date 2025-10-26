@@ -20,7 +20,6 @@ const WhyCenterBased = lazy(() => import("@/components/services/WhyCenterBased")
 const DailyScheduleSection = lazy(() => import("@/components/services/DailyScheduleSection"));
 const InsuranceCoverage = lazy(() => import("@/components/services/InsuranceCoverage"));
 const MinneapolisLocation = lazy(() => import("@/components/services/MinneapolisLocation"));
-const CenterBasedFAQ = lazy(() => import("@/components/services/CenterBasedFAQ"));
 
 const Services = () => {
   const pathname = usePathname();
@@ -172,7 +171,6 @@ const Services = () => {
         <DailyScheduleSection />
         <InsuranceCoverage />
         <MinneapolisLocation />
-        <CenterBasedFAQ />
 
         {/* Contact Form */}
         <div id="contact">
