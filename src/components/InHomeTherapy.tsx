@@ -15,8 +15,11 @@ import therapyImage from "@/assets/therapy-session.jpg";
 // Lazy load service sections for better performance
 const ContactForm = lazy(() => import("@/components/contact/ContactForm"));
 const InHomeProgramOverview = lazy(() => import("@/components/services/InHomeProgramOverview"));
+const WhatIsInHomeABA = lazy(() => import("@/components/services/WhatIsInHomeABA"));
 const WhyInHome = lazy(() => import("@/components/services/WhyInHome"));
 const InHomeScheduleSection = lazy(() => import("@/components/services/InHomeScheduleSection"));
+const InHomeTherapyApproach = lazy(() => import("@/components/services/InHomeTherapyApproach"));
+const InHomeInsuranceCoverage = lazy(() => import("@/components/services/InHomeInsuranceCoverage"));
 
 const InHomeTherapy = () => {
   const pathname = usePathname();
@@ -80,13 +83,13 @@ const InHomeTherapy = () => {
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 <span className="text-secondary">In-Home ABA Therapy</span>{" "}
-                <span className="text-raisin-black">at Ability Avenues</span>
+                <span className="text-raisin-black">in Minneapolis & Minnesota</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                 Personalized one-on-one ABA therapy delivered in the comfort and familiarity of your home environment. 
                 Our experienced therapists work with your child in their natural setting, helping them learn and practice 
-                essential skills while involving the whole family in the therapeutic process. With flexible scheduling and 
-                individualized treatment plans, we bring evidence-based care directly to you.
+                essential skills while involving the whole family in the therapeutic process. With flexible scheduling (20-40 hours per week) 
+                and individualized treatment plans, we bring evidence-based care directly to you.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="text-lg px-8" asChild>
@@ -99,6 +102,39 @@ const InHomeTherapy = () => {
                   </Link>
                 </Button>
               </div>
+
+              {/* Trust Indicators with Icons */}
+              <motion.div 
+                key={`trust-inhome-${pathname}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+                className="flex flex-wrap items-center gap-6 md:gap-10 mt-8"
+              >
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 md:w-6 md:h-6 text-primary flex-shrink-0" />
+                  <div className="text-sm">
+                    <div className="font-semibold text-foreground">Insurance Accepted</div>
+                    <div className="text-muted-foreground">EIDBI & Major Plans</div>
+                  </div>
+                </div>
+                <div className="h-10 w-px bg-border hidden sm:block" />
+                <div className="flex items-center gap-3">
+                  <Users className="w-5 h-5 md:w-6 md:h-6 text-secondary flex-shrink-0" />
+                  <div className="text-sm">
+                    <div className="font-semibold text-foreground">Ages 1-18</div>
+                    <div className="text-muted-foreground">Personalized Care</div>
+                  </div>
+                </div>
+                <div className="h-10 w-px bg-border hidden sm:block" />
+                <div className="flex items-center gap-3">
+                  <Clock className="w-5 h-5 md:w-6 md:h-6 text-xanthous flex-shrink-0" />
+                  <div className="text-sm">
+                    <div className="font-semibold text-foreground">Flexible Scheduling</div>
+                    <div className="text-muted-foreground">20-40 Hours/Week</div>
+                  </div>
+                </div>
+              </motion.div>
             </motion.div>
 
             {/* Right Image */}
@@ -161,8 +197,11 @@ const InHomeTherapy = () => {
       {/* New Sections Following Design System */}
       <Suspense fallback={<div className="h-screen" />}>
         <InHomeProgramOverview />
+        <WhatIsInHomeABA />
         <WhyInHome />
         <InHomeScheduleSection />
+        <InHomeTherapyApproach />
+        <InHomeInsuranceCoverage />
 
         {/* Contact Form */}
         <div id="contact">

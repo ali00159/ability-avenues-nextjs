@@ -30,84 +30,84 @@ const WhyInHome = () => {
 
             {/* Title */}
             <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-center mb-8 md:mb-12 leading-relaxed px-4">
-              <span className="text-raisin-black">Why Choose a </span>
-              <span className="text-yellow-green">Center-Based </span>
-              <span className="text-raisin-black">ABA Program?</span>
+              <span className="text-raisin-black">Why Choose </span>
+              <span className="text-yellow-green">In-Home </span>
+              <span className="text-raisin-black">ABA Therapy?</span>
             </h3>
             
             <p className="text-base md:text-lg text-center mb-8 md:mb-12 text-muted-foreground leading-relaxed max-w-3xl mx-auto px-4">
-              While in-home ABA therapy offers convenience, center-based programs provide critical advantages for many children with autism. 
-              At Ability Avenues, your child benefits from structured peer interactions, specialized therapeutic spaces, and consistent routines 
-              across four age-specific programs: Early Steps (1-3), Foundations (4-7), Skills Builder (8-12), and Transition (13-18). 
-              Our BCBA-supervised Minneapolis autism center uses evidence-based techniques proven effective in clinical settings.
+              In-home ABA therapy provides a comfortable, familiar environment where children with autism can learn and grow naturally. 
+              At Ability Avenues, your child benefits from personalized one-on-one attention, flexible scheduling that fits your family's routine, 
+              and the opportunity to practice skills in their natural environment. Our BCBA-supervised in-home programs serve children ages 1-18 
+              with evidence-based techniques tailored to each family's unique needs and preferences.
             </p>
 
             {/* Badge Container with Border Bottom - Atlas Style - Desktop Only */}
             <div className="hidden md:block relative w-full border-b border-[#3d527b33] h-32 mb-12">
-              {/* Badge 1 - BCBA-Supervised */}
+              {/* Badge 1 - Family-Centered */}
               <Badge 
                 variant="feature" 
                 colorScheme="cyan" 
                 className="absolute bottom-2 left-4 rotate-[-8deg] z-30"
               >
-                BCBA-Supervised
+                Family-Centered
               </Badge>
 
-              {/* Badge 2 - Age-Specific */}
+              {/* Badge 2 - Flexible Hours */}
               <Badge 
                 variant="feature" 
                 colorScheme="lime" 
                 className="absolute bottom-0 left-52 rotate-[4deg] z-20"
               >
-                Age-Specific
+                Flexible Hours
               </Badge>
 
-              {/* Badge 3 - Peer Learning */}
+              {/* Badge 3 - Natural Learning */}
               <Badge 
                 variant="feature" 
                 colorScheme="indigo" 
                 className="absolute bottom-2 left-96 rotate-[-3deg] z-40"
               >
-                Peer Learning
+                Natural Learning
               </Badge>
 
-              {/* Badge 4 - Sensory Rooms */}
+              {/* Badge 4 - Parent Training */}
               <Badge 
                 variant="feature" 
                 colorScheme="pink" 
                 className="absolute bottom-0 right-40 rotate-[6deg] z-10"
               >
-                Sensory Rooms
+                Parent Training
               </Badge>
 
-              {/* Badge 5 - School-Ready */}
+              {/* Badge 5 - 1:1 Attention */}
               <Badge 
                 variant="feature" 
                 colorScheme="orange" 
                 className="absolute bottom-2 right-4 rotate-[-5deg] z-50"
               >
-                School-Ready
+                1:1 Attention
               </Badge>
             </div>
 
             {/* Mobile Badge View - Simplified Grid */}
             <div className="block md:hidden mb-12">
               <div className="flex flex-wrap justify-center gap-3 px-4">
-                <Badge variant="feature" colorScheme="cyan">BCBA-Supervised</Badge>
-                <Badge variant="feature" colorScheme="lime">Age-Specific</Badge>
-                <Badge variant="feature" colorScheme="indigo">Peer Learning</Badge>
-                <Badge variant="feature" colorScheme="pink">Sensory Rooms</Badge>
-                <Badge variant="feature" colorScheme="orange">School-Ready</Badge>
+                <Badge variant="feature" colorScheme="cyan">Family-Centered</Badge>
+                <Badge variant="feature" colorScheme="lime">Flexible Hours</Badge>
+                <Badge variant="feature" colorScheme="indigo">Natural Learning</Badge>
+                <Badge variant="feature" colorScheme="pink">Parent Training</Badge>
+                <Badge variant="feature" colorScheme="orange">1:1 Attention</Badge>
               </div>
             </div>
 
             {/* Description Text */}
             <div className="text-center max-w-3xl mx-auto px-4">
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed font-light">
-                Center-based therapy eliminates home distractions, provides peer learning opportunities unavailable in one-on-one settings, 
-                and offers professional-grade resources like sensory rooms, adaptive equipment, and structured group activities. Research shows 
-                children in center-based programs often achieve faster progress in social communication, school-readiness skills, and adaptive 
-                behaviors—preparing them for success in school and community environments.
+                In-home therapy provides a comfortable, familiar environment where children can learn and practice skills naturally. 
+                Family members can participate in sessions, learning strategies to support their child's development throughout the day. 
+                Research shows that children in in-home programs often achieve better skill generalization, as they learn and practice 
+                new abilities in the same environment where they'll use them daily—preparing them for success in their natural home and community settings.
               </p>
             </div>
           </motion.div>

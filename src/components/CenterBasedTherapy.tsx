@@ -102,6 +102,31 @@ const Services = () => {
                   </Link>
                 </Button>
               </div>
+
+              {/* Trust Indicators with Icons */}
+              <motion.div 
+                key={`trust-center-${pathname}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+                className="flex flex-wrap items-center gap-6 md:gap-10 mt-8"
+              >
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 md:w-6 md:h-6 text-secondary flex-shrink-0" />
+                  <div className="text-sm">
+                    <div className="font-semibold text-foreground">Insurance Accepted</div>
+                    <div className="text-muted-foreground">EIDBI & Major Plans</div>
+                  </div>
+                </div>
+                <div className="h-10 w-px bg-border hidden sm:block" />
+                <div className="flex items-center gap-3">
+                  <Users className="w-5 h-5 md:w-6 md:h-6 text-primary flex-shrink-0" />
+                  <div className="text-sm">
+                    <div className="font-semibold text-foreground">Ages 1-18</div>
+                    <div className="text-muted-foreground">4 Specialized Tracks</div>
+                  </div>
+                </div>
+              </motion.div>
             </motion.div>
 
             {/* Right Image */}

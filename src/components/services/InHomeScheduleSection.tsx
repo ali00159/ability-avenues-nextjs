@@ -5,17 +5,12 @@ import Image from "next/image";
 import compassIcon from "@/assets/compass.svg";
 
 const schedule = [
-  { time: "8:30 AM", activity: "Arrival & Greeting" },
-  { time: "9:00 AM", activity: "Small group learning and playing" },
-  { time: "9:45 AM", activity: "Circle time activity" },
-  { time: "10:15 AM", activity: "Snack and hygiene" },
-  { time: "10:30 AM", activity: "1:1 focused learning" },
-  { time: "12:00 PM", activity: "Playground activity (indoor & outdoor)" },
-  { time: "12:45 PM", activity: "Lunch" },
-  { time: "1:15 PM", activity: "Independent play & quiet time" },
-  { time: "2:00 PM", activity: "1:1 focused learning" },
-  { time: "3:30 PM", activity: "Small group learning and playing" },
-  { time: "4:30 PM", activity: "Wrap-up & Family Communication" },
+  { time: "Morning Sessions", activity: "8:00 AM - 12:00 PM: Early morning therapy focusing on daily living skills and communication" },
+  { time: "Afternoon Sessions", activity: "1:00 PM - 5:00 PM: Afternoon therapy with play-based learning and social skills development" },
+  { time: "Evening Sessions", activity: "5:00 PM - 8:00 PM: Evening therapy to accommodate family schedules and routines" },
+  { time: "Weekend Options", activity: "Saturday & Sunday: Flexible weekend sessions for families who prefer weekday flexibility" },
+  { time: "Community Outings", activity: "As needed: Therapy sessions in community settings for skill generalization" },
+  { time: "Family Training", activity: "Regular: Parent and caregiver training sessions to support ongoing development" },
 ];
 
 const InHomeScheduleSection = () => {
@@ -40,11 +35,11 @@ const InHomeScheduleSection = () => {
               />
             </div>
             <h2 className="mb-6 text-raisin-black">
-              Our Daily Schedule
+              Flexible In-Home Therapy Schedule
             </h2>
             <p className="text-lg text-muted-foreground font-light">
-              A typical day in our structured early intervention Center-Based ABA Program provides age-appropriate activities 
-              with a balance of group learning, individualized therapy, and play-based development for children and teens ages 1-18.
+              Our in-home ABA therapy adapts to your family's routine with 20-40 hours per week of personalized support. 
+              Sessions are scheduled based on your preferences—mornings, afternoons, or evenings—to fit your family's unique needs and schedule.
             </p>
           </motion.div>
 
@@ -62,7 +57,7 @@ const InHomeScheduleSection = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className={`grid grid-cols-[140px_1fr] gap-6 p-6 ${
+                className={`grid grid-cols-[200px_1fr] gap-6 p-6 ${
                   index % 2 === 0 ? "bg-cornsilk/20" : "bg-white"
                 } ${index !== schedule.length - 1 ? "border-b border-cornsilk" : ""}`}
               >

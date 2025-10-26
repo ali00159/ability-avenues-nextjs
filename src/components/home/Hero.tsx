@@ -188,7 +188,7 @@ const Hero = () => {
             key={`hero-image-${pathname}`}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
+            transition={{ delay: 0.2, duration: 0.4 }}
             className="flex items-center justify-center relative"
           >
             {/* Floating Icons */}
@@ -199,7 +199,7 @@ const Hero = () => {
                 rotate: [0, 5, 0],
               }}
               transition={{
-                duration: 4,
+                duration: 2,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
@@ -214,10 +214,10 @@ const Hero = () => {
                 rotate: [0, -5, 0],
               }}
               transition={{
-                duration: 3.5,
+                duration: 1.8,
                 repeat: Infinity,
                 ease: "easeInOut",
-                delay: 0.5,
+                delay: 0.3,
               }}
             >
               <Puzzle className="w-10 h-10 md:w-14 md:h-14" />
@@ -230,10 +230,10 @@ const Hero = () => {
                 rotate: [0, 10, 0],
               }}
               transition={{
-                duration: 3,
+                duration: 1.5,
                 repeat: Infinity,
                 ease: "easeInOut",
-                delay: 1,
+                delay: 0.5,
               }}
             >
               <Star className="w-10 h-10 md:w-12 md:h-12" fill="currentColor" />
@@ -246,10 +246,10 @@ const Hero = () => {
                 rotate: [0, 5, 0],
               }}
               transition={{
-                duration: 4.2,
+                duration: 2.1,
                 repeat: Infinity,
                 ease: "easeInOut",
-                delay: 1.2,
+                delay: 0.6,
               }}
             >
               <Smile className="w-10 h-10 md:w-12 md:h-12" />

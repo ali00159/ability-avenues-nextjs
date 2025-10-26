@@ -7,7 +7,7 @@ import { CheckCircle, Phone, ArrowRight } from "lucide-react";
 import Link from 'next/link';
 import Image from 'next/image';
 
-const InsuranceCoverage = () => {
+const InHomeInsuranceCoverage = () => {
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
@@ -44,11 +44,11 @@ const InsuranceCoverage = () => {
                 />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                <span className="text-raisin-black">Insurance & </span>
-                <span className="text-yellow-green">EIDBI Coverage</span>
+                <span className="text-raisin-black">Insurance Coverage for </span>
+                <span className="text-yellow-green">In-Home ABA Therapy</span>
               </h2>
               <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-                We accept EIDBI (Early Intensive Developmental and Behavioral Intervention) coverage and work with most major insurance providers.
+                We accept EIDBI (Early Intensive Developmental and Behavioral Intervention) coverage and work with most major insurance providers for our in-home ABA therapy services.
               </p>
             </div>
 
@@ -60,13 +60,11 @@ const InsuranceCoverage = () => {
                     <CheckCircle className="w-6 h-6 text-pacific-cyan" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-raisin-black mb-2">EIDBI Coverage</h3>
-                    <p className="text-muted-foreground leading-relaxed mb-3">
-                      Ability Avenues accepts EIDBI coverage for children and teens ages 1-18 in our center-based ABA therapy programs. 
-                      EIDBI is Minnesota's program for providing early intensive developmental and behavioral intervention services for children with autism.
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      <strong>Note:</strong> While EIDBI in Minnesota covers ages 1-21, Ability Avenues accepts EIDBI for ages 1-18 based on our program capacity.
+                    <h3 className="text-xl font-bold text-raisin-black mb-2">EIDBI Coverage for In-Home Services</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      EIDBI coverage is available for in-home ABA therapy for children ages 1-18 in Minnesota. 
+                      This program provides comprehensive coverage for evidence-based interventions delivered in your home environment, 
+                      ensuring your family has access to the support you need without financial burden.
                     </p>
                   </div>
                 </div>
@@ -105,7 +103,7 @@ const InsuranceCoverage = () => {
               <Card className="p-6 bg-yellow-green/5 border-2 border-yellow-green/20">
                 <p className="text-center text-raisin-black leading-relaxed">
                   <strong>Coverage varies by plan.</strong> We recommend contacting us to verify your specific insurance benefits 
-                  for center-based ABA therapy services. Our team will help you understand your coverage and work with your insurance provider.
+                  for in-home ABA therapy services. Our team will help you understand your coverage and work with your insurance provider.
                 </p>
               </Card>
             </div>
@@ -113,7 +111,7 @@ const InsuranceCoverage = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button onClick={scrollToContact} size="lg" className="text-lg px-8 bg-cornsilk hover:bg-cornsilk/90 text-raisin-black">
-                Verify Insurance Coverage
+                Verify Your Coverage
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8" asChild>
                 <Link href="/contact" className="flex items-center gap-2">
@@ -129,4 +127,4 @@ const InsuranceCoverage = () => {
   );
 };
 
-export default InsuranceCoverage;
+export default InHomeInsuranceCoverage;
