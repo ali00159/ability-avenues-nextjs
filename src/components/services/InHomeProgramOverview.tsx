@@ -5,8 +5,12 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, ClipboardCheck } from "lucide-react";
-import abaIcon from "@/assets/aba-icon.svg";
 import graduationCapIcon from "@/assets/graduation-cap-icon.svg";
+import abstractShape1 from "@/assets/abstact shape 1.svg";
+import abstractShape2 from "@/assets/abstact shape 2.svg";
+import abstractShape3 from "@/assets/abstact shape 3.svg";
+import abstractShape4 from "@/assets/abstact shape 4.svg";
+import abstractShape5 from "@/assets/abstact shape 5.svg";
 
 const InHomeProgramOverview = () => {
   const scrollToContact = () => {
@@ -32,11 +36,59 @@ const InHomeProgramOverview = () => {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto"
         >
-          {/* Header with ABA Icon */}
+          {/* Header with Abstract Shapes */}
           <div className="text-center mb-8">
-          <div className="flex justify-center mb-3">
-            <Image src={abaIcon} alt="ABA Therapy" className="w-32 h-32 md:w-40 md:h-40" width={160} height={160} />
-          </div>
+            <div className="flex flex-row justify-center items-center gap-2 md:gap-8 mb-3">
+              {/* Shape 1 - Clockwise, 2.0s */}
+              <motion.div
+                initial={{ opacity: 0, rotate: 340 }}
+                whileInView={{ opacity: 1, rotate: -20 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 2.0 }}
+              >
+                <Image src={abstractShape1} alt="" className="w-20 h-20 md:w-48 md:h-48" width={192} height={192} />
+              </motion.div>
+
+              {/* Shape 2 - Counter-clockwise, 2.5s */}
+              <motion.div
+                initial={{ opacity: 0, rotate: -340 }}
+                whileInView={{ opacity: 1, rotate: 20 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 2.5 }}
+              >
+                <Image src={abstractShape2} alt="" className="w-20 h-20 md:w-48 md:h-48" width={192} height={192} />
+              </motion.div>
+
+              {/* Shape 3 - Clockwise, 1.8s */}
+              <motion.div
+                initial={{ opacity: 0, rotate: 340 }}
+                whileInView={{ opacity: 1, rotate: -20 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 1.8 }}
+              >
+                <Image src={abstractShape3} alt="" className="w-20 h-20 md:w-48 md:h-48" width={192} height={192} />
+              </motion.div>
+
+              {/* Shape 4 - Counter-clockwise, 2.2s */}
+              <motion.div
+                initial={{ opacity: 0, rotate: -340 }}
+                whileInView={{ opacity: 1, rotate: 20 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 2.2 }}
+              >
+                <Image src={abstractShape4} alt="" className="w-20 h-20 md:w-48 md:h-48" width={192} height={192} />
+              </motion.div>
+
+              {/* Shape 5 - Clockwise, 2.8s */}
+              <motion.div
+                initial={{ opacity: 0, rotate: 340 }}
+                whileInView={{ opacity: 1, rotate: -20 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 2.8 }}
+              >
+                <Image src={abstractShape5} alt="" className="w-20 h-20 md:w-48 md:h-48" width={192} height={192} />
+              </motion.div>
+            </div>
           </div>
 
           {/* Large Headline with Color */}

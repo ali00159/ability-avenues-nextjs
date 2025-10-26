@@ -68,10 +68,10 @@ const ProgramHighlights = () => {
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.9 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="text-secondary font-semibold uppercase tracking-wider text-sm">Why Choose Us</span>
@@ -87,10 +87,10 @@ const ProgramHighlights = () => {
             return (
               <motion.div
                 key={highlight.title}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 70 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.85, delay: index * 0.1 }}
                 className="flex"
               >
                 <div className="flex flex-col items-start p-6 rounded-2xl bg-gradient-to-br from-cornsilk/50 to-transparent border border-border hover:shadow-md transition-all duration-300 h-full">
@@ -106,10 +106,10 @@ const ProgramHighlights = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
           className="flex justify-center mt-12"
         >
           <Link href="/about">

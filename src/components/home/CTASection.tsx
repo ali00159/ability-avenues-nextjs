@@ -10,10 +10,10 @@ const CTASection = () => {
     <section className="py-12 md:py-24 bg-cornsilk/30">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.9 }}
           className="max-w-5xl mx-auto"
         >
           <div className="bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-700 rounded-[2rem] md:rounded-[2.5rem] p-8 sm:p-10 md:p-16 lg:p-20 text-center overflow-hidden relative">

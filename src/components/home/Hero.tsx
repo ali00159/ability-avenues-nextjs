@@ -65,43 +65,45 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-light">
-      {/* Animated Background Shapes - Hidden on mobile for performance */}
-      <div className="absolute inset-0 z-0 overflow-hidden hidden md:block">
+      {/* Animated Background Shapes - Optimized for mobile performance */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <motion.div
-          className="absolute top-20 right-20 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-3xl"
+          className="absolute top-20 right-20 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-secondary/10 rounded-full blur-xl md:blur-3xl"
           animate={{
             scale: [1, 1.1, 1],
             x: [0, 30, 0],
             y: [0, 20, 0],
           }}
           transition={{
-            duration: 25,
+            duration: 30,
             repeat: Infinity,
             ease: "easeInOut",
           }}
+          style={{ willChange: "transform" }}
         />
         <motion.div
-          className="absolute bottom-20 left-20 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl"
+          className="absolute bottom-20 left-20 w-[350px] h-[350px] md:w-[500px] md:h-[500px] bg-primary/10 rounded-full blur-xl md:blur-3xl"
           animate={{
             scale: [1, 1.15, 1],
             x: [0, -20, 0],
             y: [0, -30, 0],
           }}
           transition={{
-            duration: 30,
+            duration: 35,
             repeat: Infinity,
             ease: "easeInOut",
           }}
+          style={{ willChange: "transform" }}
         />
       </div>
       {/* Content */}
       <div className="container mx-auto px-4 z-10 relative pt-24 md:pt-32 pb-12 md:pb-20">
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Column - Text Content */}
-          <div className="relative z-20 max-w-2xl">
+          <div className="relative z-20 max-w-2xl w-full flex flex-col">
             <h1
               ref={titleRef}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight tracking-tight drop-shadow"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight tracking-tight drop-shadow order-1"
             >
               Where children & their families can{" "}
               <span className="text-yellow-green block mt-2">
@@ -116,17 +118,16 @@ const Hero = () => {
                 />
               </span>
             </h1>
-            
+
             <p
               ref={subtitleRef}
-              className="text-xl md:text-2xl text-foreground mb-8 leading-relaxed font-normal"
+              className="text-xl md:text-2xl text-foreground mb-8 leading-relaxed font-normal order-3 lg:order-2"
             >
               Personalized ABA therapy for children with autism.
             </p>
 
-
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4 mb-10 mt-6 md:mt-8">
+            <div className="flex flex-wrap items-center gap-4 mb-10 mt-6 md:mt-8 order-4 lg:order-3">
               <Link href="/contact">
                 <Button
                   size="lg"
@@ -155,7 +156,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2, duration: 0.8 }}
-              className="flex flex-wrap items-center gap-6 md:gap-10"
+              className="flex flex-wrap items-center gap-6 md:gap-10 order-5 lg:order-4"
             >
               <div className="flex items-center gap-3">
                 <Star className="w-5 h-5 md:w-6 md:h-6 text-xanthous flex-shrink-0" fill="currentColor" />
@@ -189,7 +190,7 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.4 }}
-            className="flex items-center justify-center relative"
+            className="flex items-center justify-center relative order-2 max-w-sm md:max-w-md lg:max-w-4xl mx-auto lg:mx-0"
           >
             {/* Floating Icons */}
             <motion.div
@@ -204,7 +205,7 @@ const Hero = () => {
                 ease: "easeInOut",
               }}
             >
-              <Pencil className="w-12 h-12 md:w-16 md:h-16" />
+              <Pencil className="w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16" />
             </motion.div>
 
             <motion.div
@@ -220,7 +221,7 @@ const Hero = () => {
                 delay: 0.3,
               }}
             >
-              <Puzzle className="w-10 h-10 md:w-14 md:h-14" />
+              <Puzzle className="w-6 h-6 md:w-10 md:h-10 lg:w-14 lg:h-14" />
             </motion.div>
 
             <motion.div
@@ -236,7 +237,7 @@ const Hero = () => {
                 delay: 0.5,
               }}
             >
-              <Star className="w-10 h-10 md:w-12 md:h-12" fill="currentColor" />
+              <Star className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" fill="currentColor" />
             </motion.div>
 
             <motion.div
@@ -252,7 +253,7 @@ const Hero = () => {
                 delay: 0.6,
               }}
             >
-              <Smile className="w-10 h-10 md:w-12 md:h-12" />
+              <Smile className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />
             </motion.div>
 
             <div className="relative w-full max-w-4xl">
