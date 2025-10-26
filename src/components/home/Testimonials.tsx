@@ -1,28 +1,58 @@
 'use client';
 
 import Image from "next/image";
-import { Testimonial } from "@/components/ui/testimonial-card";
 import { motion } from "framer-motion";
 import testimonialIcon from "@/assets/testimonial-icon.svg";
+import { TestimonialsWithMarquee } from "@/components/ui/testimonials-with-marquee";
 
 const testimonials = [
   {
     name: "Jennifer Martinez",
     role: "Parent",
     rating: 5,
-    testimonial: "Ability Avenues has been life-changing for our family. The therapists are incredibly skilled and compassionate, and we've seen remarkable progress in our child's development."
+    testimonial: "After searching for quality ABA therapy in Minneapolis, we found Ability Avenues. The Board Certified Behavior Analysts created a personalized program that helped our 5-year-old with autism develop social skills and communication."
   },
   {
     name: "Michael Thompson",
     role: "Parent",
     rating: 5,
-    testimonial: "From the initial intake process to ongoing therapy sessions, the team at Ability Avenues has been professional, caring, and results-driven. Our son has made incredible strides."
+    testimonial: "The center-based therapy at Ability Avenues exceeded our expectations. Our daughter's early intervention program focuses on natural environment learning, and we've seen incredible progress in just 6 months."
   },
   {
     name: "Sarah Chen",
     role: "Parent",
     rating: 5,
-    testimonial: "The comprehensive evaluation and personalized treatment plan gave us clarity and hope. The staff's dedication and expertise have helped our daughter achieve milestones."
+    testimonial: "We appreciate how Ability Avenues accepts our insurance and works with EIDBI coverage. The in-home therapy program allows our family to be involved in the applied behavior analysis process, and our BCBA supervisor is always available."
+  },
+  {
+    name: "David Rodriguez",
+    role: "Parent",
+    rating: 5,
+    testimonial: "As someone new to autism therapy, I was impressed by how Ability Avenues explained the ABA therapy process. The center-based approach helped our 7-year-old son build peer relationships and develop age-appropriate behaviors."
+  },
+  {
+    name: "Amanda Williams",
+    role: "Parent",
+    rating: 5,
+    testimonial: "The Minneapolis clinic offers excellent ABA services for children aged 2-10. Our daughter's developmental progress has been remarkable under the guidance of experienced Board Certified Behavior Analysts who truly understand autism spectrum disorder."
+  },
+  {
+    name: "Robert Kim",
+    role: "Parent",
+    rating: 5,
+    testimonial: "We chose Ability Avenues for their expertise in both in-home and center-based therapy. The flexible scheduling works perfectly with our busy lives, and the team's knowledge of insurance coverage made the process seamless."
+  },
+  {
+    name: "Lisa Anderson",
+    role: "Parent",
+    rating: 5,
+    testimonial: "The ABA therapy program at Ability Avenues helped our toddler learn essential skills through play-based interventions. The BCBA supervision ensures quality care, and we value the family-focused approach in Minnesota."
+  },
+  {
+    name: "James Parker",
+    role: "Parent",
+    rating: 5,
+    testimonial: "Our experience with Ability Avenues has been exceptional. The applied behavior analysis techniques have transformed how we approach challenging behaviors, and the center-based program provides the social skills practice our child needs."
   }
 ];
 
@@ -56,19 +86,8 @@ const Testimonials = () => {
           </motion.div>
         </div>
 
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={testimonial.name}
-              initial={{ opacity: 0, y: 70 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.85, delay: index * 0.1 }}
-              className="flex"
-            >
-              <Testimonial {...testimonial} className="flex flex-col h-full" />
-            </motion.div>
-          ))}
+        <div className="py-8">
+          <TestimonialsWithMarquee testimonials={testimonials} />
         </div>
       </div>
     </section>
