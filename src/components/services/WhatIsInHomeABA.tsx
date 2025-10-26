@@ -87,7 +87,7 @@ const WhatIsInHomeABA = () => {
           >
             <Card className="p-8 bg-pacific-cyan/5 border-2 border-pacific-cyan/20">
               <p className="text-base md:text-lg text-raisin-black leading-relaxed text-center">
-                <strong>Our in-home ABA therapy in Minneapolis and Minnesota</strong> serves children and teens with autism spectrum disorder 
+                <strong>Our in-home ABA therapy in Minneapolis, Minnesota</strong> serves children and teens with autism spectrum disorder 
                 ages 1-18, offering evidence-based applied behavior analysis in the comfort of your home, 
                 with BCBA supervision and flexible scheduling that honors each family's unique needs and preferences.
               </p>
