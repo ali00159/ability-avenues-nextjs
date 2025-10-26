@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import centerBasedIcon from "@/assets/center-based-icon.svg";
 import { Badge } from "@/components/ui/badge";
 
-const WhyCenterBased = () => {
+const WhyInHome = () => {
   return (
     <section className="py-24 bg-pacific-cyan">
       <div className="container mx-auto px-4">
@@ -117,4 +117,4 @@ const WhyCenterBased = () => {
   );
 };
 
-export default WhyCenterBased;
+export default WhyInHome;

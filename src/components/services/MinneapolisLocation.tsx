@@ -146,7 +146,7 @@ const MinneapolisLocation = () => {
             <Card className="p-8 bg-white border-2 border-gray-100">
               <div className="relative w-full h-[400px] rounded-2xl overflow-hidden border-2 border-gray-100">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2823.67786712345!2d-93.26891916537508!3d44.975705198235715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!1s0x0%3A0x0!5e0!3m2!1sen!2sus!4v1734567890&q=44.975705198235715,-93.26891916537508&t=m&z=12"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18059.989812345!2d-93.26891916537508!3d44.975705198235715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDU4JzMyLjUiTiA5M8KwMTYnMDguMSJX!5e0!3m2!1sen!2sus!4v1735000000&t=m&z=12"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

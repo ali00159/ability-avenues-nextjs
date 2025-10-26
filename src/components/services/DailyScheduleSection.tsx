@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { Clock } from "lucide-react";
+import Image from "next/image";
+import compassIcon from "@/assets/compass.svg";
 
 const schedule = [
   { time: "8:30 AM", activity: "Arrival & Greeting" },
@@ -29,8 +30,14 @@ const DailyScheduleSection = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-xanthous/10 mb-6">
-              <Clock className="w-8 h-8 text-xanthous" />
+            <div className="flex justify-center mb-6">
+              <Image 
+                src={compassIcon} 
+                alt="Compass" 
+                className="w-32 h-32"
+                width={128}
+                height={128}
+              />
             </div>
             <h2 className="mb-6 text-raisin-black">
               Our Daily Schedule
