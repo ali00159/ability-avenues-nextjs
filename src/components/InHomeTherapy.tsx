@@ -14,9 +14,9 @@ import therapyImage from "@/assets/therapy-session.jpg";
 
 // Lazy load service sections for better performance
 const ContactForm = lazy(() => import("@/components/contact/ContactForm"));
-const ProgramOverviewSection = lazy(() => import("@/components/services/ProgramOverviewSection"));
-const WhyCenterBased = lazy(() => import("@/components/services/WhyCenterBased"));
-const DailyScheduleSection = lazy(() => import("@/components/services/DailyScheduleSection"));
+const InHomeProgramOverview = lazy(() => import("@/components/services/InHomeProgramOverview"));
+const WhyInHome = lazy(() => import("@/components/services/WhyInHome"));
+const InHomeScheduleSection = lazy(() => import("@/components/services/InHomeScheduleSection"));
 
 const InHomeTherapy = () => {
   const pathname = usePathname();
@@ -160,9 +160,9 @@ const InHomeTherapy = () => {
       </section>
       {/* New Sections Following Design System */}
       <Suspense fallback={<div className="h-screen" />}>
-        <ProgramOverviewSection />
-        <WhyCenterBased />
-        <DailyScheduleSection />
+        <InHomeProgramOverview />
+        <WhyInHome />
+        <InHomeScheduleSection />
 
         {/* Contact Form */}
         <div id="contact">
