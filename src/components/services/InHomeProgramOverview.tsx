@@ -6,11 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, ClipboardCheck } from "lucide-react";
 import graduationCapIcon from "@/assets/graduation-cap-icon.svg";
-import abstractShape1 from "@/assets/abstact shape 1.svg";
-import abstractShape2 from "@/assets/abstact shape 2.svg";
-import abstractShape3 from "@/assets/abstact shape 3.svg";
-import abstractShape4 from "@/assets/abstact shape 4.svg";
-import abstractShape5 from "@/assets/abstact shape 5.svg";
+import visionIllustration from "@/assets/vision-illustration.svg";
 
 const InHomeProgramOverview = () => {
   const scrollToContact = () => {
@@ -36,68 +32,26 @@ const InHomeProgramOverview = () => {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto"
         >
-          {/* Header with Abstract Shapes */}
+          {/* Header with Vision Illustration Icon */}
           <div className="text-center mb-8">
-            <div className="flex flex-row justify-center items-center gap-2 md:gap-8 mb-3">
-              {/* Shape 1 - Clockwise, 2.0s */}
+            <div className="flex justify-center mb-3">
               <motion.div
                 initial={{ opacity: 0, rotate: 340 }}
                 whileInView={{ opacity: 1, rotate: -20 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 2.0 }}
               >
-                <Image src={abstractShape1} alt="" className="w-20 h-20 md:w-48 md:h-48" width={192} height={192} />
-              </motion.div>
-
-              {/* Shape 2 - Counter-clockwise, 2.5s */}
-              <motion.div
-                initial={{ opacity: 0, rotate: -340 }}
-                whileInView={{ opacity: 1, rotate: 20 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 2.5 }}
-              >
-                <Image src={abstractShape2} alt="" className="w-20 h-20 md:w-48 md:h-48" width={192} height={192} />
-              </motion.div>
-
-              {/* Shape 3 - Clockwise, 1.8s */}
-              <motion.div
-                initial={{ opacity: 0, rotate: 340 }}
-                whileInView={{ opacity: 1, rotate: -20 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 1.8 }}
-              >
-                <Image src={abstractShape3} alt="" className="w-20 h-20 md:w-48 md:h-48" width={192} height={192} />
-              </motion.div>
-
-              {/* Shape 4 - Counter-clockwise, 2.2s */}
-              <motion.div
-                initial={{ opacity: 0, rotate: -340 }}
-                whileInView={{ opacity: 1, rotate: 20 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 2.2 }}
-              >
-                <Image src={abstractShape4} alt="" className="w-20 h-20 md:w-48 md:h-48" width={192} height={192} />
-              </motion.div>
-
-              {/* Shape 5 - Clockwise, 2.8s */}
-              <motion.div
-                initial={{ opacity: 0, rotate: 340 }}
-                whileInView={{ opacity: 1, rotate: -20 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 2.8 }}
-              >
-                <Image src={abstractShape5} alt="" className="w-20 h-20 md:w-48 md:h-48" width={192} height={192} />
+                <Image src={visionIllustration} alt="" className="w-56 h-56 md:w-72 md:h-72" width={288} height={288} />
               </motion.div>
             </div>
           </div>
 
           {/* Large Headline with Color */}
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-8 leading-tight">
-            <span className="text-raisin-black">Personalized </span>
-            <span className="text-raisin-black">In-Home ABA Therapy</span>
+            <span className="text-raisin-black">Personalized In-Home ABA Therapy</span>
             <br />
             <span className="text-raisin-black">in Your </span>
-            <span className="text-yellow-green">Natural Environment</span>
+            <span className="text-xanthous">Natural Environment</span>
           </h2>
 
           {/* Body Text */}
@@ -134,7 +88,7 @@ const InHomeProgramOverview = () => {
               <Card className="p-8 h-full bg-white border-2 border-gray-100 hover:border-pacific-cyan/30 transition-all duration-300">
                 <div className="flex flex-col items-start h-full">
                   <div className="w-16 h-16 bg-yellow-green/10 rounded-2xl flex items-center justify-center mb-6">
-                    <MapPin className="w-8 h-8 text-yellow-green" />
+                    <MapPin className="w-8 h-8 text-xanthous" />
                   </div>
                   <h3 className="text-xl font-bold text-raisin-black mb-4">Schedule an Assessment</h3>
                   <p className="text-muted-foreground mb-6 flex-grow leading-relaxed">

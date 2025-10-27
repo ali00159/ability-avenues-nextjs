@@ -200,7 +200,9 @@ const InsuranceCoverage = () => {
             </div>
 
             {/* Logo Carousel */}
-            <Logos3 />
+            <div className="overflow-hidden rounded-2xl">
+              <Logos3 />
+            </div>
 
             {/* Coverage Note */}
             <div className="mb-8">

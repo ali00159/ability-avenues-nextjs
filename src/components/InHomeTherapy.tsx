@@ -84,8 +84,8 @@ const InHomeTherapy = () => {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                <span className="text-secondary">In-Home ABA Therapy</span>{" "}
-                <span className="text-raisin-black">in Minneapolis & Minnesota</span>
+                <span className="text-xanthous">In-Home ABA Therapy</span>{" "}
+                <span className="text-raisin-black">in Minneapolis, MN</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                 Personalized one-on-one ABA therapy delivered in the comfort and familiarity of your home environment. 
@@ -94,7 +94,7 @@ const InHomeTherapy = () => {
                 and individualized treatment plans, we bring evidence-based care directly to you.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="text-lg px-8" asChild>
+                <Button size="lg" className="text-lg px-8 bg-xanthous hover:bg-xanthous/90 text-raisin-black" asChild>
                   <a href="#contact">Get started</a>
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8" asChild>

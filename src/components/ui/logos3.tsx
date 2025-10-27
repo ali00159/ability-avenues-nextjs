@@ -71,14 +71,14 @@ const Logos3 = ({
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <section className="py-8">
-      <div className="container flex flex-col items-center text-center">
-        <h2 className="text-2xl font-bold text-pretty lg:text-3xl mb-6">
+    <div className="py-8 px-4">
+      <div className="flex flex-col items-center text-center mb-6">
+        <h2 className="text-2xl font-bold text-pretty lg:text-3xl">
           {heading}
         </h2>
       </div>
       <div className="pt-6 md:pt-10">
-        <div className="relative mx-auto flex items-center justify-center lg:max-w-5xl">
+        <div className="relative overflow-hidden">
           <Carousel
             opts={{ loop: true, align: "start" }}
             plugins={[
@@ -113,11 +113,11 @@ const Logos3 = ({
             </CarouselContent>
           </Carousel>
           {/* Gradient fade overlays */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-white to-transparent"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-white to-transparent"></div>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-white to-transparent z-10"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-white to-transparent z-10"></div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

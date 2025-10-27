@@ -41,7 +41,7 @@ const WhatIsInHomeABA = () => {
           >
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
               <span className="text-raisin-black">What is </span>
-              <span className="text-secondary">In-Home ABA Therapy?</span>
+              <span className="text-xanthous">In-Home ABA Therapy?</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               In-home ABA therapy brings evidence-based applied behavior analysis directly to your home, 
@@ -64,7 +64,7 @@ const WhatIsInHomeABA = () => {
                   <Card className="p-8 h-full bg-white border-2 border-gray-100 hover:border-pacific-cyan/30 transition-all duration-300">
                     <div className="flex flex-col items-start h-full">
                       <div className="w-16 h-16 bg-yellow-green/10 rounded-2xl flex items-center justify-center mb-6">
-                        <Icon className="w-8 h-8 text-yellow-green" />
+                        <Icon className="w-8 h-8 text-xanthous" />
                       </div>
                       <h3 className="text-xl font-bold text-raisin-black mb-4">{benefit.title}</h3>
                       <p className="text-muted-foreground leading-relaxed flex-grow">
