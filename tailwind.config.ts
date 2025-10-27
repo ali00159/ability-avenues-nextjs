@@ -96,8 +96,10 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        marquee: "marquee 60s linear infinite",
-        "marquee-reverse": "marquee 60s linear infinite reverse",
+        marquee: "marquee 40s linear infinite",
+        "marquee-reverse": "marquee 40s linear infinite reverse",
+        "marquee-fast": "marquee 25s linear infinite",
+        "marquee-reverse-fast": "marquee 25s linear infinite reverse",
       },
     },
   },

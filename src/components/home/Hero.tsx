@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 import { useEffect, useRef, memo } from "react";
 import { Button } from "@/components/ui/button";
 import { Heart, Puzzle, Star, Pencil, Smile, Award, Users2, ArrowRight, Phone, BookOpen } from "lucide-react";
@@ -9,6 +10,8 @@ import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { Typewriter } from "@/components/ui/typewriter-text";
 import heroImage from "@/assets/hero-girl-lollipop.webp";
+import yellowCircleOpaque from "@/assets/yellow-circle-opaue.svg";
+import yellowSemicircle from "@/assets/yellow-semicircle.svg";
 
 const Hero = () => {
   const pathname = usePathname();
@@ -194,104 +197,119 @@ const Hero = () => {
           >
             {/* Floating Icons */}
             <motion.div
-              className="absolute top-10 left-10 text-primary"
+              className="absolute -top-4 -right-4 text-secondary"
               animate={{
-                y: [0, -15, 0],
-                rotate: [0, 5, 0],
+                y: [0, -20, 0],
+                rotate: [0, 8, 0],
               }}
               transition={{
-                duration: 2,
+                duration: 5,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
+              aria-hidden
             >
-              <Pencil className="w-8 h-8 md:w-12 md:h-12 lg:w-16 lg:h-16" />
+              <Puzzle className="w-16 h-16" />
             </motion.div>
 
             <motion.div
-              className="absolute top-20 right-10 text-secondary"
+              className="absolute -bottom-2 -left-2 text-primary"
               animate={{
-                y: [0, 15, 0],
-                rotate: [0, -5, 0],
+                y: [0, 22, 0],
+                rotate: [0, -8, 0],
               }}
               transition={{
-                duration: 1.8,
+                duration: 5.5,
                 repeat: Infinity,
                 ease: "easeInOut",
-                delay: 0.3,
               }}
+              aria-hidden
             >
-              <Puzzle className="w-6 h-6 md:w-10 md:h-10 lg:w-14 lg:h-14" />
+              <Pencil className="w-20 h-20" />
             </motion.div>
 
             <motion.div
-              className="absolute bottom-20 left-5 text-xanthous"
+              className="absolute top-10 left-2 text-xanthous"
               animate={{
-                y: [0, -10, 0],
-                rotate: [0, 10, 0],
+                y: [0, 18, 0],
+                rotate: [0, 6, 0],
               }}
               transition={{
-                duration: 1.5,
+                duration: 6,
                 repeat: Infinity,
                 ease: "easeInOut",
-                delay: 0.5,
               }}
+              aria-hidden
             >
-              <Star className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" fill="currentColor" />
+              <Star className="w-14 h-14" fill="currentColor" />
             </motion.div>
 
             <motion.div
-              className="absolute top-1/2 right-5 text-rose-300"
+              className="absolute -bottom-2 right-4 text-secondary"
               animate={{
-                y: [0, -12, 0],
-                rotate: [0, 5, 0],
+                y: [0, -18, 0],
+                rotate: [0, -6, 0],
               }}
               transition={{
-                duration: 2.1,
+                duration: 6.2,
                 repeat: Infinity,
                 ease: "easeInOut",
-                delay: 0.6,
               }}
+              aria-hidden
             >
-              <Smile className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />
+              <Smile className="w-16 h-16" />
             </motion.div>
 
-            <div className="relative w-full max-w-4xl">
-              <svg 
-                viewBox="0 0 396 364" 
-                className="w-full h-auto"
-                xmlns="http://www.w3.org/2000/svg"
+            <div className="relative w-full aspect-square max-w-md mx-auto">
+              {/* Layer 1: Yellow Circle Opaque - Larger, Bottom Layer */}
+              <motion.div
+                initial={{ opacity: 0, x: 200, scale: 1.5225, y: '-10%' }}
+                animate={{ opacity: 1, x: '-3%', scale: 1.5225, y: '-10%' }}
+                transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+                className="absolute inset-0 flex items-center justify-center"
               >
-                <defs>
-                  <clipPath id="heroCircleClip">
-                    <path d="M510.037 275.508C643.516 274.468 752.599 381.764 753.764 515.242C754.929 648.72 647.735 757.904 514.259 759.194C380.605 760.486 271.244 653.119 270.077 519.464C268.911 385.808 376.381 276.548 510.037 275.508Z" transform="matrix(0.502616 0 0 0.502616 -61.8218 -91.4761)"/>
-                  </clipPath>
-                </defs>
-                {/* Background yellow circle */}
-                <path 
-                  fill="#FEEE9C" 
-                  d="M510.037 275.508C643.516 274.468 752.599 381.764 753.764 515.242C754.929 648.72 647.735 757.904 514.259 759.194C380.605 760.486 271.244 653.119 270.077 519.464C268.911 385.808 376.381 276.548 510.037 275.508Z" 
-                  transform="matrix(0.502616 0 0 0.502616 -61.8218 -91.4761)"
+                <Image
+                  src={yellowCircleOpaque}
+                  alt=""
+                  className="w-full h-full object-contain"
+                  width={500}
+                  height={500}
+                  aria-hidden="true"
                 />
-                {/* Semi-circle on bottom half */}
-                <g transform="translate(10, 110) scale(0.8)">
-                  <path 
-                    fill="#F4C537" 
-                    d="M499.93 365.774C509.994 364.73 522.911 365.533 533.059 366.025C647.149 371.61 751.609 447.271 788.299 556.166C798.551 584.683 804.416 615.305 804.467 645.617C804.485 655.97 800.581 659.542 791.16 659.802C781.201 660.076 770.524 660.004 760.59 660.007L703.084 660.007L525.25 660.022L331.239 660L267.717 659.985C259.977 659.98 230.306 661.197 224.401 657.492C217.837 653.375 220.765 629.629 221.444 621.231C226.501 562.943 250.089 507.807 288.754 463.898C344.538 401.784 417.23 370.149 499.93 365.774Z" 
-                    transform="matrix(0.609669 0 0 0.609669 -73.77 -137.175)"
-                  />
-                </g>
-                {/* Girl image back in yellow circle */}
-                <image 
-                  href={typeof heroImage === 'string' ? heroImage : heroImage.src}
-                  x="50" 
-                  y="30"
-                  width="300" 
-                  height="300"
-                  preserveAspectRatio="xMidYMid meet"
-                  clipPath="url(#heroCircleClip)"
+              </motion.div>
+
+              {/* Layer 2: Yellow Semicircle - Larger, Middle Layer */}
+              <motion.div
+                initial={{ opacity: 0, x: -200, scale: 1.134, y: '25%' }}
+                animate={{ opacity: 1, x: 0, scale: 1.134, y: '15%' }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="absolute inset-0 flex items-center justify-center"
+              >
+                <Image
+                  src={yellowSemicircle}
+                  alt=""
+                  className="w-full h-full object-contain"
+                  width={500}
+                  height={500}
+                  aria-hidden="true"
                 />
-              </svg>
+              </motion.div>
+
+              {/* Layer 3: Girl Holding Toy - Slightly Smaller, Top Layer */}
+              <motion.div
+                initial={{ opacity: 0, y: '-8%', scale: 1.1025 }}
+                animate={{ opacity: 1, y: '-8%', scale: 1.1025 }}
+                transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+                className="absolute inset-0 flex items-center justify-center z-10"
+              >
+                <Image
+                  src={heroImage}
+                  alt="Child engaging in creative play therapy"
+                  className="w-full h-full object-contain"
+                  width={500}
+                  height={500}
+                />
+              </motion.div>
             </div>
           </motion.div>
         </div>

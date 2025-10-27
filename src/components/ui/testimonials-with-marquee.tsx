@@ -24,7 +24,7 @@ const TestimonialsWithMarquee = React.forwardRef<HTMLDivElement, TestimonialsWit
     return (
       <div ref={ref} className={cn("relative w-full overflow-hidden", className)} {...props}>
         {/* First row - scrolls right */}
-        <div className="mb-6 flex animate-marquee gap-6 whitespace-nowrap">
+        <div className="mb-6 flex animate-marquee-fast md:animate-marquee gap-6 whitespace-nowrap">
           {duplicatedTestimonials.map((testimonial, index) => (
             <TestimonialCardMarquee
               key={`row1-${index}`}
@@ -35,7 +35,7 @@ const TestimonialsWithMarquee = React.forwardRef<HTMLDivElement, TestimonialsWit
         </div>
 
         {/* Second row - scrolls left */}
-        <div className="flex animate-marquee-reverse gap-6 whitespace-nowrap">
+        <div className="flex animate-marquee-reverse-fast md:animate-marquee-reverse gap-6 whitespace-nowrap">
           {duplicatedTestimonials.map((testimonial, index) => (
             <TestimonialCardMarquee
               key={`row2-${index}`}
