@@ -2,10 +2,60 @@ import { Metadata } from 'next';
 import Careers from '@/components/Careers';
 
 export const metadata: Metadata = {
-  title: 'Careers',
-  description: 'Careers page - Access and manage your content',
+  title: 'Careers - Join Our ABA Therapy Team in Minneapolis',
+  description: 'Join the Ability Avenues team in Minneapolis. We offer rewarding careers in ABA therapy, competitive benefits, and opportunities to make a difference in children\'s lives.',
+  openGraph: {
+    title: 'Careers - Join Our ABA Therapy Team in Minneapolis',
+    description: 'Join the Ability Avenues team in Minneapolis. We offer rewarding careers in ABA therapy, competitive benefits, and opportunities to make a difference.',
+    url: 'https://abilityavenues.com/careers',
+    siteName: 'Ability Avenues',
+    images: [
+      {
+        url: '/images/team-collaboration.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Ability Avenues Careers - Join Our ABA Therapy Team',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Careers - Join Our ABA Therapy Team in Minneapolis',
+    description: 'Join the Ability Avenues team. We offer rewarding careers in ABA therapy, competitive benefits, and opportunities to make a difference.',
+    images: ['/images/team-collaboration.jpg'],
+  },
+  alternates: {
+    canonical: 'https://abilityavenues.com/careers',
+  },
 };
 
 export default function CareersPage() {
-  return <Careers />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Ability Avenues',
+            url: 'https://abilityavenues.com',
+            logo: 'https://abilityavenues.com/images/og-default.jpg',
+            description: 'Join our team of ABA therapy professionals dedicated to supporting children with autism in Minneapolis.',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: '6385 Old Shady Oak Rd Suite 250',
+              addressLocality: 'Eden Prairie',
+              addressRegion: 'MN',
+              postalCode: '55344',
+              addressCountry: 'US',
+            },
+          }),
+        }}
+      />
+      <Careers />
+    </>
+  );
 }

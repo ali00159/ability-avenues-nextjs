@@ -13,11 +13,18 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://abilityavenues.com'),
   title: {
     default: 'Ability Avenues - ABA Therapy for Children with Autism in Minneapolis',
     template: '%s | Ability Avenues',
   },
   description: 'Personalized autism therapy and ABA services for children with autism. Center-based and in-home autism therapy in Minneapolis, Minnesota.',
+  themeColor: '#0FA3B1',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Ability Avenues',
+  },
 };
 
 export default function RootLayout({

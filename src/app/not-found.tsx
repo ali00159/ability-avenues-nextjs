@@ -3,6 +3,30 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: '404 - Page Not Found',
   description: 'The page you are looking for does not exist.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+  openGraph: {
+    title: '404 - Page Not Found',
+    description: 'The page you are looking for does not exist.',
+    siteName: 'Ability Avenues',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-default.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Ability Avenues - Page Not Found',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary',
+    title: '404 - Page Not Found',
+    description: 'The page you are looking for does not exist.',
+    images: ['/images/og-default.jpg'],
+  },
 };
 
 export default function NotFound() {
