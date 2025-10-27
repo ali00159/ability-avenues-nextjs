@@ -2,10 +2,10 @@ import { Metadata } from 'next';
 import InHomeTherapy from '@/components/InHomeTherapy';
 
 export const metadata: Metadata = {
-  title: 'In-Home ABA Therapy Minneapolis & Minnesota | Ability Avenues',
+  title: 'In-Home ABA Therapy Minneapolis & Minnesota',
   description: 'Personalized in-home ABA therapy for children with autism ages 1-18 in Minneapolis & Minnesota. BCBA-supervised, flexible scheduling, family involvement, and natural environment learning. EIDBI accepted.',
   openGraph: {
-    title: 'In-Home ABA Therapy Minneapolis & Minnesota | Ability Avenues',
+    title: 'In-Home ABA Therapy Minneapolis & Minnesota',
     description: 'Personalized in-home ABA therapy for children with autism ages 1-18 in Minneapolis & Minnesota. BCBA-supervised, flexible scheduling, family involvement, and natural environment learning.',
     url: 'https://abilityavenues.com/in-home-therapy',
     siteName: 'Ability Avenues',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'In-Home ABA Therapy Minneapolis & Minnesota | Ability Avenues',
+    title: 'In-Home ABA Therapy Minneapolis & Minnesota',
     description: 'Personalized in-home ABA therapy for children with autism ages 1-18 in Minneapolis & Minnesota. BCBA-supervised, flexible scheduling, family involvement.',
     images: ['/images/therapy-session.jpg'],
   },
