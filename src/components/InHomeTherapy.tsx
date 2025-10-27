@@ -21,7 +21,7 @@ const WhatIsInHomeABA = lazy(() => import("@/components/services/WhatIsInHomeABA
 const WhyInHome = lazy(() => import("@/components/services/WhyInHome"));
 const InHomeScheduleSection = lazy(() => import("@/components/services/InHomeScheduleSection"));
 const InHomeTherapyApproach = lazy(() => import("@/components/services/InHomeTherapyApproach"));
-const InHomeInsuranceCoverage = lazy(() => import("@/components/services/InHomeInsuranceCoverage"));
+const InsuranceCoverage = lazy(() => import("@/components/services/InsuranceCoverage"));
 
 const InHomeTherapy = () => {
   const pathname = usePathname();
@@ -244,7 +244,7 @@ const InHomeTherapy = () => {
         <WhyInHome />
         <InHomeScheduleSection />
         <InHomeTherapyApproach />
-        <InHomeInsuranceCoverage />
+        <InsuranceCoverage />
 
         {/* Contact Form */}
         <div id="contact">

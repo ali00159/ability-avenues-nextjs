@@ -70,11 +70,11 @@ const FAQ = () => {
   const pathname = usePathname();
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-primary/10 via-white to-secondary/10">
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative pt-32 pb-4 bg-gradient-to-br from-primary/5 via-white to-secondary/5">
+        <section className="relative pt-32 pb-4">
           <div className="container mx-auto px-4">
             <motion.div
               key={`faq-hero-${pathname}`}
@@ -84,13 +84,20 @@ const FAQ = () => {
               className="text-center max-w-4xl mx-auto"
             >
               {/* Decorative Icon */}
-              <div className="mb-8 flex justify-center">
-                <div className="relative w-24 h-24">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-12 bg-pacific-cyan/30 rounded-2xl rotate-12"></div>
-                  <div className="absolute top-6 left-1/2 -translate-x-1/2 w-16 h-12 bg-yellow-green/40 rounded-2xl -rotate-6"></div>
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-14 bg-secondary/30 rounded-2xl rotate-3"></div>
+              <motion.div 
+                className="mb-8 flex justify-center"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <div className="w-48 h-48">
+                  <img 
+                    src="/images/question-hearts-red-icon.svg" 
+                    alt="Question Hearts Icon" 
+                    className="w-full h-full object-contain"
+                  />
                 </div>
-              </div>
+              </motion.div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-raisin-black mb-6">
                 Frequently Asked{" "}

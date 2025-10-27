@@ -1,8 +1,10 @@
 'use client';
 
 import { motion } from "framer-motion";
+import Link from 'next/link';
 import { Card } from "@/components/ui/card";
-import { Heart, Target, Users, GraduationCap } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Heart, Target, Users, GraduationCap, ArrowRight } from "lucide-react";
 
 const InHomeTherapyApproach = () => {
   const approaches = [
@@ -77,21 +79,21 @@ const InHomeTherapyApproach = () => {
             })}
           </div>
 
-          {/* Additional Context */}
+          {/* Community Integration Button */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-12 max-w-4xl mx-auto"
+            className="mt-12 flex justify-center"
           >
-            <Card className="p-8 bg-white border-2 border-pacific-cyan/20">
-              <p className="text-base md:text-lg text-raisin-black leading-relaxed text-center">
-                <strong>Community Integration:</strong> Our in-home therapy often includes community outings to parks, stores, 
-                and social settings where your child can practice new skills in real-world environments. This approach 
-                ensures that skills learned at home transfer successfully to community and social situations.
-              </p>
-            </Card>
+            <Button size="lg" variant="outline" className="text-lg px-8 border-2 border-pacific-cyan/30 hover:border-pacific-cyan text-raisin-black" asChild>
+              <Link href="/contact" className="flex items-center">
+                <Users className="w-5 h-5 mr-2" />
+                Learn More
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </Button>
           </motion.div>
         </div>
       </div>

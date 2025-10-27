@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import centerBasedIcon from "@/assets/center-based-icon.svg";
+import greenBalloonIcon from "@/assets/green-ballon-icon.svg";
 import { Badge } from "@/components/ui/badge";
 
 const WhyInHome = () => {
   return (
-    <section className="py-24 bg-pacific-cyan">
+    <section className="py-24 bg-[radial-gradient(circle_at_center,white_0%,hsl(var(--yellow-green))_100%)]">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <motion.div
@@ -19,13 +19,20 @@ const WhyInHome = () => {
           >
             {/* Icon - Custom SVG */}
             <div className="flex justify-center mb-8">
-              <Image 
-                src={centerBasedIcon} 
-                alt="Center-Based Program" 
-                className="w-40 h-40 md:w-52 md:h-52"
-                width={208}
-                height={208}
-              />
+              <motion.div
+                initial={{ opacity: 0, y: 60, rotate: 0 }}
+                whileInView={{ opacity: 1, y: 0, rotate: 5 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
+              >
+                <Image 
+                  src={greenBalloonIcon} 
+                  alt="Why Choose In-Home Therapy" 
+                  className="w-40 h-40 md:w-52 md:h-52"
+                  width={208}
+                  height={208}
+                />
+              </motion.div>
             </div>
 
             {/* Title */}

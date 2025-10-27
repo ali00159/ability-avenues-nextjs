@@ -49,15 +49,17 @@ const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
           </motion.div>
 
           {/* FAQ Items */}
-          <div className="max-w-2xl mx-auto space-y-2">
-            {items.map((item, index) => (
-              <FaqItem
-                key={index}
-                question={item.question}
-                answer={item.answer}
-                index={index}
-              />
-            ))}
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {items.map((item, index) => (
+                <FaqItem
+                  key={index}
+                  question={item.question}
+                  answer={item.answer}
+                  index={index}
+                />
+              ))}
+            </div>
           </div>
 
           {/* Contact Section */}
@@ -112,7 +114,7 @@ const FaqItem = React.forwardRef<
       className={cn(
         "group rounded-lg",
         "transition-all duration-200 ease-in-out",
-        "border border-border/50",
+        "border-[1.5px] border-border/50",
         isOpen
           ? "bg-gradient-to-br from-background via-muted/50 to-background"
           : "hover:bg-muted/50"

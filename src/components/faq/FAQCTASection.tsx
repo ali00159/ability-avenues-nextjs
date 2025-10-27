@@ -7,7 +7,7 @@ import { ArrowRight, Calendar } from "lucide-react";
 
 const FAQCTASection = () => {
   return (
-    <section className="py-16 md:py-20 bg-cornsilk/30">
+    <section className="py-16 md:py-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -40,7 +40,7 @@ const FAQCTASection = () => {
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform flex-shrink-0" />
                   </Button>
                 </Link>
-                <Link href="/contact" className="w-full sm:w-auto">
+                <Link href="/center-based-therapy" className="w-full sm:w-auto">
                   <Button
                     variant="outline"
                     size="lg"
