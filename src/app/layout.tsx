@@ -14,10 +14,10 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Ability Avenues - ABA Therapy for Children with Autism',
+    default: 'Ability Avenues - ABA Therapy for Children with Autism in Minneapolis',
     template: '%s | Ability Avenues',
   },
-  description: 'Personalized ABA therapy for children with autism. Center-based and in-home services in Minnesota.',
+  description: 'Personalized autism therapy and ABA services for children with autism. Center-based and in-home autism therapy in Minneapolis, Minnesota.',
 };
 
 export default function RootLayout({
