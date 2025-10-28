@@ -26,10 +26,10 @@ const InHomeProgramOverview = () => {
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.9 }}
           className="max-w-6xl mx-auto"
         >
           {/* Header with Vision Illustration Icon */}
@@ -80,10 +80,10 @@ const InHomeProgramOverview = () => {
           <div className="grid md:grid-cols-2 gap-8 relative">
             {/* Card 1 - Schedule a Tour */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.85, delay: 0.1 }}
             >
               <Card className="p-8 h-full bg-white border-2 border-gray-100 hover:border-pacific-cyan/30 transition-all duration-300">
                 <div className="flex flex-col items-start h-full">
@@ -104,10 +104,10 @@ const InHomeProgramOverview = () => {
 
             {/* Card 2 - ABA at Ability Avenues */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 80 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.85, delay: 0.2 }}
             >
               <Card className="p-8 h-full bg-white border-2 border-gray-100 hover:border-pacific-cyan/30 transition-all duration-300">
                 <div className="flex flex-col items-start h-full">

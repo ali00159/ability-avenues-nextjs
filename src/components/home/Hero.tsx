@@ -18,6 +18,7 @@ const Hero = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   
+  
 
   useEffect(() => {
     // Reset elements to ensure clean state on navigation
@@ -67,7 +68,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-light">
+    <section className="relative min-h-screen bg-gradient-light overflow-hidden">
       {/* Animated Background Shapes - Optimized for mobile performance */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <motion.div
@@ -101,12 +102,12 @@ const Hero = () => {
       </div>
       {/* Content */}
       <div className="container mx-auto px-4 z-10 relative pt-24 md:pt-32 pb-12 md:pb-20">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left Column - Text Content */}
           <div className="relative z-20 max-w-2xl w-full flex flex-col">
             <h1
               ref={titleRef}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight tracking-tight drop-shadow order-1"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight tracking-tight drop-shadow"
             >
               Where children & their families can{" "}
               <span className="text-yellow-green block mt-2">
@@ -124,13 +125,13 @@ const Hero = () => {
 
             <p
               ref={subtitleRef}
-              className="text-xl md:text-2xl text-foreground mb-8 leading-relaxed font-normal order-3 lg:order-2"
+              className="text-xl md:text-2xl text-foreground mb-8 leading-relaxed font-normal"
             >
               Personalized ABA therapy for children with autism.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4 mb-10 mt-6 md:mt-8 order-4 lg:order-3">
+            <div className="flex flex-wrap items-center gap-4 mb-10 mt-6 md:mt-8">
               <Link href="/contact">
                 <Button
                   size="lg"
@@ -159,7 +160,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2, duration: 0.8 }}
-              className="flex flex-wrap items-center gap-6 md:gap-10 order-5 lg:order-4"
+              className="flex flex-wrap items-center gap-6 md:gap-10"
             >
               <div className="flex items-center gap-3">
                 <Star className="w-5 h-5 md:w-6 md:h-6 text-xanthous flex-shrink-0" fill="currentColor" />
@@ -193,11 +194,11 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.4 }}
-            className="flex items-center justify-center relative order-2 max-w-sm md:max-w-md lg:max-w-4xl mx-auto lg:mx-0"
+            className="relative"
           >
             {/* Floating Icons */}
             <motion.div
-              className="absolute -top-4 -right-4 text-secondary"
+              className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 text-secondary"
               animate={{
                 y: [0, -20, 0],
                 rotate: [0, 8, 0],
@@ -209,11 +210,11 @@ const Hero = () => {
               }}
               aria-hidden
             >
-              <Puzzle className="w-16 h-16" />
+              <Puzzle className="w-6 h-6 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-16 lg:h-16" />
             </motion.div>
 
             <motion.div
-              className="absolute -bottom-2 -left-2 text-primary"
+              className="absolute -bottom-1 -left-1 sm:-bottom-2 sm:-left-2 text-primary"
               animate={{
                 y: [0, 22, 0],
                 rotate: [0, -8, 0],
@@ -225,11 +226,11 @@ const Hero = () => {
               }}
               aria-hidden
             >
-              <Pencil className="w-20 h-20" />
+              <Pencil className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20" />
             </motion.div>
 
             <motion.div
-              className="absolute top-10 left-2 text-xanthous"
+              className="absolute top-8 left-1 sm:top-10 sm:left-2 text-xanthous"
               animate={{
                 y: [0, 18, 0],
                 rotate: [0, 6, 0],
@@ -241,11 +242,11 @@ const Hero = () => {
               }}
               aria-hidden
             >
-              <Star className="w-14 h-14" fill="currentColor" />
+              <Star className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 lg:w-14 lg:h-14" fill="currentColor" />
             </motion.div>
 
             <motion.div
-              className="absolute -bottom-2 right-4 text-secondary"
+              className="absolute -bottom-1 right-2 sm:-bottom-2 sm:right-4 text-secondary"
               animate={{
                 y: [0, -18, 0],
                 rotate: [0, -6, 0],
@@ -257,10 +258,10 @@ const Hero = () => {
               }}
               aria-hidden
             >
-              <Smile className="w-16 h-16" />
+              <Smile className="w-6 h-6 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-16 lg:h-16" />
             </motion.div>
 
-            <div className="relative w-full aspect-square max-w-md mx-auto">
+            <div className="relative w-full aspect-square max-w-sm sm:max-w-md md:max-w-md mx-auto overflow-visible">
               {/* Layer 1: Yellow Circle Opaque - Larger, Bottom Layer */}
               <motion.div
                 initial={{ opacity: 0, x: 200, scale: 1.5225, y: '-10%' }}
@@ -274,6 +275,7 @@ const Hero = () => {
                   className="w-full h-full object-contain"
                   width={500}
                   height={500}
+                  loading="lazy"
                   aria-hidden="true"
                 />
               </motion.div>
@@ -291,6 +293,7 @@ const Hero = () => {
                   className="w-full h-full object-contain"
                   width={500}
                   height={500}
+                  loading="lazy"
                   aria-hidden="true"
                 />
               </motion.div>
@@ -308,6 +311,8 @@ const Hero = () => {
                   className="w-full h-full object-contain"
                   width={500}
                   height={500}
+                  priority
+                  quality={85}
                 />
               </motion.div>
             </div>

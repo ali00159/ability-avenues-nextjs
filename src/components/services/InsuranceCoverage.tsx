@@ -27,10 +27,10 @@ const InsuranceCoverage = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 70 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.9 }}
             className="bg-white rounded-3xl shadow-lg p-8 md:p-12"
           >
             {/* Header */}

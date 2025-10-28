@@ -33,10 +33,10 @@ const WhatIsInHomeABA = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 70 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.9 }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -56,10 +56,10 @@ const WhatIsInHomeABA = () => {
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 80 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.85, delay: index * 0.1 }}
                 >
                   <Card className="p-8 h-full bg-white border-2 border-gray-100 hover:border-pacific-cyan/30 transition-all duration-300">
                     <div className="flex flex-col items-start h-full">
@@ -79,10 +79,10 @@ const WhatIsInHomeABA = () => {
 
           {/* Additional Context */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 70 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.9, delay: 0.4 }}
             className="mt-12 max-w-4xl mx-auto"
           >
             <Card className="p-8 bg-pacific-cyan/5 border-2 border-pacific-cyan/20">

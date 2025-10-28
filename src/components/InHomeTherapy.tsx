@@ -3,13 +3,12 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from "next/image";
-import { useEffect, useState, lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
-import { HeartHandshake, Check, Phone, ArrowRight, ChevronRight, Puzzle, Star, Pencil, Smile, Clock, Target, TrendingUp, Search as SearchIcon, Sparkles, Home, Users, Building2 } from "lucide-react";
+import { Check, Phone, Puzzle, Star, Pencil, Smile, Clock, Users } from "lucide-react";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import greenOval from "@/assets/green-oval.svg";
 import greenOvalOpaque from "@/assets/green-oval-opaque.svg";
 import girlHoldingToy from "@/assets/girl-holding-toy.png";
@@ -25,48 +24,6 @@ const InsuranceCoverage = lazy(() => import("@/components/services/InsuranceCove
 
 const InHomeTherapy = () => {
   const pathname = usePathname();
-  const [activeSection, setActiveSection] = useState("aba-therapy");
-
-  const sections = [
-    { id: "aba-therapy", label: "ABA Therapy Overview", icon: HeartHandshake },
-    { id: "in-home", label: "In-Home Services", icon: Home },
-    { id: "center-based", label: "Center-Based Services", icon: Building2 },
-    { id: "eidbi", label: "EIDBI Services", icon: Users },
-  ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200;
-
-      for (const section of sections) {
-        const element = document.getElementById(section.id);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section.id);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 100;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -147,7 +104,7 @@ const InHomeTherapy = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
             >
-              <div className="relative w-full aspect-square max-w-md mx-auto">
+              <div className="relative w-full aspect-square max-w-sm sm:max-w-md md:max-w-md mx-auto">
                 {/* Layer 1: Green Oval Opaque - Smaller, Bottom Layer */}
                 <motion.div
                   initial={{ opacity: 0, x: 200, scale: 0.78, y: '-10%' }}
@@ -161,6 +118,7 @@ const InHomeTherapy = () => {
                     className="w-full h-full object-contain"
                     width={500}
                     height={500}
+                    loading="lazy"
                     aria-hidden="true"
                   />
                 </motion.div>
@@ -178,6 +136,7 @@ const InHomeTherapy = () => {
                     className="w-full h-full object-contain"
                     width={500}
                     height={500}
+                    loading="lazy"
                     aria-hidden="true"
                   />
                 </motion.div>
@@ -195,42 +154,44 @@ const InHomeTherapy = () => {
                     className="w-full h-full object-contain"
                     width={500}
                     height={500}
+                    priority
+                    quality={85}
                   />
                 </motion.div>
               </div>
               
               {/* Decorative floating icons */}
               <motion.div
-                className="absolute -top-4 -right-4 text-secondary"
+                className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 text-secondary"
                 animate={{ y: [0, -12, 0], rotate: [0, 8, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 aria-hidden
               >
-                <Puzzle className="w-16 h-16" />
+                <Puzzle className="w-6 h-6 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-16 lg:h-16" />
               </motion.div>
               <motion.div
-                className="absolute -bottom-2 -left-2 text-primary"
+                className="absolute -bottom-1 -left-1 sm:-bottom-2 sm:-left-2 text-primary"
                 animate={{ y: [0, 14, 0], rotate: [0, -8, 0] }}
                 transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut" }}
                 aria-hidden
               >
-                <Pencil className="w-20 h-20" />
+                <Pencil className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20" />
               </motion.div>
               <motion.div
-                className="absolute top-10 left-2 text-xanthous"
+                className="absolute top-8 left-1 sm:top-10 sm:left-2 text-xanthous"
                 animate={{ y: [0, 10, 0], rotate: [0, 6, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 aria-hidden
               >
-                <Star className="w-14 h-14" fill="currentColor" />
+                <Star className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 lg:w-14 lg:h-14" fill="currentColor" />
               </motion.div>
               <motion.div
-                className="absolute -bottom-2 right-4 text-secondary"
+                className="absolute -bottom-1 right-2 sm:-bottom-2 sm:right-4 text-secondary"
                 animate={{ y: [0, -10, 0], rotate: [0, -6, 0] }}
                 transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut" }}
                 aria-hidden
               >
-                <Smile className="w-16 h-16" />
+                <Smile className="w-6 h-6 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-16 lg:h-16" />
               </motion.div>
             </motion.div>
           </div>
