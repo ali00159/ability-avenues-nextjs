@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from "next/image";
-import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { Check, Phone, Puzzle, Star, Pencil, Smile, Clock, Users } from "lucide-react";
 import Header from "@/components/shared/Header";
@@ -12,15 +11,13 @@ import { Button } from "@/components/ui/button";
 import greenOval from "@/assets/green-oval.svg";
 import greenOvalOpaque from "@/assets/green-oval-opaque.svg";
 import girlHoldingToy from "@/assets/girl-holding-toy.png";
-
-// Lazy load service sections for better performance
-const ContactForm = lazy(() => import("@/components/contact/ContactForm"));
-const InHomeProgramOverview = lazy(() => import("@/components/services/InHomeProgramOverview"));
-const WhatIsInHomeABA = lazy(() => import("@/components/services/WhatIsInHomeABA"));
-const WhyInHome = lazy(() => import("@/components/services/WhyInHome"));
-const InHomeScheduleSection = lazy(() => import("@/components/services/InHomeScheduleSection"));
-const InHomeTherapyApproach = lazy(() => import("@/components/services/InHomeTherapyApproach"));
-const InsuranceCoverage = lazy(() => import("@/components/services/InsuranceCoverage"));
+import ContactForm from "@/components/contact/ContactForm";
+import InHomeProgramOverview from "@/components/services/InHomeProgramOverview";
+import WhatIsInHomeABA from "@/components/services/WhatIsInHomeABA";
+import WhyInHome from "@/components/services/WhyInHome";
+import InHomeScheduleSection from "@/components/services/InHomeScheduleSection";
+import InHomeTherapyApproach from "@/components/services/InHomeTherapyApproach";
+import InsuranceCoverage from "@/components/services/InsuranceCoverage";
 
 const InHomeTherapy = () => {
   const pathname = usePathname();
@@ -199,19 +196,17 @@ const InHomeTherapy = () => {
         </div>
       </section>
       {/* New Sections Following Design System */}
-      <Suspense fallback={<div className="h-screen" />}>
-        <InHomeProgramOverview />
-        <WhatIsInHomeABA />
-        <WhyInHome />
-        <InHomeScheduleSection />
-        <InHomeTherapyApproach />
-        <InsuranceCoverage />
+      <InHomeProgramOverview />
+      <WhatIsInHomeABA />
+      <WhyInHome />
+      <InHomeScheduleSection />
+      <InHomeTherapyApproach />
+      <InsuranceCoverage />
 
-        {/* Contact Form */}
-        <div id="contact">
-          <ContactForm />
-        </div>
-      </Suspense>
+      {/* Contact Form */}
+      <div id="contact">
+        <ContactForm />
+      </div>
       <Footer />
     </div>
   );

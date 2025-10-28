@@ -35,9 +35,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Providers>
-          {children}
-        </Providers>
+        <div className="overflow-x-hidden max-w-[100vw]">
+          <Providers>
+            {children}
+          </Providers>
+        </div>
         <SpeedInsights />
         <Analytics />
       </body>

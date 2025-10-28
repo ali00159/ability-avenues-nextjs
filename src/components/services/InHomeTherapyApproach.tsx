@@ -1,15 +1,12 @@
 'use client';
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import { Heart, Target, Users, ArrowRight } from "lucide-react";
 import ApproachCard from "./ApproachCard";
 
 const InHomeTherapyApproach = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-  
   const approaches = [
     {
       icon: Heart,
@@ -40,27 +37,14 @@ const InHomeTherapyApproach = () => {
     },
   ];
 
-  // Track scroll progress of the section
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start center", "end center"]
-  });
-
-  // Transform to control opacity and position
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
-  const y = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [50, 0, 0, -50]);
-
   return (
-    <section ref={sectionRef} className="py-24 bg-pacific-cyan/5 relative overflow-hidden">
+    <section className="py-24 bg-pacific-cyan/5 relative">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          {/* 2-Column Layout: Left Header (Sticky), Right Cards */}
+          {/* 2-Column Layout: Left Header, Right Cards */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-            {/* Left Column: Sticky Header */}
-            <motion.div
-              style={{ opacity, y }}
-              className="lg:sticky lg:top-24 lg:self-start"
-            >
+            {/* Left Column: Header */}
+            <div>
               <h2 className="text-3xl md:text-5xl lg:text-5xl font-bold mb-6 text-left">
                 <span className="text-raisin-black">Our In-Home </span>
                 <span className="text-secondary">Therapy Approach</span>
@@ -69,7 +53,7 @@ const InHomeTherapyApproach = () => {
                 Our in-home ABA therapy approach focuses on family involvement, natural learning environments, 
                 and practical skill development that integrates seamlessly into your daily routine.
               </p>
-            </motion.div>
+            </div>
 
             {/* Right Column: Cards */}
             <div className="space-y-6">

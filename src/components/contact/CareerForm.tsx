@@ -267,13 +267,7 @@ const CareerForm = () => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start max-w-6xl mx-auto">
           {/* Left side - Info */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:sticky lg:top-24 hidden lg:block"
-          >
+          <div className="hidden lg:block">
             <div className="flex items-start gap-4 mb-6">
               <div className="w-20 h-20 rounded-3xl bg-pacific-cyan flex items-center justify-center shadow-lg">
                 <Briefcase className="w-10 h-10 text-white" />
@@ -331,7 +325,7 @@ const CareerForm = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right side - Form */}
           <motion.div
