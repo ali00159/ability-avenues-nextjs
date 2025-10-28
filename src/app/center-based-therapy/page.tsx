@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: 'Ability Avenues',
     images: [
       {
-        url: '/images/therapy-session.jpg',
+        url: '/images/opengraph-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Center-based ABA therapy at Ability Avenues in Minneapolis',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Center-Based ABA Therapy in Minneapolis',
     description: 'Evidence-based center-based ABA therapy for children and teens with autism ages 1-18 in Minneapolis.',
-    images: ['/images/therapy-session.jpg'],
+    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/center-based-therapy',
@@ -41,7 +41,7 @@ export default function CenterBasedTherapyPage() {
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
             name: 'Ability Avenues',
-            image: 'https://abilityavenues.com/images/therapy-session.jpg',
+            image: 'https://abilityavenues.com/images/opengraph-image.jpg',
             '@id': 'https://abilityavenues.com',
             url: 'https://abilityavenues.com',
             telephone: '',

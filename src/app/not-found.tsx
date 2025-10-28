@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/og-default.jpg',
+        url: '/images/opengraph-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Ability Avenues - Page Not Found',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary',
     title: '404 - Page Not Found',
     description: 'The page you are looking for does not exist.',
-    images: ['/images/og-default.jpg'],
+    images: ['/images/opengraph-image.jpg'],
   },
 };
 

@@ -97,15 +97,17 @@ const InHomeTherapy = () => {
             <motion.div
               key={`home-right-${pathname}`}
               initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
               className="relative"
             >
               <div className="relative w-full aspect-square max-w-sm sm:max-w-md md:max-w-md mx-auto">
                 {/* Layer 1: Green Oval Opaque - Smaller, Bottom Layer */}
                 <motion.div
                   initial={{ opacity: 0, x: 200, scale: 0.78, y: '-10%' }}
-                  animate={{ opacity: 1, x: '-15%', scale: 0.78, y: '-10%' }}
+                  whileInView={{ opacity: 1, x: '-15%', scale: 0.78, y: '-10%' }}
+                  viewport={{ once: true }}
                   transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
                   className="absolute inset-0 flex items-center justify-center"
                 >
@@ -123,7 +125,8 @@ const InHomeTherapy = () => {
                 {/* Layer 2: Green Oval (Non-Opaque) - Larger, Middle Layer */}
                 <motion.div
                   initial={{ opacity: 0, x: -200, scale: 1.08, y: '25%' }}
-                  animate={{ opacity: 1, x: 0, scale: 1.08, y: '25%' }}
+                  whileInView={{ opacity: 1, x: 0, scale: 1.08, y: '25%' }}
+                  viewport={{ once: true }}
                   transition={{ duration: 1, ease: "easeOut" }}
                   className="absolute inset-0 flex items-center justify-center"
                 >
@@ -141,7 +144,8 @@ const InHomeTherapy = () => {
                 {/* Layer 3: Girl Holding Toy - Enlarged, Top Layer */}
                 <motion.div
                   initial={{ opacity: 0, y: '-10%', scale: 1.3 }}
-                  animate={{ opacity: 1, y: '-10%', scale: 1.3 }}
+                  whileInView={{ opacity: 1, y: '-10%', scale: 1.3 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
                   className="absolute inset-0 flex items-center justify-center z-10"
                 >

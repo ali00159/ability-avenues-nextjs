@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: 'Ability Avenues',
     images: [
       {
-        url: '/images/og-default.jpg',
+        url: '/images/opengraph-image.jpg',
         width: 1200,
         height: 630,
         alt: 'FAQ - Ability Avenues ABA Therapy',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'FAQ - Common Questions About ABA Therapy & Autism Services',
     description: 'Get answers to frequently asked questions about ABA therapy, autism services, and getting started with Ability Avenues.',
-    images: ['/images/og-default.jpg'],
+    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/faq',

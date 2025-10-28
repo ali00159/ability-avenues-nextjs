@@ -5,17 +5,19 @@ import Image from "next/image";
 import compassIcon from "@/assets/compass.svg";
 
 const schedule = [
-  { time: "8:30 AM", activity: "Arrival & Greeting" },
-  { time: "9:00 AM", activity: "Small group learning and playing" },
-  { time: "9:45 AM", activity: "Circle time activity" },
-  { time: "10:15 AM", activity: "Snack and hygiene" },
-  { time: "10:30 AM", activity: "1:1 focused learning" },
-  { time: "12:00 PM", activity: "Playground activity (indoor & outdoor)" },
-  { time: "12:45 PM", activity: "Lunch" },
-  { time: "1:15 PM", activity: "Independent play & quiet time" },
-  { time: "2:00 PM", activity: "1:1 focused learning" },
-  { time: "3:30 PM", activity: "Small group learning and playing" },
-  { time: "4:30 PM", activity: "Wrap-up & Family Communication" },
+  { time: "8:00 AM", activity: "Arrival and greeting time with morning routine setup" },
+  { time: "8:30 AM", activity: "Small group learning activities with social skill focus" },
+  { time: "9:15 AM", activity: "Circle time with songs stories and group participation" },
+  { time: "9:45 AM", activity: "Snack time and hygiene routines with handwashing practice" },
+  { time: "10:15 AM", activity: "Individualized one-on-one focused skill building sessions" },
+  { time: "11:00 AM", activity: "Outdoor playground activities with gross motor skill practice" },
+  { time: "12:00 PM", activity: "Lunch time with mealtime therapy and social eating" },
+  { time: "12:30 PM", activity: "Independent play time for self-directed skill development" },
+  { time: "1:15 PM", activity: "Individualized one-on-one focused skill building sessions" },
+  { time: "2:00 PM", activity: "Small group learning activities with peer interaction focus" },
+  { time: "2:45 PM", activity: "Circle time with songs stories and group participation" },
+  { time: "3:30 PM", activity: "Outdoor playground activities with gross motor skill practice" },
+  { time: "4:00 PM", activity: "Daily wrap-up session and parent communication time" },
 ];
 
 const DailyScheduleSection = () => {
@@ -62,14 +64,14 @@ const DailyScheduleSection = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className={`grid grid-cols-[140px_1fr] gap-6 p-6 ${
+                className={`grid grid-cols-[120px_1fr] gap-4 p-6 ${
                   index % 2 === 0 ? "bg-cornsilk/20" : "bg-white"
                 } ${index !== schedule.length - 1 ? "border-b border-cornsilk" : ""}`}
               >
-                <div className="text-muted-foreground font-light text-sm flex items-center">
+                <div className="text-muted-foreground font-bold text-sm flex items-center justify-start text-left">
                   {item.time}
                 </div>
-                <div className="text-foreground font-normal flex items-center">
+                <div className="text-foreground font-normal flex items-center justify-start text-left">
                   {item.activity}
                 </div>
               </motion.div>

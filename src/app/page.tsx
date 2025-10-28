@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: 'Ability Avenues',
     images: [
       {
-        url: '/images/team-photo.jpg',
+        url: '/images/opengraph-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Ability Avenues - ABA Therapy Minneapolis',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ability Avenues - ABA Therapy for Children with Autism in Minneapolis',
     description: 'Personalized autism therapy and ABA services for children with autism. Center-based and in-home autism therapy in Minneapolis, Minnesota.',
-    images: ['/images/team-photo.jpg'],
+    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com',
@@ -42,7 +42,7 @@ export default function IndexPage() {
             '@type': 'Organization',
             name: 'Ability Avenues',
             url: 'https://abilityavenues.com',
-            logo: 'https://abilityavenues.com/images/og-default.jpg',
+            logo: 'https://abilityavenues.com/images/opengraph-image.jpg',
             description: 'Personalized autism therapy and ABA services for children with autism in Minneapolis, Minnesota.',
             address: {
               '@type': 'PostalAddress',

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: 'Ability Avenues',
     images: [
       {
-        url: '/images/team-photo.jpg',
+        url: '/images/opengraph-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Ability Avenues Team - ABA Therapy Minneapolis',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About Us - Our Mission to Support Children with Autism',
     description: 'Learn about Ability Avenues, a leading ABA therapy provider in Minneapolis. Our dedicated team and evidence-based approach.',
-    images: ['/images/team-photo.jpg'],
+    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/about',
@@ -42,7 +42,7 @@ export default function AboutUsPage() {
             '@type': 'Organization',
             name: 'Ability Avenues',
             url: 'https://abilityavenues.com',
-            logo: 'https://abilityavenues.com/images/og-default.jpg',
+            logo: 'https://abilityavenues.com/images/opengraph-image.jpg',
             description: 'Leading ABA therapy provider in Minneapolis dedicated to supporting children with autism through evidence-based interventions.',
             foundingDate: '2020',
             areaServed: {
