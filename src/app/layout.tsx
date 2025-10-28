@@ -24,6 +24,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Ability Avenues',
+    images: [
+      {
+        url: '/opengraph-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Ability Avenues - ABA Therapy Minneapolis',
+      },
+    ],
   },
 };
 

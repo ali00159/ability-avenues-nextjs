@@ -127,7 +127,7 @@ const Hero = () => {
               ref={subtitleRef}
               className="text-xl md:text-2xl text-foreground mb-8 leading-relaxed font-normal"
             >
-              Personalized ABA therapy for children with autism.
+              Evidence-based Applied Behavior Analysis by Board Certified Behavior Analysts (BCBAs). Center-based and in-home therapy for ages 2-18. We accept EIDBI and most insurance plans.
             </p>
 
             {/* CTA Buttons */}
@@ -174,7 +174,7 @@ const Hero = () => {
                 <Award className="w-5 h-5 md:w-6 md:h-6 text-primary flex-shrink-0" />
                 <div className="text-sm">
                   <div className="font-semibold text-foreground">#1 Rated</div>
-                  <div className="text-muted-foreground">ABA therapy</div>
+                  <div className="text-muted-foreground">in Minneapolis</div>
                 </div>
               </div>
               <div className="h-10 w-px bg-border hidden sm:block" />

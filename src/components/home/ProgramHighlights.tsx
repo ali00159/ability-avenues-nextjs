@@ -17,7 +17,7 @@ const highlights = [
     icon: iconEvidence,
     title: "Evidence-Based",
     description:
-      "Our programs utilize proven ABA techniques backed by clinical evidence and overseen by Board Certified Behavior Analysts (BCBAs).",
+      "Our programs utilize proven Applied Behavior Analysis techniques backed by clinical evidence and overseen by Board Certified Behavior Analysts (BCBAs).",
     bgColor: "",
     iconColor: "text-white",
   },
@@ -33,7 +33,7 @@ const highlights = [
     icon: iconSchool,
     title: "School Readiness",
     description:
-      "Our comprehensive STEP program prepares children with the fundamental cognitive, social, and emotional skills needed for mainstream classrooms.",
+      "Our comprehensive program prepares children with autism spectrum disorder with the fundamental cognitive, social, and emotional skills needed for mainstream classrooms.",
     bgColor: "bg-xanthous",
     iconColor: "text-white",
   },
@@ -78,7 +78,7 @@ const ProgramHighlights = () => {
           <h2 className="mt-4 mb-6">Built for Kids, Designed for Success</h2>
           <p className="text-lg text-muted-foreground">
             At Ability Avenues, we're committed to meeting each child where they are and helping them grow through
-            individualized, evidence-based care.
+            individualized, evidence-based care by Board Certified Behavior Analysts (BCBAs) for Minnesota families.
           </p>
         </motion.div>
 

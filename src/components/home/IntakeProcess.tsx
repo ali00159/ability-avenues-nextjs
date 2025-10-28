@@ -31,7 +31,7 @@ const IntakeProcess = () => {
     {
       number: 2,
       title: "Insurance & Documentation",
-      description: "We'll help you complete necessary paperwork and verify your insurance coverage. Our team will work to ensure all documentation is in order.",
+      description: "We'll help you complete necessary paperwork and verify your insurance coverage or EIDBI eligibility (Minnesota Medicaid program covering ABA therapy). Our team will work to ensure all documentation is in order.",
       icon: FileText,
       color: "secondary",
       bgColor: "bg-secondary",

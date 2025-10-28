@@ -81,7 +81,7 @@ const Testimonials = () => {
               What Families Say
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Hear from the families who have experienced the transformative impact of our services
+              Hear from families who have experienced the transformative impact of our Applied Behavior Analysis services for children with autism spectrum disorder
             </p>
           </motion.div>
         </div>
