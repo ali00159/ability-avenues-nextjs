@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 
 const WhyCenterBased = () => {
   return (
-    <section className="py-24 bg-pacific-cyan">
+    <section className="py-24 bg-[radial-gradient(circle_at_center,white_0%,hsl(var(--pacific-cyan))_100%)] relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <motion.div
@@ -19,19 +19,26 @@ const WhyCenterBased = () => {
           >
             {/* Icon - Custom SVG */}
             <div className="flex justify-center mb-8">
-              <Image 
-                src={centerBasedIcon} 
-                alt="Center-Based Program" 
-                className="w-40 h-40 md:w-52 md:h-52"
-                width={208}
-                height={208}
-              />
+              <motion.div
+                initial={{ opacity: 0, y: 60, x: 0, rotate: 0 }}
+                whileInView={{ opacity: 1, y: 0, x: [-20, 0], rotate: 5 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
+              >
+                <Image 
+                  src={centerBasedIcon} 
+                  alt="Center-Based Program" 
+                  className="w-40 h-40 md:w-52 md:h-52"
+                  width={208}
+                  height={208}
+                />
+              </motion.div>
             </div>
 
             {/* Title */}
             <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-center mb-8 md:mb-12 leading-relaxed px-4">
               <span className="text-raisin-black">Why Choose a </span>
-              <span className="text-yellow-green">Center-Based </span>
+              <span className="text-pacific-cyan">Center-Based </span>
               <span className="text-raisin-black">ABA Program?</span>
             </h3>
             
