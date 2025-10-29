@@ -42,7 +42,7 @@ const EligibilityChecker = () => {
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.9 }}
+          transition={{ duration: 0.55 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -64,7 +64,7 @@ const EligibilityChecker = () => {
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.85, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card className="p-6 h-full hover-lift hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-primary/20 bg-white">
                   {/* Icon with Background */}
@@ -107,7 +107,7 @@ const EligibilityChecker = () => {
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
           className="text-center"
         >
           <Link href="/contact">
@@ -120,10 +120,7 @@ const EligibilityChecker = () => {
           </Link>
           
           <p className="mt-6 text-muted-foreground max-w-2xl mx-auto">
-            Not sure if your child qualifies? Our team can help you determine eligibility.{' '}
-            <Link href="/contact" className="text-pacific-cyan hover:underline font-medium">
-              Call 651-431-2670
-            </Link>
+            Not sure if your child qualifies? Our team can help you determine eligibility.
           </p>
         </motion.div>
       </div>

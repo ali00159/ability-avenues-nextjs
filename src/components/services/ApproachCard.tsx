@@ -30,7 +30,7 @@ const ApproachCard = ({
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.85, delay: index * 0.1 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <Card
         className={`p-8 h-full ${bgColor} border-2 ${borderColor} transition-all duration-300 hover:shadow-lg`}

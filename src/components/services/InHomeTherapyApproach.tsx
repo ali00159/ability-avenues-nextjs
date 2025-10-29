@@ -97,7 +97,7 @@ const InHomeTherapyApproach = () => {
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.9 }}
+          transition={{ duration: 0.55 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -132,7 +132,7 @@ const InHomeTherapyApproach = () => {
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.85, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={gridClasses}
               >
                 <Card

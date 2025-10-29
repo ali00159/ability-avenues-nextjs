@@ -31,7 +31,7 @@ const stats = [
   },
 ];
 
-const WhatIsEidbi = () => {
+const WhatIsEidbiDuplicate = () => {
   const contentRef = useRef<HTMLDivElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -43,7 +43,7 @@ const WhatIsEidbi = () => {
       const ctx = gsap.context(() => {
         gsap.fromTo(
           contentRef.current,
-          {
+ করতে {
             opacity: 0,
             y: 60,
           },
@@ -73,8 +73,36 @@ const WhatIsEidbi = () => {
   return (
     <section className="py-24 bg-gradient-to-br from-cornsilk/20 via-white to-pacific-cyan/5 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-12 lg:gap-16 items-center">
-          {/* Left Column - Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-12 lg:gap-16 items-center">
+          {/* Left Column - Image Placeholder */}
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <div className="relative w-full max-w-xl mx-auto">
+              {/* Decorative Accent Circle */}
+              <div
+                className="absolute -bottom-8 -right-8 w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-yellow-green/20 to-pacific-cyan/20 rounded-full blur-2xl"
+                aria-hidden="true"
+              />
+              
+              {/* Main Visual */}
+              <div className="relative z-10 aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-cornsilk to-pacific-cyan/10 shadow-lg">
+                <Image
+                  src="/placeholder.svg"
+                  alt="Placeholder image"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right Column - Content */}
           <div ref={contentRef} className="space-y-6">
             {/* Eyebrow Text */}
             <div className="inline-block">
@@ -114,7 +142,7 @@ const WhatIsEidbi = () => {
                 through Minnesota's Medical Assistance programs, removing financial barriers to 
                 essential autism services.
               </p>
-            </div>
+            </div страницу
 
             {/* Three Stat Boxes */}
             <div ref={statsRef} className="grid grid-cols-3 gap-4 pt-6">
@@ -153,39 +181,11 @@ const WhatIsEidbi = () => {
               </Link>
             </div>
           </div>
-
-          {/* Right Column - Decorative Illustration */}
-          <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            <div className="relative w-full max-w-xl mx-auto">
-              {/* Decorative Accent Circle */}
-              <div
-                className="absolute -bottom-8 -left-8 w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-yellow-green/20 to-pacific-cyan/20 rounded-full blur-2xl"
-                aria-hidden="true"
-              />
-              
-              {/* Main Visual */}
-              <div className="relative z-10 aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-cornsilk to-pacific-cyan/10 shadow-lg">
-                <Image
-                  src="/placeholder.svg"
-                  alt="Placeholder image"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 55vw"
-                />
-              </div>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
   );
 };
 
-export default WhatIsEidbi;
+export default WhatIsEidbiDuplicate;
 

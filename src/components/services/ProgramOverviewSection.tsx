@@ -4,9 +4,9 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, ClipboardCheck } from "lucide-react";
-import abaIcon from "@/assets/aba-icon.svg";
-import graduationCapIcon from "@/assets/graduation-cap-icon.svg";
+import yellowGreenPencilIcon from "@/assets/yellow-green-pencil-icon.svg";
+import greenMapPinIcon from "@/assets/green-map-pin-icon.svg";
+import greenGradCapIcon from "@/assets/green-grad-cap-icon.svg";
 
 const ProgramOverviewSection = () => {
   const scrollToContact = () => {
@@ -33,9 +33,39 @@ const ProgramOverviewSection = () => {
           className="max-w-6xl mx-auto"
         >
           {/* Header with ABA Icon */}
-          <div className="text-center mb-8">
-          <div className="flex justify-center mb-3">
-            <Image src={abaIcon} alt="ABA Therapy" className="w-32 h-32 md:w-40 md:h-40" width={160} height={160} />
+          <div className="text-center mb-4">
+          <div className="flex justify-center mb-2">
+            <motion.div
+              initial={{ opacity: 0, x: -150, rotate: 0 }}
+              whileInView={{ 
+                opacity: 1, 
+                x: 0,
+                transition: { 
+                  duration: 0.8, 
+                  delay: 0.3,
+                  ease: "easeOut"
+                }
+              }}
+              viewport={{ once: true }}
+              animate={{
+                rotate: [0, -8, 8, -8, 8, 0],
+                x: [0, -5, 5, -5, 5, 0]
+              }}
+              transition={{
+                rotate: {
+                  delay: 1.1,
+                  duration: 0.6,
+                  ease: "easeInOut"
+                },
+                x: {
+                  delay: 1.1,
+                  duration: 0.6,
+                  ease: "easeInOut"
+                }
+              }}
+            >
+              <Image src={yellowGreenPencilIcon} alt="ABA Therapy" className="w-40 h-40 md:w-52 md:h-52 lg:w-64 lg:h-64" width={256} height={256} />
+            </motion.div>
           </div>
           </div>
 
@@ -81,9 +111,7 @@ const ProgramOverviewSection = () => {
             >
               <Card className="p-8 h-full bg-white border-2 border-gray-100 hover:border-pacific-cyan/30 transition-all duration-300">
                 <div className="flex flex-col items-start h-full">
-                  <div className="w-16 h-16 bg-yellow-green/10 rounded-2xl flex items-center justify-center mb-6">
-                    <MapPin className="w-8 h-8 text-yellow-green" />
-                  </div>
+                  <Image src={greenMapPinIcon} alt="Map Pin" className="w-12 h-12 mb-6" width={48} height={48} />
                   <h3 className="text-xl font-bold text-raisin-black mb-4">Schedule a tour</h3>
                   <p className="text-muted-foreground mb-6 flex-grow leading-relaxed">
                     Securely submit your information using our brief interest form. We'll then contact you to answer
@@ -105,9 +133,7 @@ const ProgramOverviewSection = () => {
             >
               <Card className="p-8 h-full bg-white border-2 border-gray-100 hover:border-pacific-cyan/30 transition-all duration-300">
                 <div className="flex flex-col items-start h-full">
-                  <div className="w-16 h-16 bg-yellow-green/10 rounded-2xl flex items-center justify-center mb-6">
-                    <Image src={graduationCapIcon} alt="Graduation Cap" className="w-10 h-10" width={40} height={40} />
-                  </div>
+                  <Image src={greenGradCapIcon} alt="Graduation Cap" className="w-12 h-12 mb-6" width={48} height={48} />
                   <h3 className="text-xl font-bold text-raisin-black mb-4">ABA at Ability Avenues</h3>
                   <p className="text-muted-foreground mb-6 flex-grow leading-relaxed">
                     ABA therapy uses positive reinforcement and play-based activities to help children with autism reach

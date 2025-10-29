@@ -13,7 +13,7 @@ const FinalCTA = () => {
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.9 }}
+          transition={{ duration: 0.55 }}
           className="max-w-5xl mx-auto"
         >
           <div className="bg-gradient-to-br from-pacific-cyan via-pacific-cyan/90 to-yellow-green/80 rounded-[2rem] md:rounded-[2.5rem] p-8 sm:p-10 md:p-16 lg:p-20 text-center overflow-hidden relative">

@@ -71,7 +71,7 @@ const ProgramHighlights = () => {
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.9 }}
+          transition={{ duration: 0.55 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="text-secondary font-semibold uppercase tracking-wider text-sm">Why Choose Us</span>
@@ -90,7 +90,7 @@ const ProgramHighlights = () => {
                 initial={{ opacity: 0, y: 70 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.85, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex"
               >
                 <div className="flex flex-col items-start p-6 rounded-2xl bg-gradient-to-br from-cornsilk/50 to-transparent border border-border hover:shadow-md transition-all duration-300 h-full">
@@ -109,7 +109,7 @@ const ProgramHighlights = () => {
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
           className="flex justify-center mt-12"
         >
           <Link href="/about">

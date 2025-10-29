@@ -6,6 +6,7 @@ import EidbiHero from "@/components/eidbi/EidbiHero";
 // Lazy load below-the-fold sections for performance
 const EligibilityChecker = lazy(() => import("@/components/eidbi/EligibilityChecker"));
 const WhatIsEidbi = lazy(() => import("@/components/eidbi/WhatIsEidbi"));
+const EIDBIvsABA = lazy(() => import("@/components/eidbi/EIDBIvsABA"));
 const ComprehensiveServices = lazy(() => import("@/components/eidbi/ComprehensiveServices"));
 const NoCostHighlight = lazy(() => import("@/components/eidbi/NoCostHighlight"));
 const SupportNetwork = lazy(() => import("@/components/eidbi/SupportNetwork"));
@@ -20,6 +21,7 @@ const EIDBI = () => {
         <Suspense fallback={<div className="h-screen" />}>
           <EligibilityChecker />
           <WhatIsEidbi />
+          <EIDBIvsABA />
           <ComprehensiveServices />
           <NoCostHighlight />
           <SupportNetwork />

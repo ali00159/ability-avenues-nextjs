@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-// Using question hearts icon from FAQ page
 import { TestimonialsWithMarquee } from "@/components/ui/testimonials-with-marquee";
+import greenTrophyIcon from "@/assets/green-trophy-icon.svg";
 
 const testimonials = [
   {
@@ -68,7 +68,14 @@ const Testimonials = () => {
             transition={{ duration: 0.9 }}
           >
             <div className="flex justify-center mb-6">
-              <Image src="/images/question-hearts-red-icon.svg" alt="" className="w-40 h-40" width={160} height={160} />
+              <motion.div
+                initial={{ opacity: 0, rotate: 0 }}
+                whileInView={{ opacity: 1, rotate: [0, -10, 10, -10, 10, -5, 5, 0] }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+              >
+                <Image src={greenTrophyIcon} alt="" className="w-40 h-40" width={160} height={160} />
+              </motion.div>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               What Families Say

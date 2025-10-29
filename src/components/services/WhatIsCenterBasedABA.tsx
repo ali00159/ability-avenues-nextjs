@@ -17,7 +17,7 @@ const WhatIsCenterBasedABA = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.4 }}
             className="space-y-8"
           >
             {/* Service Category Label */}

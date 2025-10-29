@@ -61,7 +61,7 @@ const NoCostHighlight = () => {
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.9 }}
+          transition={{ duration: 0.55 }}
           className="text-center max-w-4xl mx-auto mb-12"
         >
           <h2 className="text-3xl md:text-4xl lg:text-[42px] font-bold mb-4">
@@ -150,7 +150,7 @@ const NoCostHighlight = () => {
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
           className="text-center"
         >
           <p className="text-lg text-muted-foreground mb-6">
