@@ -27,10 +27,10 @@ const InHomeScheduleSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 70 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
             <div className="flex justify-center mb-6">
@@ -52,18 +52,19 @@ const InHomeScheduleSection = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 70 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9, delay: 0.2 }}
-            className="bg-white rounded-2xl border-2 border-cornsilk overflow-visible shadow-sm"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white rounded-2xl border-2 border-cornsilk overflow-hidden shadow-sm"
           >
             {schedule.map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
                 className={`grid grid-cols-[120px_1fr] gap-4 p-6 ${
                   index % 2 === 0 ? "bg-cornsilk/20" : "bg-white"
                 } ${index !== schedule.length - 1 ? "border-b border-cornsilk" : ""}`}

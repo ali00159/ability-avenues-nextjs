@@ -4,8 +4,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, ClipboardCheck } from "lucide-react";
-import graduationCapIcon from "@/assets/graduation-cap-icon.svg";
+import yellowMapPinIcon from "@/assets/yellow-map-pin-icon.svg";
+import yellowGradCapIcon from "@/assets/yellow-grad-cap-icon.svg";
 import visionIllustration from "@/assets/vision-illustration.svg";
 
 const InHomeProgramOverview = () => {
@@ -87,9 +87,7 @@ const InHomeProgramOverview = () => {
             >
               <Card className="p-8 h-full bg-white border-2 border-gray-100 hover:border-pacific-cyan/30 transition-all duration-300">
                 <div className="flex flex-col items-start h-full">
-                  <div className="w-16 h-16 bg-yellow-green/10 rounded-2xl flex items-center justify-center mb-6">
-                    <MapPin className="w-8 h-8 text-xanthous" />
-                  </div>
+                  <Image src={yellowMapPinIcon} alt="Map Pin" className="w-12 h-12" width={48} height={48} />
                   <h3 className="text-xl font-bold text-raisin-black mb-4">Schedule an Assessment</h3>
                   <p className="text-muted-foreground mb-6 flex-grow leading-relaxed">
                     Securely submit your information using our brief interest form. We'll then contact you to answer
@@ -111,9 +109,7 @@ const InHomeProgramOverview = () => {
             >
               <Card className="p-8 h-full bg-white border-2 border-gray-100 hover:border-pacific-cyan/30 transition-all duration-300">
                 <div className="flex flex-col items-start h-full">
-                  <div className="w-16 h-16 bg-yellow-green/10 rounded-2xl flex items-center justify-center mb-6">
-                    <Image src={graduationCapIcon} alt="Graduation Cap" className="w-10 h-10" width={40} height={40} />
-                  </div>
+                  <Image src={yellowGradCapIcon} alt="Graduation Cap" className="w-12 h-12" width={48} height={48} />
                   <h3 className="text-xl font-bold text-raisin-black mb-4">In-Home ABA at Ability Avenues</h3>
                   <p className="text-muted-foreground mb-6 flex-grow leading-relaxed">
                     In-home ABA therapy uses positive reinforcement and play-based activities to help children with autism reach
