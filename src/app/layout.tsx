@@ -13,7 +13,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://abilityavenues.com'),
+  metadataBase: new URL('https://ability-avenues-nextjs.vercel.app'),
   title: {
     default: 'Ability Avenues - ABA Therapy for Children with Autism in Minneapolis',
     template: '%s | Ability Avenues',
