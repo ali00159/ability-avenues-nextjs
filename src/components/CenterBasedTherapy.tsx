@@ -9,8 +9,9 @@ import { HeartHandshake, Check, Phone, ArrowRight, ChevronRight, Puzzle, Star, P
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import therapyImage from "@/assets/therapy-session.jpg";
+import blueHexagonOpaque from "@/assets/blue-hexagon-opaqe.svg";
+import blueHexagon from "@/assets/blue-hexagon.svg";
+import kidSmilingImage from "@/assets/kid-smiling-hero-center-page.png";
 
 // Lazy load service sections for better performance
 const ContactForm = lazy(() => import("@/components/contact/ContactForm"));
@@ -20,6 +21,7 @@ const WhyCenterBased = lazy(() => import("@/components/services/WhyCenterBased")
 const DailyScheduleSection = lazy(() => import("@/components/services/DailyScheduleSection"));
 const InsuranceCoverage = lazy(() => import("@/components/services/InsuranceCoverage"));
 const MinneapolisLocation = lazy(() => import("@/components/services/MinneapolisLocation"));
+
 
 const Services = () => {
   const pathname = usePathname();
@@ -82,7 +84,7 @@ const Services = () => {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                <span className="text-secondary">Center-Based ABA Therapy</span>{" "}
+                <span className="text-pacific-cyan">Center-Based ABA Therapy</span>{" "}
                 <span className="text-raisin-black">in Minneapolis for Children & Teens with Autism</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
@@ -129,59 +131,106 @@ const Services = () => {
               </motion.div>
             </motion.div>
 
-            {/* Right Image */}
+            {/* Right Image - Layered Hexagon Composition */}
             <motion.div
               key={`center-right-${pathname}`}
               initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="absolute -top-12 -right-12 w-80 h-80 rounded-full bg-xanthous/30 -z-10" />
-              <div className="relative w-full aspect-square max-w-md mx-auto">
-                <Image
-                  src={therapyImage}
-                  alt="Children receiving center-based ABA therapy in Minneapolis autism center"
-                  className="w-full h-full object-cover rounded-full shadow-2xl"
-                  width={500}
-                  height={500}
-                  loading="eager"
-                  priority
-                />
+              <div className="relative w-full aspect-square max-w-md sm:max-w-lg md:max-w-xl mx-auto">
+                {/* Layer 1: Background Opaque Blue Hexagon */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 1.1, x: 200, y: '-6%' }}
+                  whileInView={{ opacity: 1, scale: 1.1, x: '-5%', y: '-6%' }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+                  className="absolute inset-0 flex items-center justify-center z-0 scale-110 md:scale-125"
+                >
+                  <Image
+                    src={blueHexagonOpaque}
+                    alt=""
+                    className="w-full h-full object-contain"
+                    width={400}
+                    height={400}
+                    loading="lazy"
+                    aria-hidden="true"
+                  />
+                </motion.div>
+
+                {/* Layer 2: Foreground Solid Blue Hexagon */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9, x: -200 }}
+                  whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, ease: "easeOut" }}
+                  className="absolute inset-0 flex items-center justify-center z-10 scale-100 md:scale-110"
+                >
+                  <Image
+                    src={blueHexagon}
+                    alt=""
+                    className="w-full h-full object-contain"
+                    width={400}
+                    height={400}
+                    loading="lazy"
+                    aria-hidden="true"
+                  />
+                </motion.div>
+
+                {/* Layer 3: Kid Smiling Image */}
+                <motion.div
+                  initial={{ opacity: 0, y: '-2.4%', scale: .70 }}
+                  whileInView={{ opacity: 1, y: '-2.4%', scale: .70 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+                  className="absolute inset-0 flex items-center justify-center z-20 scale-90 md:scale-95"
+                >
+                  <Image
+                    src={kidSmilingImage}
+                    alt="Happy child at center-based ABA therapy in Minneapolis"
+                    className="w-full h-full object-contain"
+                    width={400}
+                    height={400}
+                    priority
+                    quality={85}
+                  />
+                </motion.div>
               </div>
               
               {/* Decorative floating icons */}
               <motion.div
-                className="absolute -top-10 -right-10 text-secondary"
+                className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 text-secondary"
                 animate={{ y: [0, -12, 0], rotate: [0, 8, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 aria-hidden
               >
-                <Puzzle className="w-16 h-16" />
+                <Puzzle className="w-6 h-6 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-16 lg:h-16" />
               </motion.div>
               <motion.div
-                className="absolute -bottom-8 -left-8 text-primary"
+                className="absolute -bottom-1 -left-1 sm:-bottom-2 sm:-left-2 text-primary"
                 animate={{ y: [0, 14, 0], rotate: [0, -8, 0] }}
                 transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut" }}
                 aria-hidden
               >
-                <Pencil className="w-20 h-20" />
+                <Pencil className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20" />
               </motion.div>
               <motion.div
-                className="absolute top-10 -left-8 text-xanthous"
+                className="absolute top-8 left-1 sm:top-10 sm:left-2 text-xanthous"
                 animate={{ y: [0, 10, 0], rotate: [0, 6, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 aria-hidden
               >
-                <Star className="w-14 h-14" fill="currentColor" />
+                <Star className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 lg:w-14 lg:h-14" fill="currentColor" />
               </motion.div>
               <motion.div
-                className="absolute -bottom-4 right-10 text-secondary"
+                className="absolute -bottom-1 right-2 sm:-bottom-2 sm:right-4 text-secondary"
                 animate={{ y: [0, -10, 0], rotate: [0, -6, 0] }}
                 transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut" }}
                 aria-hidden
               >
-                <Smile className="w-16 h-16" />
+                <Smile className="w-6 h-6 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-16 lg:h-16" />
               </motion.div>
             </motion.div>
           </div>
