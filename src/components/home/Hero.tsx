@@ -127,7 +127,7 @@ const Hero = () => {
               ref={subtitleRef}
               className="text-xl md:text-2xl text-foreground mb-8 leading-relaxed font-normal"
             >
-              Evidence-based Applied Behavior Analysis by Board Certified Behavior Analysts (BCBAs). Center-based and in-home therapy for ages 2-18. We accept EIDBI and most insurance plans.
+              Evidence-based Applied Behavior Analysis (ABA). Center-based and in-home therapy for ages 2-18. We accept EIDBI and most insurance plans.
             </p>
 
             {/* CTA Buttons */}
@@ -231,7 +231,7 @@ const Hero = () => {
             </motion.div>
 
             <motion.div
-              className="absolute top-8 left-1 sm:top-10 sm:left-2 text-xanthous"
+              className="absolute top-4 left-0 sm:top-6 sm:left-1 text-xanthous"
               animate={{
                 y: [0, 18, 0],
                 rotate: [0, 6, 0],

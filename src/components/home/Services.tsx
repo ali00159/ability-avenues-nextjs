@@ -1,25 +1,26 @@
 'use client';
 
 import Link from 'next/link';
+import { Route } from 'next';
 import { memo } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail } from "lucide-react";
-import houseIcon from "@/assets/icon-house.svg";
-import socialSkillsIcon from "@/assets/icon-social-skills.svg";
-import assessmentIcon from "@/assets/icon-assessment.svg";
+import { ArrowRight } from "lucide-react";
+import yellowCenterIcon from "@/assets/yellow-center-icon.svg";
+import greenFamilyIcon from "@/assets/green-family-icon.svg";
+import blueClipboardIcon from "@/assets/blue-clipboard.svg";
 
 const services: Array<{
-  icon: any;
+  icon: StaticImageData;
   title: string;
   description: string;
   features: string[];
-  href: string | null;
+  href: Route;
 }> = [
   {
-    icon: houseIcon,
+    icon: yellowCenterIcon,
     title: "Center-Based ABA Therapy",
     description:
       "Our preschool-like setting provides comprehensive, play-based Applied Behavior Analysis that helps children with autism spectrum disorder develop essential skills for school readiness and social success.",
@@ -27,7 +28,7 @@ const services: Array<{
     href: "/center-based-therapy",
   },
   {
-    icon: socialSkillsIcon,
+    icon: greenFamilyIcon,
     title: "In-Home ABA Therapy",
     description:
       "Personalized one-on-one Applied Behavior Analysis delivered in the comfort and familiarity of your home environment, helping children with autism spectrum disorder learn and practice skills in their natural setting.",
@@ -35,12 +36,12 @@ const services: Array<{
     href: "/in-home-therapy",
   },
   {
-    icon: assessmentIcon,
+    icon: blueClipboardIcon,
     title: "Early Intensive Developmental & Behavioral Intervention",
     description:
       "Comprehensive early intervention services designed to support young children with developmental delays and autism spectrum disorder through intensive, evidence-based Applied Behavior Analysis.",
     features: ["Ages 0-7", "Intensive Support", "Family Collaboration"],
-    href: null,
+    href: "/eidbi",
   },
 ];
 
@@ -109,17 +110,10 @@ const Services = () => {
                   </ul>
                 </div>
                 <div className="mt-auto">
-                  {service.href ? (
-                    <Link href={service.href as any} className="group inline-flex items-center gap-2 text-foreground font-medium hover:no-underline hover:-translate-y-0.5 transition-all duration-300">
-                      Learn more
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  ) : (
-                    <button className="group inline-flex items-center gap-2 text-foreground font-medium cursor-default opacity-70 hover:-translate-y-0.5 transition-all duration-300" disabled>
-                      Learn more
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                  )}
+                  <Link href={service.href} className="group inline-flex items-center gap-2 text-foreground font-medium hover:no-underline hover:-translate-y-0.5 transition-all duration-300">
+                    Learn more
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
               </Card>
             </motion.div>
@@ -133,8 +127,8 @@ const Services = () => {
               size="lg" 
               className="text-lg px-8 py-6 bg-raisin-black text-cornsilk font-semibold rounded-full hover:bg-raisin-black/90 hover:shadow-lg transition-all duration-300 border-2 border-raisin-black/10 hover:border-raisin-black/20"
             >
-              <Mail className="w-5 h-5 mr-2" />
-              Learn More About All
+              <ArrowRight className="w-5 h-5 mr-2" />
+              Contact Us to Learn More
             </Button>
           </Link>
         </div>

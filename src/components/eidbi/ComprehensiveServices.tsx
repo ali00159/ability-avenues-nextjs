@@ -89,10 +89,20 @@ const ComprehensiveServices = () => {
           </p>
         </motion.div>
 
-        {/* Services Grid - Flexible for 5 items */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {/* Services Bento Grid - 2 rows: first row 2 large cards, second row 3 smaller cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 lg:grid-rows-2 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => {
             const IconComponent = service.icon;
+            
+            // Determine grid positioning for bento layout
+            let gridClasses = '';
+            if (index < 2) {
+              // First row: 2 large cards (each spans 3 columns)
+              gridClasses = 'lg:col-span-3';
+            } else {
+              // Second row: 3 smaller cards (each spans 2 columns)
+              gridClasses = 'lg:col-span-2';
+            }
             
             return (
               <motion.div
@@ -101,52 +111,56 @@ const ComprehensiveServices = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.85, delay: index * 0.1 }}
-                className={index === services.length - 2 ? 'md:col-span-2 lg:col-span-1' : ''}
+                className={gridClasses}
               >
                 <Card
-                  className={`p-8 h-full hover-lift hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-primary/20 bg-gradient-to-br ${service.bgColor} backdrop-blur-sm`}
+                  className={`p-8 h-full hover-lift hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-primary/20 bg-gradient-to-br ${service.bgColor} backdrop-blur-sm flex flex-col justify-between`}
                 >
-                  {/* Icon */}
-                  <motion.div
-                    className="mb-6 inline-flex rounded-2xl p-4 bg-white shadow-md"
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <IconComponent
-                      className="w-12 h-12"
+                  <div>
+                    {/* Icon */}
+                    <motion.div
+                      className="mb-6 inline-flex rounded-2xl p-4 bg-white shadow-md"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <IconComponent
+                        className="w-12 h-12"
+                        style={{ color: `hsl(var(--${service.iconColor}))` }}
+                        aria-hidden="true"
+                      />
+                    </motion.div>
+
+                    {/* Title */}
+                    <h3 className="text-xl md:text-2xl font-semibold mb-4 text-foreground">
+                      {service.title}
+                    </h3>
+
+                    {/* Bullet Points */}
+                    <ul className="space-y-3">
+                      {service.points.map((point, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div
+                            className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
+                            style={{ backgroundColor: `hsl(var(--${service.iconColor}))` }}
+                            aria-hidden="true"
+                          />
+                          <span className="text-muted-foreground leading-relaxed">{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Learn More Link - Positioned at bottom */}
+                  <div className="mt-6">
+                    <Link
+                      href="#"
+                      className="group inline-flex items-center gap-2 font-medium hover:gap-3 transition-all duration-300"
                       style={{ color: `hsl(var(--${service.iconColor}))` }}
-                      aria-hidden="true"
-                    />
-                  </motion.div>
-
-                  {/* Title */}
-                  <h3 className="text-xl md:text-2xl font-semibold mb-4 text-foreground">
-                    {service.title}
-                  </h3>
-
-                  {/* Bullet Points */}
-                  <ul className="space-y-3 mb-6">
-                    {service.points.map((point, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <div
-                          className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
-                          style={{ backgroundColor: `hsl(var(--${service.iconColor}))` }}
-                          aria-hidden="true"
-                        />
-                        <span className="text-muted-foreground leading-relaxed">{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Learn More Link */}
-                  <Link
-                    href="#"
-                    className="group inline-flex items-center gap-2 font-medium hover:gap-3 transition-all duration-300"
-                    style={{ color: `hsl(var(--${service.iconColor}))` }}
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                  </Link>
+                    >
+                      Learn More
+                      <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                    </Link>
+                  </div>
                 </Card>
               </motion.div>
             );

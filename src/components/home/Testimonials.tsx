@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import testimonialIcon from "@/assets/testimonial-icon.svg";
+// Using question hearts icon from FAQ page
 import { TestimonialsWithMarquee } from "@/components/ui/testimonials-with-marquee";
 
 const testimonials = [
   {
-    name: "Jennifer Martinez",
+    name: "Ilyas Nur",
     role: "Parent",
     rating: 5,
     testimonial: "After searching for quality ABA therapy in Minneapolis, we found Ability Avenues. The Board Certified Behavior Analysts created a personalized program that helped our 5-year-old with autism develop social skills and communication."
@@ -19,7 +19,7 @@ const testimonials = [
     testimonial: "The center-based therapy at Ability Avenues exceeded our expectations. Our daughter's early intervention program focuses on natural environment learning, and we've seen incredible progress in just 6 months."
   },
   {
-    name: "Sarah Chen",
+    name: "Jamaal Mohamed",
     role: "Parent",
     rating: 5,
     testimonial: "We appreciate how Ability Avenues accepts our insurance and works with EIDBI coverage. The in-home therapy program allows our family to be involved in the applied behavior analysis process, and our BCBA supervisor is always available."
@@ -31,7 +31,7 @@ const testimonials = [
     testimonial: "As someone new to autism therapy, I was impressed by how Ability Avenues explained the ABA therapy process. The center-based approach helped our 7-year-old son build peer relationships and develop age-appropriate behaviors."
   },
   {
-    name: "Amanda Williams",
+    name: "Asha Ahmed",
     role: "Parent",
     rating: 5,
     testimonial: "The Minneapolis clinic offers excellent ABA services for children aged 2-10. Our daughter's developmental progress has been remarkable under the guidance of experienced Board Certified Behavior Analysts who truly understand autism spectrum disorder."
@@ -68,14 +68,7 @@ const Testimonials = () => {
             transition={{ duration: 0.9 }}
           >
             <div className="flex justify-center mb-6">
-              <motion.div
-                initial={{ opacity: 0, rotate: 340 }}
-                whileInView={{ opacity: 1, rotate: -20 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 2.0 }}
-              >
-                <Image src={testimonialIcon} alt="" className="w-40 h-40" width={160} height={160} />
-              </motion.div>
+              <Image src="/images/question-hearts-red-icon.svg" alt="" className="w-40 h-40" width={160} height={160} />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               What Families Say
