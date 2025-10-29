@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'EIDBI Services in Minnesota - Comprehensive Autism Support',
     description:
-      'Get no-cost, evidence-based autism intervention through Minnesota\'s EIDBI program. Check eligibility and start your child\'s journey today.',
+      'Get no-cost, evidence-based autism intervention through Minnesota\'s EIDBI program. Check eligibility and start your child\'s services today.',
     type: 'website',
   },
 };

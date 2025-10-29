@@ -26,7 +26,7 @@ const FinalCTA = () => {
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 md:mb-10 font-light leading-relaxed max-w-2xl mx-auto">
                 Early intervention can make a life-changing difference for your child. 
-                Don't wait—start your EIDBI journey today.
+                Don't wait—start your EIDBI services today.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-6">

@@ -7,7 +7,6 @@ import EidbiHero from "@/components/eidbi/EidbiHero";
 const EligibilityChecker = lazy(() => import("@/components/eidbi/EligibilityChecker"));
 const WhatIsEidbi = lazy(() => import("@/components/eidbi/WhatIsEidbi"));
 const ComprehensiveServices = lazy(() => import("@/components/eidbi/ComprehensiveServices"));
-const EidbiProcess = lazy(() => import("@/components/eidbi/EidbiProcess"));
 const NoCostHighlight = lazy(() => import("@/components/eidbi/NoCostHighlight"));
 const SupportNetwork = lazy(() => import("@/components/eidbi/SupportNetwork"));
 const FinalCTA = lazy(() => import("@/components/eidbi/FinalCTA"));
@@ -22,7 +21,6 @@ const EIDBI = () => {
           <EligibilityChecker />
           <WhatIsEidbi />
           <ComprehensiveServices />
-          <EidbiProcess />
           <NoCostHighlight />
           <SupportNetwork />
           <FinalCTA />
