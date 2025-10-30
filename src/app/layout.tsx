@@ -13,20 +13,26 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ability-avenues-nextjs.vercel.app'),
+  metadataBase: new URL('https://abilityavenues.com'),
   title: {
     default: 'Ability Avenues - ABA Therapy for Children with Autism in Minneapolis',
     template: '%s | Ability Avenues',
   },
   description: 'Personalized autism therapy and ABA services for children with autism. Center-based and in-home autism therapy in Minneapolis, Minnesota.',
   themeColor: '#0FA3B1',
+  manifest: '/manifest.json',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     siteName: 'Ability Avenues',
     images: [
       {
-        url: '/opengraph-image.jpg',
+        url: '/images/opengraph-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Ability Avenues - ABA Therapy Minneapolis',

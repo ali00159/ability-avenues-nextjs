@@ -2,11 +2,11 @@ import { Metadata } from 'next';
 import InHomeTherapy from '@/components/InHomeTherapy';
 
 export const metadata: Metadata = {
-  title: 'In-Home ABA Therapy Minneapolis & Minnesota',
-  description: 'Personalized in-home ABA therapy for children with autism ages 1-18 in Minneapolis & Minnesota. BCBA-supervised, flexible scheduling, family involvement, and natural environment learning. EIDBI accepted.',
+  title: 'In-Home ABA Therapy Minneapolis, Minnesota',
+  description: 'Personalized in-home ABA therapy for children with autism ages 1-18 in Minneapolis, Minnesota. BCBA-supervised, flexible scheduling, family involvement, and natural environment learning. EIDBI accepted.',
   openGraph: {
-    title: 'In-Home ABA Therapy Minneapolis & Minnesota',
-    description: 'Personalized in-home ABA therapy for children with autism ages 1-18 in Minneapolis & Minnesota. BCBA-supervised, flexible scheduling, family involvement, and natural environment learning.',
+    title: 'In-Home ABA Therapy Minneapolis, Minnesota',
+    description: 'Personalized in-home ABA therapy for children with autism ages 1-18 in Minneapolis, Minnesota. BCBA-supervised, flexible scheduling, family involvement, and natural environment learning.',
     url: 'https://abilityavenues.com/in-home-therapy',
     siteName: 'Ability Avenues',
     images: [
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'In-Home ABA Therapy Minneapolis & Minnesota',
-    description: 'Personalized in-home ABA therapy for children with autism ages 1-18 in Minneapolis & Minnesota. BCBA-supervised, flexible scheduling, family involvement.',
+    title: 'In-Home ABA Therapy Minneapolis, Minnesota',
+    description: 'Personalized in-home ABA therapy for children with autism ages 1-18 in Minneapolis, Minnesota. BCBA-supervised, flexible scheduling, family involvement.',
     images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
@@ -34,6 +34,29 @@ export const metadata: Metadata = {
 export default function InHomeTherapyPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://abilityavenues.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'In-Home Therapy',
+                item: 'https://abilityavenues.com/in-home-therapy',
+              },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

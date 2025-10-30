@@ -39,11 +39,39 @@ export default function CareersPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://abilityavenues.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Careers',
+                item: 'https://abilityavenues.com/careers',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
             '@type': 'Organization',
             name: 'Ability Avenues',
             url: 'https://abilityavenues.com',
-            logo: 'https://abilityavenues.com/images/opengraph-image.jpg',
-            description: 'Join our team of ABA therapy professionals dedicated to supporting children with autism in Minneapolis.',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://abilityavenues.com/images/opengraph-image.jpg',
+              width: 1200,
+              height: 630,
+            },
+            description: 'Join our team of ABA therapy professionals dedicated to supporting children with autism in Minneapolis. We offer rewarding careers in ABA therapy, competitive benefits, and opportunities to make a difference in children\'s lives.',
             address: {
               '@type': 'PostalAddress',
               streetAddress: '6385 Old Shady Oak Rd Suite 250',
@@ -51,6 +79,15 @@ export default function CareersPage() {
               addressRegion: 'MN',
               postalCode: '55344',
               addressCountry: 'US',
+            },
+            jobLocation: {
+              '@type': 'Place',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Eden Prairie',
+                addressRegion: 'MN',
+                addressCountry: 'US',
+              },
             },
           }),
         }}

@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import yellowSquare from "@/assets/yellow-square.svg";
-import kidsLearning from "@/assets/kids-learning-in-home-page.png";
+import greenTriangleOpaque from "@/assets/green-triangle-opqaue-icon.svg";
+import greenTriangle from "@/assets/green-triangle-icon.svg";
+import girlSmiling from "@/assets/girl-smiling-center-page.png";
 
 const WhatIsCenterBasedABA = () => {
   return (
@@ -21,7 +22,7 @@ const WhatIsCenterBasedABA = () => {
             className="space-y-8"
           >
             {/* Service Category Label */}
-            <div className="text-sm uppercase tracking-wider font-semibold text-xanthous">
+            <div className="text-sm uppercase tracking-wider font-semibold text-yellow-green">
               UNDERSTANDING CENTER-BASED
             </div>
             
@@ -59,7 +60,7 @@ const WhatIsCenterBasedABA = () => {
             {/* CTA Button */}
             <Button 
               size="lg" 
-              className="text-lg px-8 py-6 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold shadow-lg"
+              className="group bg-[hsl(var(--yellow-green))] hover:bg-[hsl(79,98%,45%)] text-[hsl(var(--raisin-black))] font-semibold shadow-lg border-0 text-lg px-8 py-6"
               asChild
             >
               <Link href="/contact">Get Started</Link>
@@ -68,16 +69,16 @@ const WhatIsCenterBasedABA = () => {
 
           {/* Right Column - Animated Images */}
           <div className="relative flex items-center justify-center min-h-[500px] lg:min-h-[600px]">
-            {/* Yellow Square Background */}
+            {/* Layer 1: Opaque Green Triangle - Bottom */}
             <motion.div
-              initial={{ opacity: 0, x: -200 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 1.1, x: -200 }}
+              whileInView={{ opacity: 1, scale: 1.1, x: '-1%' }}
               viewport={{ once: true }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="absolute inset-0 flex items-center justify-center"
+              className="absolute inset-0 flex items-center justify-center z-0"
             >
               <Image
-                src={yellowSquare}
+                src={greenTriangleOpaque}
                 alt=""
                 className="w-[110%] h-[110%] object-contain"
                 width={550}
@@ -87,18 +88,37 @@ const WhatIsCenterBasedABA = () => {
               />
             </motion.div>
 
-            {/* Kids Learning Image - On Top */}
+            {/* Layer 2: Solid Green Triangle - Middle */}
             <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              initial={{ opacity: 0, x: 200 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+              className="absolute inset-0 flex items-center justify-center z-[5]"
+            >
+              <Image
+                src={greenTriangle}
+                alt=""
+                className="w-[110%] h-[110%] object-contain"
+                width={550}
+                height={550}
+                loading="lazy"
+                aria-hidden="true"
+              />
+            </motion.div>
+
+            {/* Layer 3: Girl Smiling Image - Top */}
+            <motion.div
+              initial={{ opacity: 0, x: -20, y: 38, scale: 1.05 }}
+              whileInView={{ opacity: 1, x: -20, y: 38, scale: 1.05 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
               className="absolute inset-0 flex items-center justify-center z-10"
-              style={{ transform: 'translateY(-20%)' }}
+              style={{ transform: 'translateY(-5%)' }}
             >
               <Image
-                src={kidsLearning}
-                alt="Children learning during center-based ABA therapy session"
+                src={girlSmiling}
+                alt="Child smiling during center-based ABA therapy session"
                 className="w-full h-full object-contain"
                 width={500}
                 height={500}

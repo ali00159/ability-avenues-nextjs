@@ -39,6 +39,29 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://abilityavenues.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'FAQ',
+                item: 'https://abilityavenues.com/faq',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
             '@type': 'FAQPage',
             mainEntity: [
               {
@@ -54,7 +77,7 @@ export default function FAQPage() {
                 name: 'What ages do you serve?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'We provide services for children of all ages, from early intervention (as young as 18 months) through adolescence. Our programs are tailored to meet the developmental needs of each age group, ensuring age-appropriate goals and activities.',
+                  text: 'We provide services for children and teens ages 1-18. Our programs are tailored to meet the developmental needs of each age group, ensuring age-appropriate goals and activities.',
                 },
               },
               {

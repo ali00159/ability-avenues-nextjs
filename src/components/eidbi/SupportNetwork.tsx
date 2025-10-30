@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Download, Users, BookOpen, Heart, Headphones, Building2, HandHeart } from 'lucide-react';
+import { ExternalLink, Download, Users, BookOpen, Heart, Headphones, Building2, HandHeart, Phone } from 'lucide-react';
 import Link from 'next/link';
 
 const resources = [
@@ -12,7 +12,7 @@ const resources = [
     name: 'Minnesota Autism Resource Portal',
     description:
       'Comprehensive online resource connecting families to autism services, providers, and support throughout Minnesota.',
-    link: '#',
+    link: 'https://mn.gov/autism/',
     phone: '',
     color: 'pacific-cyan',
   },
@@ -21,8 +21,8 @@ const resources = [
     name: 'PACER Center',
     description:
       'Parent advocacy organization providing information, training, and support to families of children with disabilities.',
-    link: '#',
-    phone: '952-838-9000',
+    link: 'https://www.pacer.org/',
+    phone: { main: '952-838-9000', tollFree: '800-537-2237' },
     color: 'yellow-green',
   },
   {
@@ -30,8 +30,8 @@ const resources = [
     name: 'The Arc Minnesota',
     description:
       'Advocacy organization promoting and protecting human rights for people with intellectual and developmental disabilities.',
-    link: '#',
-    phone: '833-450-1494',
+    link: 'https://arcminnesota.org/',
+    phone: { main: '952-920-0855', tollFree: '833-450-1494' },
     color: 'xanthous',
   },
   {
@@ -39,8 +39,8 @@ const resources = [
     name: 'Help Me Connect',
     description:
       'Free service helping Minnesota families find early childhood programs, resources, and support for children with special needs.',
-    link: '#',
-    phone: '866-693-4663',
+    link: 'https://helpmeconnect.web.health.state.mn.us/HelpMeConnect/',
+    phone: '866-693-4769',
     color: 'pacific-cyan',
   },
   {
@@ -48,17 +48,17 @@ const resources = [
     name: 'MN Association for Children\'s Mental Health',
     description:
       'Family-run organization supporting children with social, emotional, behavioral, and mental health challenges.',
-    link: '#',
-    phone: '800-528-4511',
+    link: 'https://macmh.org/',
+    phone: { main: '651-644-7333', tollFree: '800-528-4511' },
     color: 'yellow-green',
   },
   {
     icon: HandHeart,
-    name: 'Family to Family Network',
+    name: 'Family Voices of Minnesota',
     description:
       'Connecting families raising children with disabilities and special health care needs through peer support.',
-    link: '#',
-    phone: '651-644-3663',
+    link: 'https://familyvoicesofminnesota.org/',
+    phone: { main: '612-440-1609', tollFree: '866-334-8444' },
     color: 'xanthous',
   },
 ];
@@ -94,20 +94,18 @@ const SupportNetwork = () => {
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="p-6 h-full hover-lift hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-primary/20 bg-white group">
+                <Card className="p-6 h-full hover-lift hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-primary/20 bg-white group flex flex-col">
                   {/* Icon */}
-                  <motion.div
+                  <div
                     className="mb-4 inline-flex rounded-xl p-3"
                     style={{ backgroundColor: `hsl(var(--${resource.color}) / 0.1)` }}
-                    whileHover={{ scale: 1.05, rotate: 5 }}
-                    transition={{ duration: 0.2 }}
                   >
                     <IconComponent
                       className="w-8 h-8"
                       style={{ color: `hsl(var(--${resource.color}))` }}
                       aria-hidden="true"
                     />
-                  </motion.div>
+                  </div>
 
                   {/* Name */}
                   <h3 className="text-xl font-semibold mb-3 text-foreground">
@@ -115,32 +113,63 @@ const SupportNetwork = () => {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                  <p className="text-muted-foreground mb-4 leading-relaxed text-sm flex-grow">
                     {resource.description}
                   </p>
 
-                  {/* Phone Number */}
-                  {resource.phone && (
-                    <div className="mb-3">
-                      <a
-                        href={`tel:${resource.phone.replace(/[^0-9]/g, '')}`}
-                        className="text-sm font-medium hover:underline"
-                        style={{ color: `hsl(var(--${resource.color}))` }}
-                      >
-                        {resource.phone}
-                      </a>
-                    </div>
-                  )}
+                  {/* Contact Information - Aligned at bottom */}
+                  <div className="space-y-2">
+                    {/* Phone Number */}
+                    {resource.phone && (
+                      <div className="space-y-1">
+                        {typeof resource.phone === 'string' ? (
+                          <a
+                            href={`tel:${resource.phone.replace(/[^0-9]/g, '')}`}
+                            className="inline-flex items-center gap-2 text-sm font-medium hover:underline"
+                            style={{ color: `hsl(var(--${resource.color}))` }}
+                          >
+                            <Phone className="w-4 h-4" aria-hidden="true" />
+                            {resource.phone} <span className="text-muted-foreground ml-1">(toll-free)</span>
+                          </a>
+                        ) : (
+                          <>
+                            {resource.phone.main && (
+                              <a
+                                href={`tel:${resource.phone.main.replace(/[^0-9]/g, '')}`}
+                                className="inline-flex items-center gap-2 text-sm font-medium hover:underline"
+                                style={{ color: `hsl(var(--${resource.color}))` }}
+                              >
+                                <Phone className="w-4 h-4" aria-hidden="true" />
+                                {resource.phone.main} <span className="text-muted-foreground ml-1">(main)</span>
+                              </a>
+                            )}
+                            {resource.phone.tollFree && (
+                              <a
+                                href={`tel:${resource.phone.tollFree.replace(/[^0-9]/g, '')}`}
+                                className="inline-flex items-center gap-2 text-sm font-medium hover:underline"
+                                style={{ color: `hsl(var(--${resource.color}))` }}
+                              >
+                                <Phone className="w-4 h-4" aria-hidden="true" />
+                                {resource.phone.tollFree} <span className="text-muted-foreground ml-1">(toll-free)</span>
+                              </a>
+                            )}
+                          </>
+                        )}
+                      </div>
+                    )}
 
-                  {/* Visit Website Link */}
-                  <Link
-                    href={resource.link as any}
-                    className="inline-flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all"
-                    style={{ color: `hsl(var(--${resource.color}))` }}
-                  >
-                    Visit Website
-                    <ExternalLink className="w-4 h-4" aria-hidden="true" />
-                  </Link>
+                    {/* Visit Website Link */}
+                    <Link
+                      href={resource.link as any}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all"
+                      style={{ color: `hsl(var(--${resource.color}))` }}
+                    >
+                      Visit Website
+                      <ExternalLink className="w-4 h-4" aria-hidden="true" />
+                    </Link>
+                  </div>
                 </Card>
               </motion.div>
             );

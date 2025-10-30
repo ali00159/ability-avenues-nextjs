@@ -44,12 +44,13 @@ export default function CenterBasedTherapyPage() {
             image: 'https://abilityavenues.com/images/opengraph-image.jpg',
             '@id': 'https://abilityavenues.com',
             url: 'https://abilityavenues.com',
-            telephone: '',
             priceRange: '$$',
             address: {
               '@type': 'PostalAddress',
-              addressLocality: 'Minneapolis',
+              streetAddress: '6385 Old Shady Oak Rd Suite 250',
+              addressLocality: 'Eden Prairie',
               addressRegion: 'MN',
+              postalCode: '55344',
               addressCountry: 'US',
             },
             geo: {
@@ -57,18 +58,26 @@ export default function CenterBasedTherapyPage() {
               latitude: 44.9778,
               longitude: -93.2650,
             },
-            openingHoursSpecification: {
-              '@type': 'OpeningHoursSpecification',
-              dayOfWeek: [
-                'Monday',
-                'Tuesday',
-                'Wednesday',
-                'Thursday',
-                'Friday',
-              ],
-              opens: '08:30',
-              closes: '16:30',
-            },
+            openingHoursSpecification: [
+              {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                opens: '08:00',
+                closes: '18:00',
+              },
+              {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: 'Saturday',
+                opens: '10:00',
+                closes: '16:00',
+              },
+              {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: 'Sunday',
+                opens: '10:00',
+                closes: '16:00',
+              },
+            ],
           }),
         }}
       />
@@ -81,11 +90,12 @@ export default function CenterBasedTherapyPage() {
             name: 'Ability Avenues',
             description: 'Center-based ABA therapy for children and teens with autism ages 1-18 in Minneapolis',
             url: 'https://abilityavenues.com/center-based-therapy',
-            telephone: '',
             address: {
               '@type': 'PostalAddress',
-              addressLocality: 'Minneapolis',
+              streetAddress: '6385 Old Shady Oak Rd Suite 250',
+              addressLocality: 'Eden Prairie',
               addressRegion: 'MN',
+              postalCode: '55344',
               addressCountry: 'US',
             },
           }),

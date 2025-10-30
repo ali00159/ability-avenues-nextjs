@@ -85,34 +85,36 @@ const WhatIsEidbi = () => {
 
             {/* H2 */}
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Minnesota's Comprehensive{' '}
-              <span className="text-yellow-green">Autism Intervention</span> Program
+              What is Minnesota's <span className="text-yellow-green">Early Intensive Developmental and Behavioral Intervention </span> 
+              <span className="text-raisin-black">(EIDBI) Program</span>?
             </h2>
 
             {/* Body Paragraphs */}
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                EIDBI (Early Intensive Developmental and Behavioral Intervention) is Minnesota's 
-                Medical Assistance benefit designed specifically for children and young adults with 
-                autism spectrum disorder and related conditions.
+                EIDBI is a Minnesota Health Care Programs benefit for children and youth with autism 
+                or a related condition, up to age 21. The benefit funds medically necessary, early 
+                and intensive intervention.
               </p>
               
               <p>
-                This comprehensive program provides intensive, evidence-based services including 
-                Applied Behavior Analysis (ABA) therapy, developmental interventions, and family 
-                training—all coordinated to support your child's growth and development.
+                Eligibility ties to a confirmed diagnosis, a comprehensive multi-disciplinary evaluation, 
+                enrollment in a qualifying health program, and age. Qualifying coverage includes Medical 
+                Assistance and MinnesotaCare.
               </p>
               
               <p>
-                Unlike traditional therapy with session limits, EIDBI provides the hours your child 
-                needs based on their individual assessment, ensuring consistent, quality care that 
-                makes a real difference.
+                Families reach EIDBI in different ways. Some qualify for Medical Assistance based on 
+                income. Others use MA under the TEFRA option, which looks at the child's income and 
+                disability status, not the full household income. TEFRA routes children with disabilities 
+                into MA to cover EIDBI services. Apply through your county or tribal agency.
               </p>
               
               <p>
-                Best of all, eligible families pay nothing out-of-pocket. EIDBI is fully covered 
-                through Minnesota's Medical Assistance programs, removing financial barriers to 
-                essential autism services.
+                EIDBI supports several treatment modalities. Minnesota lists Applied Behavior Analysis, 
+                DIR or Floortime, Early Start Denver Model, and Relationship Development Intervention 
+                as approved approaches. Play Project and Early Social Interaction were removed effective 
+                July 1, 2025.
               </p>
             </div>
 

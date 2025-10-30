@@ -39,6 +39,29 @@ export default function ReferralsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://abilityavenues.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Referrals',
+                item: 'https://abilityavenues.com/referrals',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
             '@type': 'Service',
             name: 'ABA Therapy Referral Services',
             serviceType: 'Healthcare Referral Service',
@@ -46,6 +69,8 @@ export default function ReferralsPage() {
               '@type': 'Organization',
               name: 'Ability Avenues',
               url: 'https://abilityavenues.com',
+              telephone: '+1-952-900-2344',
+              email: 'info@abilityavenues.com',
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: '6385 Old Shady Oak Rd Suite 250',
@@ -59,7 +84,11 @@ export default function ReferralsPage() {
               '@type': 'City',
               name: 'Minneapolis',
             },
-            description: 'Seamless ABA therapy referral process for healthcare providers in Minneapolis.',
+            description: 'Healthcare providers and professionals can refer patients to Ability Avenues for comprehensive ABA therapy services in Minneapolis. Seamless intake process and collaborative care with quick response times and personalized treatment planning.',
+            offers: {
+              '@type': 'Offer',
+              description: 'Streamlined referral process with dedicated support for healthcare providers and families.',
+            },
           }),
         }}
       />

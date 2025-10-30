@@ -1,0 +1,16 @@
+{
+  "name": "Ability Avenues",
+  "short_name": "Ability Avenues",
+  "description": "ABA Therapy for Children with Autism in Minneapolis",
+  "theme_color": "#0FA3B1",
+  "background_color": "#FFFFFF",
+  "display": "browser",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
+

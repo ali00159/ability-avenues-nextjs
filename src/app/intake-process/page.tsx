@@ -39,6 +39,29 @@ export default function IntakeProcessPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://abilityavenues.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Intake Process',
+                item: 'https://abilityavenues.com/intake-process',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
             '@type': 'HowTo',
             name: 'Intake Process for ABA Therapy at Ability Avenues',
             description: 'Simple 5-step process to get started with ABA therapy services in Minneapolis.',

@@ -127,7 +127,7 @@ const Hero = () => {
               ref={subtitleRef}
               className="text-xl md:text-2xl text-foreground mb-8 leading-relaxed font-normal"
             >
-              Evidence-based Applied Behavior Analysis (ABA). Center-based and in-home therapy for ages 2-18. We accept EIDBI and most insurance plans.
+              Evidence-based Applied Behavior Analysis (ABA). Center-based and in-home therapy for ages 1-18. We accept EIDBI and most insurance plans.
             </p>
 
             {/* CTA Buttons */}
@@ -181,7 +181,7 @@ const Hero = () => {
               <div className="flex items-center gap-3">
                 <Users2 className="w-5 h-5 md:w-6 md:h-6 text-secondary flex-shrink-0" />
                 <div className="text-sm">
-                  <div className="font-semibold text-foreground">Ages 2-18</div>
+                  <div className="font-semibold text-foreground">Ages 1-18</div>
                   <div className="text-muted-foreground">All levels</div>
                 </div>
               </div>

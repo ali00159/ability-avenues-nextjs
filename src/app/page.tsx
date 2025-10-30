@@ -3,15 +3,15 @@ import Index from '@/components/Index';
 
 export const metadata: Metadata = {
   title: 'ABA Therapy Minneapolis | Board Certified Behavior Analysts | Ability Avenues',
-  description: 'Evidence-based ABA therapy by Board Certified Behavior Analysts (BCBAs) for children with autism ages 2-18. Center-based and in-home therapy in Minneapolis, Minnesota. We accept EIDBI (Minnesota Medicaid) and most insurance plans.',
+  description: 'Evidence-based ABA therapy by Board Certified Behavior Analysts (BCBAs) for children with autism ages 1-18. Center-based and in-home therapy in Minneapolis, Minnesota. We accept EIDBI (Minnesota Medicaid) and most insurance plans.',
   openGraph: {
     title: 'ABA Therapy Minneapolis | Board Certified Behavior Analysts | Ability Avenues',
-    description: 'Evidence-based ABA therapy by Board Certified Behavior Analysts (BCBAs) for children with autism ages 2-18. Center-based and in-home therapy in Minneapolis, Minnesota. We accept EIDBI (Minnesota Medicaid) and most insurance plans.',
+    description: 'Evidence-based ABA therapy by Board Certified Behavior Analysts (BCBAs) for children with autism ages 1-18. Center-based and in-home therapy in Minneapolis, Minnesota. We accept EIDBI (Minnesota Medicaid) and most insurance plans.',
     url: 'https://abilityavenues.com',
     siteName: 'Ability Avenues',
     images: [
       {
-        url: '/opengraph-image.jpg',
+        url: '/images/opengraph-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Ability Avenues - ABA Therapy Minneapolis',
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'ABA Therapy Minneapolis | Board Certified Behavior Analysts | Ability Avenues',
-    description: 'Evidence-based ABA therapy by Board Certified Behavior Analysts (BCBAs) for children with autism ages 2-18. Center-based and in-home therapy in Minneapolis, Minnesota. We accept EIDBI (Minnesota Medicaid) and most insurance plans.',
-    images: ['/opengraph-image.jpg'],
+    description: 'Evidence-based ABA therapy by Board Certified Behavior Analysts (BCBAs) for children with autism ages 1-18. Center-based and in-home therapy in Minneapolis, Minnesota. We accept EIDBI (Minnesota Medicaid) and most insurance plans.',
+    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com',
@@ -43,19 +43,21 @@ export default function IndexPage() {
             '@id': 'https://abilityavenues.com',
             name: 'Ability Avenues',
             url: 'https://abilityavenues.com',
-            logo: 'https://abilityavenues.com/opengraph-image.jpg',
-            description: 'Evidence-based ABA therapy by Board Certified Behavior Analysts (BCBAs) for children with autism ages 2-18 in Minneapolis, Minnesota.',
+            logo: 'https://abilityavenues.com/images/opengraph-image.jpg',
+            description: 'Evidence-based ABA therapy by Board Certified Behavior Analysts (BCBAs) for children with autism ages 1-18 in Minneapolis, Minnesota.',
             address: {
               '@type': 'PostalAddress',
-              addressLocality: 'Minneapolis',
+              streetAddress: '6385 Old Shady Oak Rd Suite 250',
+              addressLocality: 'Eden Prairie',
               addressRegion: 'MN',
+              postalCode: '55344',
               addressCountry: 'US',
             },
             areaServed: {
               '@type': 'City',
               name: 'Minneapolis',
             },
-            telephone: '+1-612-555-0123',
+            telephone: '+1-952-900-2344',
             priceRange: '$$',
             aggregateRating: {
               '@type': 'AggregateRating',
@@ -89,7 +91,7 @@ export default function IndexPage() {
                   itemOffered: {
                     '@type': 'Service',
                     name: 'Early Intensive Developmental & Behavioral Intervention',
-                    description: 'Comprehensive early intervention services for children ages 0-7 with developmental delays and autism spectrum disorder.'
+                    description: 'Comprehensive early intervention services for children ages 1-18 with developmental delays and autism spectrum disorder.'
                   }
                 }
               ]

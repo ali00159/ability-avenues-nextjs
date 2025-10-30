@@ -40,7 +40,7 @@ const services: Array<{
     title: "Early Intensive Developmental & Behavioral Intervention",
     description:
       "Comprehensive early intervention services designed to support young children with developmental delays and autism spectrum disorder through intensive, evidence-based Applied Behavior Analysis.",
-    features: ["Ages 0-7", "Intensive Support", "Family Collaboration"],
+    features: ["Ages 1-18", "Intensive Support", "Family Collaboration"],
     href: "/eidbi",
   },
 ];

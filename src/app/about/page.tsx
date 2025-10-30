@@ -39,6 +39,29 @@ export default function AboutUsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://abilityavenues.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'About',
+                item: 'https://abilityavenues.com/about',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
             '@type': 'Organization',
             name: 'Ability Avenues',
             url: 'https://abilityavenues.com',
@@ -51,8 +74,10 @@ export default function AboutUsPage() {
             },
             address: {
               '@type': 'PostalAddress',
-              addressLocality: 'Minneapolis',
+              streetAddress: '6385 Old Shady Oak Rd Suite 250',
+              addressLocality: 'Eden Prairie',
               addressRegion: 'MN',
+              postalCode: '55344',
               addressCountry: 'US',
             },
           }),

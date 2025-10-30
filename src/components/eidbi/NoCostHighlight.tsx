@@ -1,10 +1,12 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Check, X, DollarSign } from 'lucide-react';
+import { Check, X } from 'lucide-react';
+import yellowCoinIcon from '@/assets/yellow-coin-icon.svg';
 
 const eidbiFeatures = [
   'Unlimited therapy hours based on need',
@@ -37,7 +39,7 @@ const NoCostHighlight = () => {
           className="flex justify-center mb-8"
         >
           <motion.div
-            className="relative"
+            className="relative flex items-center justify-center"
             animate={{
               scale: [1, 1.1, 1],
             }}
@@ -47,11 +49,16 @@ const NoCostHighlight = () => {
               ease: 'easeInOut',
             }}
           >
-            <div className="w-24 h-24 rounded-full bg-yellow-green/10 flex items-center justify-center">
-              <DollarSign className="w-12 h-12 text-yellow-green" strokeWidth={3} aria-hidden="true" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-1 bg-red-500 rotate-45" aria-hidden="true" />
-              </div>
+            <Image 
+              src={yellowCoinIcon} 
+              alt="" 
+              className="w-24 h-24" 
+              width={96} 
+              height={96}
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-20 h-1 bg-red-500 rotate-45" aria-hidden="true" />
             </div>
           </motion.div>
         </motion.div>

@@ -39,15 +39,48 @@ export default function ContactUsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://abilityavenues.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Contact',
+                item: 'https://abilityavenues.com/contact',
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
             '@type': 'ContactPage',
             name: 'Contact Ability Avenues',
             url: 'https://abilityavenues.com/contact',
-            description: 'Contact page for Ability Avenues ABA therapy services in Minneapolis.',
+            description: 'Contact Ability Avenues in Minneapolis for ABA therapy services. Reach us by phone, email, or visit our Eden Prairie location.',
+            telephone: '+1-952-900-2344',
+            email: 'info@abilityavenues.com',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: '6385 Old Shady Oak Rd Suite 250',
+              addressLocality: 'Eden Prairie',
+              addressRegion: 'MN',
+              postalCode: '55344',
+              addressCountry: 'US',
+            },
             mainEntity: {
               '@type': 'Organization',
               name: 'Ability Avenues',
-              telephone: '',
               email: 'info@abilityavenues.com',
+              telephone: '+1-952-900-2344',
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: '6385 Old Shady Oak Rd Suite 250',
