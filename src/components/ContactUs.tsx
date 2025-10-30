@@ -2,14 +2,22 @@
 
 import { lazy, Suspense } from "react";
 import { usePathname } from 'next/navigation';
+import Image from "next/image";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Printer } from "lucide-react";
+import whiteBlueMailIcon from "@/assets/white-blue-mail-icon.svg";
 
 const ContactForm = lazy(() => import("@/components/contact/ContactForm"));
 
-const ContactUs = () => {
+interface ContactUsProps {
+  cityName: string;
+  mapEmbedUrl: string;
+  mapTitle: string;
+}
+
+const ContactUs = ({ cityName, mapEmbedUrl, mapTitle }: ContactUsProps) => {
   const pathname = usePathname();
   
   return (
@@ -28,16 +36,49 @@ const ContactUs = () => {
             >
               {/* Decorative Icon */}
               <div className="mb-8 flex justify-center">
-                <div className="relative w-24 h-24">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-12 bg-pacific-cyan/30 rounded-2xl rotate-12"></div>
-                  <div className="absolute top-6 left-1/2 -translate-x-1/2 w-16 h-12 bg-yellow-green/40 rounded-2xl -rotate-6"></div>
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-14 bg-secondary/30 rounded-2xl rotate-3"></div>
-                </div>
+                <motion.div
+                  initial={{ opacity: 0, x: -150, rotate: 0 }}
+                  whileInView={{ 
+                    opacity: 1, 
+                    x: 0,
+                    transition: { 
+                      duration: 0.8, 
+                      delay: 0.3,
+                      ease: "easeOut"
+                    }
+                  }}
+                  viewport={{ once: true }}
+                  animate={{
+                    rotate: [0, -8, 8, -8, 8, 0],
+                    x: [0, -5, 5, -5, 5, 0]
+                  }}
+                  transition={{
+                    rotate: {
+                      delay: 1.1,
+                      duration: 0.6,
+                      ease: "easeInOut"
+                    },
+                    x: {
+                      delay: 1.1,
+                      duration: 0.6,
+                      ease: "easeInOut"
+                    }
+                  }}
+                >
+                  <Image 
+                    src={whiteBlueMailIcon} 
+                    alt="Contact Us" 
+                    className="w-40 h-40 md:w-52 md:h-52 lg:w-64 lg:h-64" 
+                    width={256} 
+                    height={256} 
+                  />
+                </motion.div>
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-raisin-black mb-6">
                 Get in touch with{" "}
-                <span className="text-yellow-green">Ability Avenues</span>
+                <span className="text-pacific-cyan">Ability Avenues</span>{" "}
+                <span className="text-raisin-black">in {cityName}, Minnesota</span>
               </h1>
               
               <p className="text-lg text-muted-foreground leading-relaxed mb-6 max-w-3xl mx-auto">
@@ -66,8 +107,8 @@ const ContactUs = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-white border border-border/40 rounded-3xl p-8 hover:shadow-lg transition-shadow"
               >
-                <div className="w-16 h-16 bg-yellow-green/10 rounded-2xl flex items-center justify-center mb-6">
-                  <Phone className="w-8 h-8 text-yellow-green" />
+                <div className="w-16 h-16 bg-pacific-cyan/10 rounded-2xl flex items-center justify-center mb-6">
+                  <Phone className="w-8 h-8 text-pacific-cyan" />
                 </div>
                 <h3 className="text-xl font-bold text-raisin-black mb-3">Phone</h3>
                 <a
@@ -85,8 +126,8 @@ const ContactUs = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="bg-white border border-border/40 rounded-3xl p-8 hover:shadow-lg transition-shadow"
               >
-                <div className="w-16 h-16 bg-yellow-green/10 rounded-2xl flex items-center justify-center mb-6">
-                  <Printer className="w-8 h-8 text-yellow-green" />
+                <div className="w-16 h-16 bg-pacific-cyan/10 rounded-2xl flex items-center justify-center mb-6">
+                  <Printer className="w-8 h-8 text-pacific-cyan" />
                 </div>
                 <h3 className="text-xl font-bold text-raisin-black mb-3">Fax</h3>
                 <p className="text-muted-foreground">
@@ -101,8 +142,8 @@ const ContactUs = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="bg-white border border-border/40 rounded-3xl p-8 hover:shadow-lg transition-shadow"
               >
-                <div className="w-16 h-16 bg-yellow-green/10 rounded-2xl flex items-center justify-center mb-6">
-                  <Mail className="w-8 h-8 text-yellow-green" />
+                <div className="w-16 h-16 bg-pacific-cyan/10 rounded-2xl flex items-center justify-center mb-6">
+                  <Mail className="w-8 h-8 text-pacific-cyan" />
                 </div>
                 <h3 className="text-xl font-bold text-raisin-black mb-3">Email</h3>
                 <a
@@ -120,8 +161,8 @@ const ContactUs = () => {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="bg-white border border-border/40 rounded-3xl p-8 hover:shadow-lg transition-shadow"
               >
-                <div className="w-16 h-16 bg-yellow-green/10 rounded-2xl flex items-center justify-center mb-6">
-                  <MapPin className="w-8 h-8 text-yellow-green" />
+                <div className="w-16 h-16 bg-pacific-cyan/10 rounded-2xl flex items-center justify-center mb-6">
+                  <MapPin className="w-8 h-8 text-pacific-cyan" />
                 </div>
                 <h3 className="text-xl font-bold text-raisin-black mb-3">Location</h3>
                 <p className="text-muted-foreground">
@@ -137,14 +178,43 @@ const ContactUs = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="bg-white border border-border/40 rounded-3xl p-8 hover:shadow-lg transition-shadow"
               >
-                <div className="w-16 h-16 bg-yellow-green/10 rounded-2xl flex items-center justify-center mb-6">
-                  <Clock className="w-8 h-8 text-yellow-green" />
+                <div className="w-16 h-16 bg-pacific-cyan/10 rounded-2xl flex items-center justify-center mb-6">
+                  <Clock className="w-8 h-8 text-pacific-cyan" />
                 </div>
                 <h3 className="text-xl font-bold text-raisin-black mb-3">Hours</h3>
                 <p className="text-muted-foreground">
                   Mon-Fri: 8am-6pm<br />
                   Sat-Sun: 10am-4pm
                 </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Map Section */}
+        <section className="pt-8 pb-12 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="w-full"
+              >
+                <div className="relative w-full h-[500px] rounded-2xl overflow-hidden border-2 border-gray-100">
+                  <iframe
+                    src={mapEmbedUrl}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={mapTitle}
+                    className="w-full h-full"
+                  />
+                </div>
               </motion.div>
             </div>
           </div>

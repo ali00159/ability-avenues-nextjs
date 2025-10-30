@@ -2,11 +2,11 @@ import { Metadata } from 'next';
 import CenterBasedTherapy from '@/components/CenterBasedTherapy';
 
 export const metadata: Metadata = {
-  title: 'Center-Based ABA Therapy in Minneapolis',
+  title: 'Center-Based ABA Therapy in Minneapolis, Minnesota',
   description: 'Evidence-based center-based ABA therapy for children and teens with autism ages 1-18 in Minneapolis. BCBA-supervised programs, EIDBI accepted ages 1-18. Tour our autism center today.',
   openGraph: {
-    title: 'Center-Based ABA Therapy in Minneapolis',
-    description: 'Evidence-based center-based ABA therapy for children and teens with autism ages 1-18 in Minneapolis. BCBA-supervised programs, EIDBI accepted ages 1-18.',
+    title: 'Center-Based ABA Therapy in Minneapolis, Minnesota',
+    description: 'Evidence-based center-based ABA therapy for children and teens with autism ages 1-18 in Minneapolis, Minnesota. BCBA-supervised programs, EIDBI accepted ages 1-18.',
     url: 'https://abilityavenues.com/center-based-therapy',
     siteName: 'Ability Avenues',
     images: [
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Center-Based ABA Therapy in Minneapolis',
-    description: 'Evidence-based center-based ABA therapy for children and teens with autism ages 1-18 in Minneapolis.',
+    title: 'Center-Based ABA Therapy in Minneapolis, Minnesota',
+    description: 'Evidence-based center-based ABA therapy for children and teens with autism ages 1-18 in Minneapolis, Minnesota.',
     images: ['/images/opengraph-image.jpg'],
   },
   alternates: {

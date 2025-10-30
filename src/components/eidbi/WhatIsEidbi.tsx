@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -10,31 +10,9 @@ import { Award, Heart, Users } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const stats = [
-  {
-    icon: Award,
-    label: '2013',
-    value: 'Established',
-    color: 'pacific-cyan',
-  },
-  {
-    icon: Heart,
-    label: 'Based',
-    value: 'Evidence',
-    color: 'yellow-green',
-  },
-  {
-    icon: Users,
-    label: 'Centered',
-    value: 'Family',
-    color: 'xanthous',
-  },
-];
-
 const WhatIsEidbi = () => {
   const contentRef = useRef<HTMLDivElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
-  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
     if (contentRef.current) {
@@ -55,7 +33,7 @@ const WhatIsEidbi = () => {
             scrollTrigger: {
               trigger: contentRef.current,
               start: 'top 85%',
-              onEnter: () => setHasAnimated(true),
+              onEnter: () => {},
             },
           }
         );
@@ -118,40 +96,50 @@ const WhatIsEidbi = () => {
               </p>
             </div>
 
-            {/* Three Stat Boxes */}
-            <div ref={statsRef} className="grid grid-cols-3 gap-4 pt-6">
-              {stats.map((stat, index) => {
-                const IconComponent = stat.icon;
-                
-                return (
-                  <motion.div
-                    key={stat.label}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={hasAnimated ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="text-center p-4 rounded-xl border-2 border-border bg-white hover:shadow-md transition-shadow"
-                  >
-                    <IconComponent
-                      className="w-8 h-8 mx-auto mb-2"
-                      style={{ color: `hsl(var(--${stat.color}))` }}
-                      aria-hidden="true"
-                    />
-                    <div className="text-2xl font-bold text-foreground">{stat.value}</div>
-                    <div className="text-xs text-muted-foreground uppercase tracking-wide">
-                      {stat.label}
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+            {/* Compact trust row (keeps same icons and text) */}
+            <motion.div 
+              ref={statsRef}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-wrap items-center gap-6 md:gap-10 pt-6"
+            >
+              {/* Established 2013 */}
+              <div className="flex items-center gap-3">
+                <Award className="w-6 h-6" style={{ color: 'hsl(var(--pacific-cyan))' }} aria-hidden="true" />
+                <div>
+                  <div className="text-xl font-bold text-foreground">Established</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wide">2013</div>
+                </div>
+              </div>
+              <div className="h-8 w-px bg-border hidden sm:block" />
+              {/* Evidence Based */}
+              <div className="flex items-center gap-3">
+                <Heart className="w-6 h-6" style={{ color: 'hsl(var(--yellow-green))' }} aria-hidden="true" />
+                <div>
+                  <div className="text-xl font-bold text-foreground">Evidence</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wide">Based</div>
+                </div>
+              </div>
+              <div className="h-8 w-px bg-border hidden sm:block" />
+              {/* Family Centered */}
+              <div className="flex items-center gap-3">
+                <Users className="w-6 h-6" style={{ color: 'hsl(var(--xanthous))' }} aria-hidden="true" />
+                <div>
+                  <div className="text-xl font-bold text-foreground">Family</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wide">Centered</div>
+                </div>
+              </div>
+            </motion.div>
 
             {/* Link */}
             <div className="pt-4">
               <Link
-                href="#"
+                href="/contact"
                 className="inline-flex items-center gap-2 text-pacific-cyan hover:text-pacific-cyan/80 font-medium transition-colors"
               >
-                Read the full EIDBI story →
+                Learn More About EIDBI →
               </Link>
             </div>
           </div>

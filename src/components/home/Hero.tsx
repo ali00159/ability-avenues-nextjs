@@ -109,11 +109,11 @@ const Hero = () => {
               ref={titleRef}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight tracking-tight drop-shadow"
             >
-              Where children & their families can{" "}
+              Personalized autism therapy for with autism to help them achieve their{" "}
               <span className="text-yellow-green block mt-2">
                 enable{" "}
                 <Typewriter
-                  text={["potential", "growth", "avenues"]}
+                  text={["potential", "goals", "milestones", "dreams" ]}
                   speed={80}
                   deleteSpeed={50}
                   delay={2000}
