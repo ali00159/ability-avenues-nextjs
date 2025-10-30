@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import compassIcon from "@/assets/compass.svg";
+import calendarIcon from "@/assets/red-blue-calendar-icon.svg";
 
 const schedule = [
   { time: "8:00 AM", activity: "Arrival routines and greeting time for the day" },
@@ -35,8 +35,8 @@ const InHomeScheduleSection = () => {
           >
             <div className="flex justify-center mb-6">
               <Image 
-                src={compassIcon} 
-                alt="Compass" 
+                src={calendarIcon} 
+                alt="Calendar" 
                 className="w-32 h-32"
                 width={128}
                 height={128}
