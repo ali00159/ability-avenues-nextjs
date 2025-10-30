@@ -38,7 +38,7 @@ const CTASection = () => {
                     className="group shadow-lg w-full justify-center"
                   >
                     <Calendar className="w-5 h-5 mr-2 flex-shrink-0" />
-                    <span className="whitespace-nowrap">Schedule ABA Consultation</span>
+                    <span className="whitespace-nowrap">React Out Today</span>
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform flex-shrink-0" />
                   </Button>
                 </Link>
@@ -48,7 +48,7 @@ const CTASection = () => {
                     size="lg"
                     className="bg-white text-emerald-700 border-white hover:bg-white/90 w-full justify-center whitespace-normal sm:whitespace-nowrap"
                   >
-                    Learn More About ABA Therapy
+                    Learn More About ABA
                   </Button>
                 </Link>
               </div>

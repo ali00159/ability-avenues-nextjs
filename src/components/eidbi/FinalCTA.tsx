@@ -7,7 +7,7 @@ import { ArrowRight, Calendar } from 'lucide-react';
 
 const FinalCTA = () => {
   return (
-    <section className="py-12 md:py-24 bg-cornsilk/30">
+    <section className="pt-6 md:pt-12 pb-12 md:pb-24 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 70 }}
@@ -37,7 +37,7 @@ const FinalCTA = () => {
                     className="group shadow-lg w-full justify-center"
                   >
                     <Calendar className="w-5 h-5 mr-2 flex-shrink-0" />
-                    <span className="whitespace-nowrap">Schedule Free Evaluation</span>
+                    <span className="whitespace-nowrap">Schedule An Evaluation</span>
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform flex-shrink-0" />
                   </Button>
                 </Link>
@@ -55,8 +55,6 @@ const FinalCTA = () => {
               {/* Simplified Trust Line */}
               <div className="text-white/80 text-sm sm:text-base">
                 <p className="flex flex-wrap justify-center items-center gap-2 sm:gap-3">
-                  <span>Questions? Call <a href="tel:6514312670" className="text-cornsilk hover:underline font-medium">651-431-2670</a></span>
-                  <span className="hidden sm:inline">•</span>
                   <span className="hidden sm:inline">Helping Minnesota families since 2013</span>
                   <span className="hidden sm:inline">•</span>
                   <span className="hidden sm:inline">10,000+ children served</span>
