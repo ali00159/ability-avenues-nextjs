@@ -109,11 +109,11 @@ const Hero = () => {
               ref={titleRef}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight tracking-tight drop-shadow"
             >
-              Personalized autism therapy for with autism to help them achieve their{" "}
+              ABA Therapy for your child, tailored to your their{" "}
               <span className="text-yellow-green block mt-2">
-                enable{" "}
+                unique{" "}
                 <Typewriter
-                  text={["potential", "goals", "milestones", "dreams" ]}
+                  text={["strengths", "needs", "goals" ]}
                   speed={80}
                   deleteSpeed={50}
                   delay={2000}

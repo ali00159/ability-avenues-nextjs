@@ -2,12 +2,12 @@
 
 import Link from 'next/link';
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Phone, ClipboardCheck, FileText, UserCheck, Calendar, ArrowRight } from "lucide-react";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import { Button } from "@/components/ui/button";
 import { Timeline } from "@/components/ui/timeline";
-import therapyImage from "@/assets/therapy-session.jpg";
 import checkmarkIcon from "@/assets/checkmark-icon.svg";
 
 const IntakeProcess = () => {
@@ -164,70 +164,82 @@ const IntakeProcess = () => {
     <div className="min-h-screen bg-background">
       <Header />
       {/* Hero Section */}
-      <section className="relative pt-32 pb-8 bg-white overflow-hidden">
-        <div className="container mx-auto px-4">
-          {/* Hero Content */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            {/* Left Content */}
-            <div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                <span className="text-secondary">Intake Process</span>{" "}
-                <span className="text-raisin-black">Made Simple</span>
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container mx-auto flex flex-col items-center gap-16 lg:px-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-6xl mx-auto relative"
+          >
+            {/* Floating Icons */}
+            <motion.div
+              className="absolute top-5 right-5 text-pacific-cyan hidden lg:block"
+              animate={{ y: [0, -12, 0], rotate: [0, 8, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              aria-hidden
+            >
+              <Phone className="w-16 h-16" />
+            </motion.div>
+            <motion.div
+              className="absolute top-5 -left-8 text-yellow-green hidden lg:block"
+              animate={{ y: [0, 14, 0], rotate: [0, -8, 0] }}
+              transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut" }}
+              aria-hidden
+            >
+              <ClipboardCheck className="w-20 h-20" />
+            </motion.div>
+            <motion.div
+              className="absolute -bottom-10 right-20 text-xanthous hidden lg:block"
+              animate={{ y: [0, 10, 0], rotate: [0, 6, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              aria-hidden
+            >
+              <UserCheck className="w-14 h-14" />
+            </motion.div>
+            <motion.div
+              className="absolute bottom-5 -left-20 text-pacific-cyan hidden lg:block"
+              animate={{ y: [0, -10, 0], rotate: [0, -6, 0] }}
+              transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut" }}
+              aria-hidden
+            >
+              <Calendar className="w-16 h-16" />
+            </motion.div>
+
+            {/* Text Content - with top margin to push down without affecting icons */}
+            <div className="mt-20">
+              {/* Large Headline */}
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-8 leading-tight">
+              <span className="text-raisin-black">Intake Process</span>
+              {" "}
+              <span className="text-yellow-green">Made Simple</span>
+            </h1>
+
+            {/* Description Text */}
+            <div className="max-w-4xl mx-auto text-center mb-12">
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                 Starting your journey with Ability Avenues is easy. Our streamlined intake process 
                 is designed to get your child the support they need quickly and efficiently. We're 
                 here to guide you every step of the way.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Link href="/contact">
-                  <Button
-                    size="lg"
-                    className="group bg-[hsl(var(--yellow-green))] hover:bg-[hsl(79,98%,45%)] text-[hsl(var(--raisin-black))] font-semibold shadow-lg justify-center border-0"
-                  >
-                    <Phone className="w-5 h-5 mr-2 flex-shrink-0" />
-                    <span className="whitespace-nowrap">Contact Us</span>
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform flex-shrink-0" />
-                  </Button>
-                </Link>
-              </div>
             </div>
 
-            {/* Right Image */}
-            <div className="relative">
-              {/* Background circle */}
-              <div className="absolute -top-12 -right-12 w-80 h-80 rounded-full bg-xanthous/30 -z-10" />
-              
-              {/* Main image */}
-              <div className="relative w-full aspect-square max-w-md mx-auto overflow-hidden rounded-full shadow-2xl">
-                <Image
-                  src={therapyImage}
-                  alt="Intake Process"
-                  className="object-cover"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
-                />
-              </div>
-              
-              {/* Static floating icons */}
-              <div className="absolute -top-10 -right-10 text-secondary" aria-hidden>
-                <ClipboardCheck className="w-16 h-16" />
-              </div>
-              
-              <div className="absolute -bottom-8 -left-8 text-primary" aria-hidden>
-                <FileText className="w-20 h-20" />
-              </div>
-              
-              <div className="absolute top-10 -left-8 text-xanthous" aria-hidden>
-                <UserCheck className="w-14 h-14" />
-              </div>
-              
-              <div className="absolute -bottom-4 right-10 text-secondary" aria-hidden>
-                <Calendar className="w-16 h-16" />
-              </div>
+            {/* CTA Button */}
+            <div className="flex justify-center">
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  className="group bg-[hsl(var(--yellow-green))] hover:bg-[hsl(79,98%,45%)] text-[hsl(var(--raisin-black))] font-semibold shadow-lg"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Contact Us
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
       {/* Timeline Section */}

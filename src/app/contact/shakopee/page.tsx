@@ -2,19 +2,21 @@ import { Metadata } from 'next';
 import ContactUs from '@/components/ContactUs';
 
 export const metadata: Metadata = {
-  title: 'Contact Us - ABA Therapy in Minneapolis',
-  description: 'Contact Ability Avenues in Minneapolis for ABA therapy services. Reach us by phone, email, or visit our Eden Prairie location. Get started today.',
+  title: 'ABA Therapy in Shakopee, Minnesota',
+  description:
+    'Contact Ability Avenues in Shakopee, Minnesota for autism therapy services. Reach us by phone, email, or visit our location. Get started today.',
   openGraph: {
-    title: 'Contact Us - ABA Therapy in Minneapolis',
-    description: 'Contact Ability Avenues in Minneapolis for ABA therapy services. Reach us by phone, email, or visit our Eden Prairie location.',
-    url: 'https://abilityavenues.com/contact',
+    title: 'ABA Therapy in Shakopee, Minnesota',
+    description:
+      'Contact Ability Avenues in Shakopee, Minnesota for autism therapy services. Reach us by phone, email, or visit our location.',
+    url: 'https://abilityavenues.com/contact/shakopee',
     siteName: 'Ability Avenues',
     images: [
       {
         url: '/images/opengraph-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Contact Ability Avenues - ABA Therapy Minneapolis',
+        alt: 'Contact Ability Avenues - ABA Therapy Shakopee',
       },
     ],
     locale: 'en_US',
@@ -22,16 +24,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Us - ABA Therapy in Minneapolis',
-    description: 'Contact Ability Avenues in Minneapolis for ABA therapy services. Reach us by phone, email, or visit our location.',
+    title: 'ABA Therapy in Shakopee, Minnesota',
+    description:
+      'Contact Ability Avenues in Shakopee, Minnesota for autism therapy services. Reach us by phone, email, or visit our location.',
     images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
-    canonical: 'https://abilityavenues.com/contact',
+    canonical: 'https://abilityavenues.com/contact/shakopee',
   },
 };
 
-export default function ContactUsPage() {
+export default function ShakopeeContactPage() {
   return (
     <>
       <script
@@ -53,6 +56,12 @@ export default function ContactUsPage() {
                 name: 'Contact',
                 item: 'https://abilityavenues.com/contact',
               },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Shakopee',
+                item: 'https://abilityavenues.com/contact/shakopee',
+              },
             ],
           }),
         }}
@@ -63,9 +72,10 @@ export default function ContactUsPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'ContactPage',
-            name: 'Contact Ability Avenues',
-            url: 'https://abilityavenues.com/contact',
-            description: 'Contact Ability Avenues in Minneapolis for ABA therapy services. Reach us by phone, email, or visit our Eden Prairie location.',
+            name: 'Contact Ability Avenues - Shakopee',
+            url: 'https://abilityavenues.com/contact/shakopee',
+            description:
+              'Contact Ability Avenues in Shakopee for ABA therapy services. Reach us by phone, email, or visit our location.',
             telephone: '+1-952-900-2344',
             email: 'info@abilityavenues.com',
             address: {
@@ -93,11 +103,13 @@ export default function ContactUsPage() {
           }),
         }}
       />
-       <ContactUs 
-        cityName="Minneapolis"
-        mapEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9051!2d-93.2650!3d44.9778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b333909377bbbd%3A0x939fcb2fcf22d956!2sMinneapolis%2C%20MN!5e0!3m2!1sen!2sus!4v1735000000&z=11"
-        mapTitle="Minneapolis Service Area Map"
+      <ContactUs
+        cityName="Shakopee"
+        mapEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9028.5!2d-93.5269!3d44.7983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b332b3b7f7f7f7%3A0x0000000000000000!2sShakopee%2C%20MN!5e0!3m2!1sen!2sus!4v1735000000&z=11"
+        mapTitle="Shakopee Service Area Map"
       />
     </>
   );
 }
+
+

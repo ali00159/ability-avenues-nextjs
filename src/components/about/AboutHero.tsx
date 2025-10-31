@@ -1,18 +1,14 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Star, Pencil, Smile, Heart, Sparkles, CircleDot, Zap, Phone } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
-import puzzleIcon from "@/assets/icon-play.svg";
-import circleDecorator from "@/assets/circle-decorator.svg";
 
 const AboutHero = () => {
-  const pathname = usePathname();
   const titleRef = useRef<HTMLHeadingElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -77,94 +73,6 @@ const AboutHero = () => {
         padding: "clamp(80px, 12vh, 120px) 0 clamp(64px, 10vh, 96px)"
       }}
     >
-      {/* Decorative floating icons - concentrated around right side image */}
-      <motion.div
-        className="hidden lg:block absolute top-32 right-24"
-        animate={{ 
-          y: [0, -15, 0],
-          rotate: [0, 5, 0]
-        }}
-        transition={{ 
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      >
-        <Star className="w-12 h-12 text-yellow-400 fill-yellow-400" />
-      </motion.div>
-      <motion.div
-        className="hidden lg:block absolute top-24 right-1/3"
-        animate={{ 
-          y: [0, -10, 0],
-          opacity: [0.6, 1, 0.6]
-        }}
-        transition={{ 
-          duration: 3.5,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1.2
-        }}
-      >
-        <Sparkles className="w-9 h-9 text-yellow-500" />
-      </motion.div>
-      <motion.div
-        className="hidden lg:block absolute top-1/3 right-12"
-        animate={{ 
-          scale: [1, 1.2, 1],
-          rotate: [0, 180, 360]
-        }}
-        transition={{ 
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 0.8
-        }}
-      >
-        <Heart className="w-10 h-10 text-pink-400 fill-pink-400" />
-      </motion.div>
-      <motion.div
-        className="hidden lg:block absolute bottom-32 right-1/4"
-        animate={{ 
-          y: [0, -12, 0],
-          scale: [1, 1.1, 1]
-        }}
-        transition={{ 
-          duration: 4.5,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1
-        }}
-      >
-        <CircleDot className="w-10 h-10 text-cyan-400" />
-      </motion.div>
-      <motion.div
-        className="hidden lg:block absolute top-1/2 right-1/3"
-        animate={{ 
-          rotate: [0, 360]
-        }}
-        transition={{ 
-          duration: 20,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-      >
-        <Image src={puzzleIcon} alt="" className="w-10 h-10 opacity-50" width={40} height={40} />
-      </motion.div>
-      <motion.div
-        className="hidden lg:block absolute bottom-24 right-16"
-        animate={{ 
-          x: [0, 10, 0],
-          rotate: [0, 15, 0]
-        }}
-        transition={{ 
-          duration: 4.2,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 0.3
-        }}
-      >
-        <Smile className="w-11 h-11 text-lime-500 fill-lime-500" />
-      </motion.div>
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
         <div className="grid md:grid-cols-[1fr_0.8fr] gap-16 items-center">
           {/* Left Column - Text Content */}
@@ -208,25 +116,15 @@ const AboutHero = () => {
 
           {/* Right Column - Image */}
           <motion.div
-            key={`about-hero-${pathname}`}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            {/* Circle decorator behind image - same size and position */}
-            <Image 
-              src={circleDecorator}
-              alt=""
-              className="absolute -top-24 -left-24 w-[400px] h-[400px] -z-10 object-contain"
-              width={400}
-              height={400}
-            />
-            
             <div className="relative rounded-full overflow-hidden aspect-square shadow-2xl">
               <Image
-                src="/images/hero-family-therapy.jpg"
-                alt="Family receiving ABA therapy support at Ability Avenues"
+                src="/placeholder.svg"
+                alt=""
                 className="w-full h-full object-cover"
                 width={500}
                 height={500}
