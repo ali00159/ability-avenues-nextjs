@@ -123,7 +123,7 @@ const ContactForm = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-start gap-4 mb-6">
-              <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-secondary to-yellow-green flex items-center justify-center shadow-lg">
+              <div className="w-20 h-20 rounded-3xl bg-pacific-cyan flex items-center justify-center shadow-lg">
                 <Baby className="w-10 h-10 text-white" />
               </div>
             </div>
@@ -302,7 +302,7 @@ const ContactForm = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full rounded-2xl py-6 text-lg font-semibold bg-yellow-green hover:bg-yellow-green/90 text-white"
+                  className="w-full rounded-2xl py-6 text-lg font-semibold bg-pacific-cyan hover:bg-pacific-cyan/90 text-white"
                   size="lg"
                 >
                   {isSubmitting ? (

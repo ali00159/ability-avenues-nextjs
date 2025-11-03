@@ -144,6 +144,46 @@ export default function FAQPage() {
                   text: 'We use data-driven methods to continuously track progress toward individualized goals. Regular assessments, behavioral data collection, and progress reports keep families informed. Our team reviews data regularly to adjust treatment plans and ensure your child is making meaningful progress.',
                 },
               },
+              {
+                '@type': 'Question',
+                name: 'What does an individualized treatment plan look like?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'A Board Certified Behavior Analyst develops a treatment plan that focuses on your child\'s goals and needs. It uses information from diagnostic records, any past therapy, the CMDE, a parent interview, and direct observation. The plan sets clear goals for skill building and behavior support. It is updated often as progress happens or needs change. A full review takes place every six months with another observation and parent interview. Families receive updates so you always know what your child is working on and why.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is a CMDE?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'A CMDE is a Comprehensive Multidisciplinary Evaluation used in Minnesota for children receiving EIDBI services. It confirms a diagnosis related to autism or a related condition. A CMDE provider completes the evaluation, such as an LICSW, LPCC, LMFT, or an Advanced Practice Registered Nurse. They complete training to run the assessment and confirm medical necessity for ABA services. The CMDE includes review of records, parent input, and observation of the child. It guides decisions for services and provides the information needed to build an individualized treatment plan.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are Ability Avenues therapy hour expectations?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Families agree to a weekly schedule of about 20 to 40 hours of ABA therapy based on clinical recommendations from our team. We use a soft minimum of 20 hours. This means we expect an average of at least 20 hours each week over a three month period. Some weeks might fall below that number because of appointments or family needs. That is fine if the quarter still averages at 20 hours. This approach supports steady progress for your child while allowing reasonable flexibility. Parents with questions receive guidance from our clinical leadership and can review Minnesota DHS resources on recommended treatment intensity for children with autism.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is EIDBI versus ABA?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'EIDBI is a Minnesota program through Medical Assistance that pays for therapy for children and young people under 21 with autism or related conditions. ABA is one of the approved therapies inside the EIDBI program. Other approaches include DIR, Early Start Denver Model, and Relationship Development Intervention. Families receive a treatment plan based on goals that fit the child, and the provider selects the approach that best supports those goals. EIDBI pays for services when the treatment meets Medical Assistance rules for medical necessity. Minnesota families find more details on the DHS Early Intensive Developmental and Behavioral Intervention webpage and the Minnesota Autism Resource Portal.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How do you get MA-TEFRA coverage for ABA services if your family income is over the limit?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'MA-TEFRA allows a child with a qualifying disability to receive Medical Assistance based on the child\'s income only, which often helps families who do not meet regular MA income limits. Parents start by applying for Medical Assistance through MNsure or with the DHS 6696 form, then request TEFRA if income stops regular approval. The county reviews disability needs through a process called SMRT and once approved, MA-TEFRA pays for covered services including ABA with no parental fees. Families reach out to their county or tribal agency for help and Minnesota DHS provides step-by-step information on its MA-TEFRA webpage.',
+                },
+              },
             ],
           }),
         }}

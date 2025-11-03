@@ -263,7 +263,7 @@ const CareerForm = () => {
           {/* Left side - Info */}
           <div className="hidden lg:block">
             <div className="flex items-start gap-4 mb-6">
-              <div className="w-20 h-20 rounded-3xl bg-pacific-cyan flex items-center justify-center shadow-lg">
+              <div className="w-20 h-20 rounded-3xl bg-yellow-green flex items-center justify-center shadow-lg">
                 <Briefcase className="w-10 h-10 text-white" />
               </div>
             </div>
@@ -282,37 +282,37 @@ const CareerForm = () => {
               </div>
               <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                 <motion.div
-                  className="h-full bg-pacific-cyan"
+                  className="h-full bg-yellow-green"
                   initial={{ width: 0 }}
                   animate={{ width: `${(currentStep / totalSteps) * 100}%` }}
                   transition={{ duration: 0.3 }}
                 />
               </div>
               <div className="mt-6 space-y-4 text-base">
-                <div className={cn("flex items-center gap-3", currentStep === 1 && "text-pacific-cyan font-medium")}>
+                <div className={cn("flex items-center gap-3", currentStep === 1 && "text-yellow-green font-medium")}>
                   <div className={cn("w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold", 
-                    currentStep > 1 ? "bg-pacific-cyan text-white" : currentStep === 1 ? "bg-pacific-cyan text-white" : "bg-gray-200")}>
+                    currentStep > 1 ? "bg-yellow-green text-white" : currentStep === 1 ? "bg-yellow-green text-white" : "bg-gray-200")}>
                     {currentStep > 1 ? "✓" : "1"}
                   </div>
                   Personal Information
                 </div>
-                <div className={cn("flex items-center gap-3", currentStep === 2 && "text-pacific-cyan font-medium")}>
+                <div className={cn("flex items-center gap-3", currentStep === 2 && "text-yellow-green font-medium")}>
                   <div className={cn("w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold",
-                    currentStep > 2 ? "bg-pacific-cyan text-white" : currentStep === 2 ? "bg-pacific-cyan text-white" : "bg-gray-200")}>
+                    currentStep > 2 ? "bg-yellow-green text-white" : currentStep === 2 ? "bg-yellow-green text-white" : "bg-gray-200")}>
                     {currentStep > 2 ? "✓" : "2"}
                   </div>
                   Position Details
                 </div>
-                <div className={cn("flex items-center gap-3", currentStep === 3 && "text-pacific-cyan font-medium")}>
+                <div className={cn("flex items-center gap-3", currentStep === 3 && "text-yellow-green font-medium")}>
                   <div className={cn("w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold",
-                    currentStep > 3 ? "bg-pacific-cyan text-white" : currentStep === 3 ? "bg-pacific-cyan text-white" : "bg-gray-200")}>
+                    currentStep > 3 ? "bg-yellow-green text-white" : currentStep === 3 ? "bg-yellow-green text-white" : "bg-gray-200")}>
                     {currentStep > 3 ? "✓" : "3"}
                   </div>
                   Resume Upload
                 </div>
-                <div className={cn("flex items-center gap-3", currentStep === 4 && "text-pacific-cyan font-medium")}>
+                <div className={cn("flex items-center gap-3", currentStep === 4 && "text-yellow-green font-medium")}>
                   <div className={cn("w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold",
-                    currentStep === 4 ? "bg-pacific-cyan text-white" : "bg-gray-200")}>
+                    currentStep === 4 ? "bg-yellow-green text-white" : "bg-gray-200")}>
                     4
                   </div>
                   Additional Information
@@ -337,7 +337,7 @@ const CareerForm = () => {
                 </div>
                 <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                   <motion.div
-                    className="h-full bg-pacific-cyan"
+                    className="h-full bg-yellow-green"
                     initial={{ width: 0 }}
                     animate={{ width: `${(currentStep / totalSteps) * 100}%` }}
                     transition={{ duration: 0.3 }}
@@ -530,7 +530,7 @@ const CareerForm = () => {
                         <Label htmlFor="resume">
                           Upload Resume<span className="text-destructive">*</span>
                         </Label>
-                        <div className="border-2 border-dashed border-border rounded-xl p-8 text-center hover:border-pacific-cyan transition-colors">
+                        <div className="border-2 border-dashed border-border rounded-xl p-8 text-center hover:border-yellow-green transition-colors">
                           <Upload className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
                           <Input
                             id="resume"
@@ -540,14 +540,14 @@ const CareerForm = () => {
                             className="hidden"
                           />
                           <Label htmlFor="resume" className="cursor-pointer">
-                            <span className="text-pacific-cyan font-semibold">Click to upload</span>
+                            <span className="text-yellow-green font-semibold">Click to upload</span>
                             <span className="text-muted-foreground"> or drag and drop</span>
                           </Label>
                           <p className="text-sm text-muted-foreground mt-2">
                             PDF, DOC, DOCX (max. 5MB)
                           </p>
                           {resumeFile && (
-                            <p className="mt-4 text-sm font-medium text-pacific-cyan">
+                            <p className="mt-4 text-sm font-medium text-yellow-green">
                               ✓ {resumeFile.name}
                             </p>
                           )}
@@ -661,7 +661,7 @@ const CareerForm = () => {
                       <Button
                         type="button"
                         onClick={handleNext}
-                        className="flex-1 rounded-xl bg-pacific-cyan hover:bg-pacific-cyan/90"
+                        className="flex-1 rounded-xl bg-yellow-green hover:bg-yellow-green/90"
                       >
                         Next
                         <ChevronRight className="w-4 h-4 ml-2" />
@@ -671,7 +671,7 @@ const CareerForm = () => {
                         type="button"
                         onClick={handleSubmit}
                         disabled={isSubmitting}
-                        className="flex-1 rounded-xl bg-pacific-cyan hover:bg-pacific-cyan/90"
+                        className="flex-1 rounded-xl bg-yellow-green hover:bg-yellow-green/90"
                       >
                         {isSubmitting ? (
                           "Submitting..."

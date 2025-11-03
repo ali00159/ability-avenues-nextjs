@@ -2,7 +2,6 @@ import { lazy, Suspense } from "react";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import AboutHero from "@/components/about/AboutHero";
-import AboutStats from "@/components/about/AboutStats";
 
 // Lazy load sections for performance
 const WhoWeAre = lazy(() => import("@/components/about/WhoWeAre"));
@@ -16,7 +15,6 @@ const AboutUs = () => {
       <Header />
       <main>
         <AboutHero />
-        <AboutStats />
         <Suspense fallback={<div className="h-screen" />}>
           <WhoWeAre />
           <WhyChooseUs />
