@@ -23,7 +23,7 @@ interface CareerFormData {
   howHeardAbout?: string;
   gender?: string;
   raceEthnicity?: string;
-  resumeUrl: string;
+  resumePath: string;
   resumeFilename: string;
 }
 
@@ -170,17 +170,6 @@ const handler = async (req: Request): Promise<Response> => {
         <span class="field-label">Employment Type:</span>
         <span class="field-value">${formData.employmentType}</span>
       </div>
-    </div>
-
-    <div class="section">
-      <h2>📄 Resume</h2>
-      <div class="field">
-        <span class="field-label">Filename:</span>
-        <span class="field-value">${formData.resumeFilename}</span>
-      </div>
-      <a href="${formData.resumeUrl}" class="resume-link" target="_blank">
-        📎 Download Resume
-      </a>
     </div>
 
     ${formData.howHeardAbout || formData.gender || formData.raceEthnicity ? `

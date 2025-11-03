@@ -107,13 +107,14 @@ const Hero = () => {
           <div className="relative z-20 max-w-2xl w-full flex flex-col">
             <h1
               ref={titleRef}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight tracking-tight drop-shadow"
+              className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-normal tracking-tight drop-shadow"
+              style={{ lineHeight: '1.5' }}
             >
-              ABA Therapy for your child, tailored to your their{" "}
+              Empowering Children with Autism to Enable{" "}
               <span className="text-yellow-green block mt-2">
-                unique{" "}
+                Avenues of{" "}
                 <Typewriter
-                  text={["strengths", "needs", "goals" ]}
+                  text={["Potential", "Growth"]}
                   speed={80}
                   deleteSpeed={50}
                   delay={2000}

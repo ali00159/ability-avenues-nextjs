@@ -188,6 +188,11 @@
     @apply text-5xl md:text-6xl;
   }
   
+  /* Hero title with increased line spacing */
+  .hero-title {
+    line-height: 1.1 !important;
+  }
+  
   h2 {
     @apply text-3xl md:text-4xl;
   }

@@ -45,11 +45,11 @@ const CareerForm = () => {
   const stepSchemas = [
     // Step 1: Personal Information
     z.object({
-      firstName: z.string().trim().min(1, "First name is required").max(50, "First name must be less than 50 characters"),
-      lastName: z.string().trim().min(1, "Last name is required").max(50, "Last name must be less than 50 characters"),
-      phone: z.string().trim().regex(/^\(?([0-9]{3})\)?[-.\s]?([0-9]{3})[-.\s]?([0-9]{4})$/, "Please enter a valid 10-digit phone number"),
-      email: z.string().trim().email("Please enter a valid email address").max(100, "Email must be less than 100 characters"),
-      zipCode: z.string().trim().regex(/^\d{5}$/, "ZIP code must be exactly 5 digits"),
+      firstName: z.string().min(1, "First name is required").max(50, "First name must be less than 50 characters"),
+      lastName: z.string().min(1, "Last name is required").max(50, "Last name must be less than 50 characters"),
+      phone: z.string().regex(/^\(?([0-9]{3})\)?[-.\s]?([0-9]{3})[-.\s]?([0-9]{4})$/, "Please enter a valid 10-digit phone number"),
+      email: z.string().email("Please enter a valid email address").max(100, "Email must be less than 100 characters"),
+      zipCode: z.string().regex(/^\d{5}$/, "ZIP code must be exactly 5 digits"),
       over18Confirmed: z.boolean().refine((val) => val === true, {
         message: "You must confirm you are over 18",
       }),
@@ -174,12 +174,6 @@ const CareerForm = () => {
         throw new Error("Failed to upload resume");
       }
 
-      // Get public URL for the resume
-      const response = supabase.storage.from("resumes").getPublicUrl(filePath);
-      const urlData = response.data;
-
-      
-
       // Save to database
       const { error: dbError } = await supabase.from("career_applications").insert({
         first_name: formData.firstName,
@@ -192,7 +186,7 @@ const CareerForm = () => {
         days_available: formData.daysAvailable,
         times_available: formData.timesAvailable,
         employment_type: formData.employmentType,
-        resume_url: urlData.publicUrl,
+        resume_url: filePath,
         resume_filename: resumeFile.name,
         how_heard_about: formData.howHeardAbout || null,
         gender: formData.gender || null,
@@ -210,7 +204,7 @@ const CareerForm = () => {
       const { error: emailError } = await supabase.functions.invoke("send-career-notification", {
         body: {
           ...formData,
-          resumeUrl: urlData.publicUrl,
+          resumePath: filePath,
           resumeFilename: resumeFile.name,
         },
       });

@@ -148,7 +148,7 @@ const ContactUs = ({ cityName, mapEmbedUrl, mapTitle }: ContactUsProps) => {
                 <h3 className="text-xl font-bold text-raisin-black mb-3">Email</h3>
                 <a
                   href="mailto:info@abilityavenues.com"
-                  className="text-muted-foreground hover:text-secondary transition-colors inline-block"
+                  className="text-muted-foreground hover:text-primary transition-colors inline-block"
                 >
                   info@abilityavenues.com
                 </a>

@@ -117,7 +117,7 @@ export default function FAQPage() {
                 name: 'How long are therapy sessions?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Session length varies based on each child\'s individualized treatment plan and recommendations from our clinical team. Typical sessions range from 2-6 hours per day, depending on your child\'s needs, goals, and insurance coverage.',
+                  text: 'Session length varies based on each child\'s individualized treatment plan and recommendations from our clinical team. Typical sessions range from 4-8 hours per day, depending on your child\'s needs, goals, and insurance coverage.',
                 },
               },
               {

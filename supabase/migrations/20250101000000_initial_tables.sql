@@ -64,6 +64,7 @@ ALTER TABLE public.referral_submissions ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "Anyone can submit referrals" 
 ON public.referral_submissions 
 FOR INSERT 
+TO anon
 WITH CHECK (true);
 
 -- Create storage bucket for resumes
@@ -74,12 +75,8 @@ VALUES ('resumes', 'resumes', false);
 CREATE POLICY "Anyone can upload resumes"
 ON storage.objects
 FOR INSERT
+TO anon
 WITH CHECK (bucket_id = 'resumes');
-
-CREATE POLICY "Anyone can view their own resume"
-ON storage.objects
-FOR SELECT
-USING (bucket_id = 'resumes');
 
 -- Create career_applications table
 CREATE TABLE public.career_applications (
@@ -120,4 +117,5 @@ ALTER TABLE public.career_applications ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "Anyone can submit career applications"
 ON public.career_applications
 FOR INSERT
+TO anon
 WITH CHECK (true);
