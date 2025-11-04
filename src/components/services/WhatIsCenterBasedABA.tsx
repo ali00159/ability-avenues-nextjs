@@ -71,10 +71,10 @@ const WhatIsCenterBasedABA = () => {
           <div className="relative flex items-center justify-center min-h-[500px] lg:min-h-[600px]">
             {/* Layer 1: Opaque Green Triangle - Bottom */}
             <motion.div
-              initial={{ opacity: 0, scale: 1.1, x: -200 }}
-              whileInView={{ opacity: 1, scale: 1.1, x: '-1%' }}
+              initial={{ opacity: 0, scale: 1, x: '-1%', y: '-6%' }}
+              whileInView={{ opacity: 1, scale: 1, x: '-1%', y: '-6%' }}
               viewport={{ once: true }}
-              transition={{ duration: 1, ease: "easeOut" }}
+              transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
               className="absolute inset-0 flex items-center justify-center z-0"
             >
               <Image
@@ -90,8 +90,8 @@ const WhatIsCenterBasedABA = () => {
 
             {/* Layer 2: Solid Green Triangle - Middle */}
             <motion.div
-              initial={{ opacity: 0, x: 200 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: .85, x: '-1%', y: '-6%' }}
+              whileInView={{ opacity: 1, scale: .85, x: '-1%', y: '-6%' }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
               className="absolute inset-0 flex items-center justify-center z-[5]"
@@ -109,12 +109,11 @@ const WhatIsCenterBasedABA = () => {
 
             {/* Layer 3: Girl Smiling Image - Top */}
             <motion.div
-              initial={{ opacity: 0, x: -20, y: 38, scale: 1.05 }}
-              whileInView={{ opacity: 1, x: -20, y: 38, scale: 1.05 }}
+              initial={{ opacity: 0, scale: .9, x: '-3%', y: '-1%' }}
+              whileInView={{ opacity: 1, scale: .9, x: '-3%', y: '-1%' }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
               className="absolute inset-0 flex items-center justify-center z-10"
-              style={{ transform: 'translateY(-5%)' }}
             >
               <Image
                 src={girlSmiling}
