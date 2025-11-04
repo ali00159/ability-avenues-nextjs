@@ -109,7 +109,7 @@ const AboutHero = () => {
 
             <div ref={subtitleRef} className="space-y-4">
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Founded in 2024, Ability Avenues was created to address the growing need for high-quality ABA therapy services in the Minneapolis area. The center was established out of a passion for helping children reach their full potential and is grounded in a strong commitment to improving the lives of individuals with developmental needs.
+                Founded in 2023, Ability Avenues was created to address the growing need for high-quality ABA therapy services in the Minneapolis area. The center was established out of a passion for helping children reach their full potential and is grounded in a strong commitment to improving the lives of individuals with developmental needs.
               </p>
               
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
@@ -147,7 +147,7 @@ const AboutHero = () => {
               >
                 <div className="flex items-center gap-2">
                   <Award className="w-5 h-5 text-pacific-cyan flex-shrink-0" />
-                  <span className="text-muted-foreground">Founded in 2024</span>
+                  <span className="text-muted-foreground">Founded in 2023</span>
                 </div>
                 <div className="h-6 w-px bg-border hidden sm:block" />
                 <div className="flex items-center gap-2">

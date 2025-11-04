@@ -41,13 +41,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    // City-specific contact pages
     {
-      url: `${baseUrl}/contact/minneapolis`,
+      url: `${baseUrl}/contact`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    // City-specific contact pages
     {
       url: `${baseUrl}/contact/eden-prairie`,
       lastModified: currentDate,

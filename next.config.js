@@ -11,6 +11,21 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: process.env.NODE_ENV === 'production',
   },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.abilityavenues.com',
+          },
+        ],
+        destination: 'https://abilityavenues.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
   webpack: (config) => {
     // Handle SVG files
     config.module.rules.push({

@@ -218,7 +218,7 @@ const IntakeProcess = () => {
           <div className="max-w-4xl mx-auto text-center relative">
             {/* Floating Icons */}
             <motion.div
-              className="absolute top-12 right-0 text-pacific-cyan hidden lg:block"
+              className="absolute top-12 -right-4 text-pacific-cyan hidden lg:block"
               animate={{ y: [0, -12, 0], rotate: [0, 8, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               aria-hidden
