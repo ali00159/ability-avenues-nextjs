@@ -83,7 +83,10 @@ const Services = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <h1 
+                className="center-hero-title text-5xl md:text-6xl font-bold mb-6"
+                style={{ lineHeight: '1.5' }}
+              >
                 <span className="text-pacific-cyan">Center-Based ABA Therapy</span>{" "}
                 <span className="text-raisin-black">in Minneapolis for Children & Teens with Autism</span>
               </h1>

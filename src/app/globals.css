@@ -193,6 +193,16 @@
     line-height: 1.1 !important;
   }
   
+  /* Center-based therapy hero title with slightly increased line spacing */
+  .center-hero-title {
+    line-height: 1.1 !important;
+  }
+  
+  /* FAQ hero title with slightly increased line spacing */
+  .faq-hero-title {
+    line-height: 1.1 !important;
+  }
+  
   h2 {
     @apply text-3xl md:text-4xl;
   }

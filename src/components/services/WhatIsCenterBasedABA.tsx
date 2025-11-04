@@ -71,7 +71,7 @@ const WhatIsCenterBasedABA = () => {
           <div className="relative flex items-center justify-center min-h-[500px] lg:min-h-[600px]">
             {/* Layer 1: Opaque Green Triangle - Bottom */}
             <motion.div
-              initial={{ opacity: 0, scale: 1, x: '-1%', y: '-6%' }}
+              initial={{ opacity: 0, scale: 1, x: '-50%', y: '-6%' }}
               whileInView={{ opacity: 1, scale: 1, x: '-1%', y: '-6%' }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
@@ -90,7 +90,7 @@ const WhatIsCenterBasedABA = () => {
 
             {/* Layer 2: Solid Green Triangle - Middle */}
             <motion.div
-              initial={{ opacity: 0, scale: .85, x: '-1%', y: '-6%' }}
+              initial={{ opacity: 0, scale: .85, x: '50%', y: '-6%' }}
               whileInView={{ opacity: 1, scale: .85, x: '-1%', y: '-6%' }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}

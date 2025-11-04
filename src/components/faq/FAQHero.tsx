@@ -96,7 +96,8 @@ const FAQHero = () => {
 
           <h1
             ref={titleRef}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight"
+            className="faq-hero-title text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight"
+            style={{ lineHeight: '1.5' }}
           >
             Frequently Asked{' '}
             <span className="text-pacific-cyan">Questions</span>{' '}

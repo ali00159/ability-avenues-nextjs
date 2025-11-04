@@ -1,59 +1,25 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Award, Heart, Users } from 'lucide-react';
-
-gsap.registerPlugin(ScrollTrigger);
+import greenSquareIcon from '@/assets/green-sqaure-icon.svg';
+import girlGlasses from '@/assets/girl-glasses-eidbi.png';
 
 const WhatIsEidbi = () => {
-  const contentRef = useRef<HTMLDivElement>(null);
-  const statsRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (contentRef.current) {
-      gsap.set(contentRef.current, { opacity: 1, y: 0 });
-
-      const ctx = gsap.context(() => {
-        gsap.fromTo(
-          contentRef.current,
-          {
-            opacity: 0,
-            y: 60,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            ease: 'power3.out',
-            scrollTrigger: {
-              trigger: contentRef.current,
-              start: 'top 85%',
-              onEnter: () => {},
-            },
-          }
-        );
-      });
-
-      return () => {
-        ctx.revert();
-        if (contentRef.current) {
-          gsap.set(contentRef.current, { clearProps: 'all' });
-        }
-      };
-    }
-  }, []);
-
   return (
     <section className="py-24 bg-gradient-to-br from-cornsilk/20 via-white to-pacific-cyan/5 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
-          <div ref={contentRef} className="space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
+          >
             {/* Eyebrow Text */}
             <div className="inline-block">
               <span className="text-yellow-green font-semibold uppercase tracking-wider text-sm">
@@ -98,7 +64,6 @@ const WhatIsEidbi = () => {
 
             {/* Compact trust row (keeps same icons and text) */}
             <motion.div 
-              ref={statsRef}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.5 }}
@@ -142,35 +107,48 @@ const WhatIsEidbi = () => {
                 Learn More About EIDBI →
               </Link>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Right Column - Decorative Illustration */}
-          <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            <div className="relative w-full max-w-xl mx-auto">
-              {/* Decorative Accent Circle */}
-              <div
-                className="absolute -bottom-8 -left-8 w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-yellow-green/20 to-pacific-cyan/20 rounded-full blur-2xl"
+          {/* Right Column - Animated Images */}
+          <div className="relative flex items-center justify-center min-h-[500px] lg:min-h-[600px]">
+            {/* Green Square Background */}
+            <motion.div
+              initial={{ opacity: 0, scale: 1.2, x: '-50%', y: '0%' }}
+              whileInView={{ opacity: 1, scale: 1.2, x: '0%', y: '0%' }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+              className="absolute inset-0 flex items-center justify-center z-0"
+            >
+              <Image
+                src={greenSquareIcon}
+                alt=""
+                className="w-[110%] h-[110%] object-contain"
+                width={550}
+                height={550}
+                loading="lazy"
                 aria-hidden="true"
               />
-              
-              {/* Main Visual */}
-              <div className="relative z-10 aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-cornsilk to-pacific-cyan/10 shadow-lg">
-                <Image
-                  src="/placeholder.svg"
-                  alt="Placeholder image"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 55vw"
-                />
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
+
+            {/* Girl with Glasses Image - On Top */}
+            <motion.div
+              initial={{ opacity: 0, scale: 1.6, x: '-37.5%', y: '-6.6%' }}
+              whileInView={{ opacity: 1, scale: 1.6, x: '-37.5%', y: '-6.6%' }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+              className="absolute inset-0 flex items-center justify-center z-10"
+            >
+              <Image
+                src={girlGlasses}
+                alt="Child with glasses during EIDBI therapy session"
+                className="w-full h-full object-contain"
+                width={500}
+                height={500}
+                priority
+                quality={85}
+              />
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

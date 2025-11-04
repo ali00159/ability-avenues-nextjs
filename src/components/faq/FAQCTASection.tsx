@@ -3,8 +3,7 @@
 import Link from 'next/link';
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageCircle } from "lucide-react";
-import Image from 'next/image';
+import { MessageCircleMore } from "lucide-react";
 
 const FAQCTASection = () => {
   return (
@@ -23,7 +22,7 @@ const FAQCTASection = () => {
               <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-muted/50 flex items-center justify-center border-2 border-border overflow-hidden">
                 {/* Using a placeholder - you can replace with actual team photo */}
                 <div className="w-full h-full bg-gradient-to-br from-pacific-cyan/20 to-yellow-green/20 flex items-center justify-center">
-                  <MessageCircle className="w-8 h-8 md:w-10 md:h-10 text-pacific-cyan" />
+                  <MessageCircleMore className="w-8 h-8 md:w-10 md:h-10 text-pacific-cyan" />
                 </div>
               </div>
             </div>
@@ -41,17 +40,9 @@ const FAQCTASection = () => {
               </p>
             </div>
             
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-              <Button
-                variant="outline"
-                size="lg"
-                className="whitespace-nowrap w-full sm:w-auto justify-center"
-                disabled
-              >
-                Documentation
-              </Button>
-              <Link href="/contact" className="w-full sm:w-auto">
+            {/* Button */}
+            <div className="w-full md:w-auto">
+              <Link href="/contact" className="w-full sm:w-auto block">
                 <Button
                   variant="default"
                   size="lg"

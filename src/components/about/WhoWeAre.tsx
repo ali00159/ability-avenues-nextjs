@@ -83,7 +83,7 @@ const WhoWeAre = () => {
             
             <div className="space-y-4 text-gray-600 leading-relaxed text-lg">
               <p dangerouslySetInnerHTML={{ 
-                __html: highlightText("Since our founding in 2024, Ability Avenues has been committed to the philosophy of 'zero distance,' which ensures seamless communication between therapists, families, and children. We believe that meaningful change happens when families and therapists work together closely, fostering the best possible outcomes for the children we serve.", ["zero distance", "meaningful change", "work together closely"])
+                __html: highlightText("Since our founding in 2023, Ability Avenues has been committed to the philosophy of 'zero distance,' which ensures seamless communication between therapists, families, and children. We believe that meaningful change happens when families and therapists work together closely, fostering the best possible outcomes for the children we serve.", ["zero distance", "meaningful change", "work together closely"])
               }} />
               
               <p>
