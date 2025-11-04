@@ -69,7 +69,7 @@ export default function FAQPage() {
                 name: 'What is ABA therapy?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Applied Behavior Analysis (ABA) is a scientific approach to understanding and changing behavior. It focuses on teaching meaningful skills and reducing challenging behaviors through evidence-based techniques. ABA therapy is highly individualized and adapts to each child\'s unique needs and learning style.',
+                  text: 'Applied Behavior Analysis (ABA) is a scientific approach to understanding and changing behavior. It focuses on teaching meaningful skills and reducing challenging behaviors through evidence-based techniques. ABA therapy is highly individualized and adapts to each child\'s unique needs and learning style. We offer both in-home therapy and center-based therapy options to meet your family\'s needs.',
                 },
               },
               {
@@ -98,6 +98,14 @@ export default function FAQPage() {
               },
               {
                 '@type': 'Question',
+                name: 'What\'s the difference between in-home and center-based therapy?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'In-home therapy brings ABA services directly to your home, offering flexibility and the ability to practice skills in your child\'s natural environment with family involvement. Center-based therapy takes place in our specialized facility and provides structured peer interactions, specialized equipment, and a distraction-free learning environment. Both options offer individualized treatment plans supervised by BCBAs. The choice depends on your child\'s needs, family schedule, and learning preferences. Our team can help you determine which option is best for your family during the intake process.',
+                },
+              },
+              {
+                '@type': 'Question',
                 name: 'How do I get started?',
                 acceptedAnswer: {
                   '@type': 'Answer',
@@ -109,7 +117,7 @@ export default function FAQPage() {
                 name: 'What should I expect during the first visit?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'During the first visit, you\'ll meet with our clinical team for a comprehensive assessment. We\'ll observe your child, gather information about their strengths and challenges, and discuss your family\'s goals. This helps us create an individualized treatment plan tailored to your child\'s needs.',
+                  text: 'During the first visit, you\'ll meet with our clinical team for a comprehensive assessment. We\'ll observe your child, gather information about their strengths and challenges, and discuss your family\'s goals. This helps us create an individualized treatment plan tailored to your child\'s needs. Learn more about our intake process to understand what to expect.',
                 },
               },
               {
@@ -149,7 +157,7 @@ export default function FAQPage() {
                 name: 'What does an individualized treatment plan look like?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'A Board Certified Behavior Analyst develops a treatment plan that focuses on your child\'s goals and needs. It uses information from diagnostic records, any past therapy, the CMDE, a parent interview, and direct observation. The plan sets clear goals for skill building and behavior support. It is updated often as progress happens or needs change. A full review takes place every six months with another observation and parent interview. Families receive updates so you always know what your child is working on and why.',
+                  text: 'A Board Certified Behavior Analyst develops a treatment plan that focuses on your child\'s goals and needs. It uses information from diagnostic records, any past therapy, the CMDE, a parent interview, and direct observation. The plan sets clear goals for skill building and behavior support. It is updated often as progress happens or needs change. A full review takes place every six months with another observation and parent interview. Families receive updates so you always know what your child is working on and why. Learn more about how we develop these plans during our intake process.',
                 },
               },
               {

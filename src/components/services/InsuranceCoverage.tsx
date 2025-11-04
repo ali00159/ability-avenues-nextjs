@@ -7,6 +7,7 @@ import { CheckCircle, Phone } from "lucide-react";
 import Link from 'next/link';
 import Image from 'next/image';
 import { Logos3 } from "@/components/ui/logos3";
+import shieldIcon from "@/assets/shield-icon.svg";
 
 const InsuranceCoverage = () => {
   const scrollToContact = () => {
@@ -43,7 +44,7 @@ const InsuranceCoverage = () => {
                   transition={{ duration: 0.7, ease: "easeOut" }}
                 >
                   <Image 
-                    src="/shield-icon.svg" 
+                    src={shieldIcon} 
                     alt="Shield Icon" 
                     width={160} 
                     height={160}

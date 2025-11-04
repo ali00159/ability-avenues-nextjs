@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
-import { Phone, ArrowRight, HelpCircle, MessageCircle, BookOpen, Lightbulb, Users, Target } from 'lucide-react';
+import { ArrowRight, HelpCircle, MessageCircle, BookOpen, Lightbulb, Users, Target } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 
@@ -12,7 +12,6 @@ const FAQHero = () => {
   const subtitleRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Reset elements to ensure clean state
     if (titleRef.current) {
       gsap.set(titleRef.current, { opacity: 1, y: 0 });
     }
@@ -47,7 +46,6 @@ const FAQHero = () => {
       '-=0.4'
     );
 
-    // Cleanup function to reset on unmount
     return () => {
       if (titleRef.current) {
         gsap.set(titleRef.current, { clearProps: 'all' });
@@ -60,25 +58,24 @@ const FAQHero = () => {
 
   return (
     <section className="relative pt-24 md:pt-32 pb-12 md:pb-20">
-      {/* Content */}
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-4xl mx-auto text-center relative">
           {/* Floating Icons */}
           <motion.div
-            className="absolute top-5 right-5 text-pacific-cyan hidden lg:block"
+            className="absolute top-10 -right-8 text-pacific-cyan hidden lg:block"
             animate={{ y: [0, -12, 0], rotate: [0, 8, 0] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             aria-hidden
           >
-            <BookOpen className="w-16 h-16" />
+            <BookOpen className="w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16" />
           </motion.div>
           <motion.div
-            className="absolute top-10 -left-4 text-yellow-green hidden lg:block"
+            className="absolute top-10 -left-12 text-yellow-green hidden lg:block"
             animate={{ y: [0, 14, 0], rotate: [0, -8, 0] }}
             transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut" }}
             aria-hidden
           >
-            <Lightbulb className="w-20 h-20" />
+            <Lightbulb className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20" />
           </motion.div>
           <motion.div
             className="absolute -bottom-10 right-20 text-xanthous hidden lg:block"
@@ -86,7 +83,7 @@ const FAQHero = () => {
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             aria-hidden
           >
-            <Users className="w-14 h-14" />
+            <Users className="w-8 h-8 md:w-12 md:h-12 lg:w-14 lg:h-14" />
           </motion.div>
           <motion.div
             className="absolute bottom-5 -left-20 text-pacific-cyan hidden lg:block"
@@ -94,8 +91,9 @@ const FAQHero = () => {
             transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut" }}
             aria-hidden
           >
-            <Target className="w-16 h-16" />
+            <Target className="w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16" />
           </motion.div>
+
           <h1
             ref={titleRef}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight"
@@ -117,25 +115,15 @@ const FAQHero = () => {
               answer any questions you may have.
             </p>
 
-            {/* Two CTAs */}
+            {/* CTA Button */}
             <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
               <Link href="/contact">
                 <Button
                   size="lg"
-                  className="group bg-yellow-green hover:bg-yellow-green/90 text-raisin-black font-semibold shadow-lg text-base md:text-lg px-6 md:px-8 py-6"
+                  className="group bg-pacific-cyan hover:bg-pacific-cyan/90 text-white font-semibold shadow-lg text-base md:text-lg px-6 md:px-8 py-6"
                 >
                   Contact Us
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
-              <Link href="/contact" className="group">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="text-base md:text-lg px-6 md:px-8 py-6 bg-white hover:bg-gray-50 border-2"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Schedule a Call →
                 </Button>
               </Link>
             </div>

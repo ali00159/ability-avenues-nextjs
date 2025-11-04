@@ -2,8 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { ExternalLink, Download, Users, BookOpen, Heart, Headphones, Building2, HandHeart, Phone } from 'lucide-react';
+import { ExternalLink, Users, BookOpen, Heart, Headphones, Building2, HandHeart, Phone } from 'lucide-react';
 import Link from 'next/link';
 
 const resources = [
@@ -175,24 +174,6 @@ const SupportNetwork = () => {
             );
           })}
         </div>
-
-        {/* Download CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-center"
-        >
-          <Button
-            size="lg"
-            variant="outline"
-            className="text-lg px-8 py-6 border-2 hover:shadow-md transition-all group"
-          >
-            <Download className="w-5 h-5 mr-2 group-hover:translate-y-1 transition-transform" />
-            Download Our Complete Minnesota Autism Resources Guide (PDF)
-          </Button>
-        </motion.div>
       </div>
     </section>
   );

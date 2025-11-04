@@ -4,14 +4,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
-import { Phone, ArrowRight, Users, Award, Calendar } from 'lucide-react';
+import { ArrowRight, Award, Users, Puzzle, Pencil, Star, Smile } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
+import blueTriangle from '@/assets/blue-triangle-icon.svg';
+import blueTriangleOpaque from '@/assets/blue-triangle-opaue-icon.svg';
+import girlWithSunglasses from '@/assets/girl-big-sunglasses-eidbi.png';
 
 const EidbiHero = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLDivElement>(null);
-  const accentCircleRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Reset elements to ensure clean state
@@ -49,20 +51,6 @@ const EidbiHero = () => {
       '-=0.4'
     );
 
-    // Parallax effect on accent circle
-    if (accentCircleRef.current) {
-      const handleScroll = () => {
-        const scrollY = window.scrollY;
-        gsap.to(accentCircleRef.current, {
-          y: scrollY * 0.3,
-          duration: 0.3,
-          ease: 'power2.out',
-        });
-      };
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-    }
-
     // Cleanup function to reset on unmount
     return () => {
       if (titleRef.current) {
@@ -75,26 +63,7 @@ const EidbiHero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-[90vh] bg-gradient-to-br from-cornsilk/20 via-white to-pacific-cyan/5 overflow-hidden pt-24 md:pt-32 pb-12 md:pb-20">
-      {/* Animated Background Shapes */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <motion.div
-          className="absolute top-20 right-20 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-yellow-green/10 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.1, 1],
-            x: [0, 30, 0],
-            y: [0, 20, 0],
-          }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-          style={{ willChange: 'transform' }}
-          aria-hidden="true"
-        />
-      </div>
-
+    <section className="relative min-h-[90vh] bg-white overflow-hidden pt-24 md:pt-32 pb-12 md:pb-20">
       {/* Content */}
       <div className="container mx-auto px-4 z-10 relative">
         <div className="grid lg:grid-cols-[55fr_45fr] gap-12 lg:gap-16 items-center">
@@ -105,7 +74,7 @@ const EidbiHero = () => {
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight"
             >
               EIDBI Services in Minnesota:{' '}
-              <span className="text-pacific-cyan">Hope, Help & Support</span>{' '}
+              <span className="text-yellow-green">Hope, Help & Support</span>{' '}
               for Your Child with Autism
             </h1>
 
@@ -162,49 +131,101 @@ const EidbiHero = () => {
             </div>
           </div>
 
-          {/* Right Column - Circular Image with Decorative Accent */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="relative lg:ml-auto"
-          >
-            <div className="relative w-full max-w-lg mx-auto">
-              {/* Decorative Accent Circle */}
-              <div
-                ref={accentCircleRef}
-                className="absolute -top-8 -right-8 w-72 h-72 md:w-96 md:h-96 bg-gradient-to-br from-xanthous/30 to-yellow-green/20 rounded-full blur-2xl"
-                aria-hidden="true"
-              />
-              
-              {/* Main Image Circle */}
-              <div className="relative z-10 aspect-square rounded-full overflow-hidden bg-gradient-to-br from-pacific-cyan/20 to-yellow-green/20 shadow-lg">
-                <Image
-                  src="/images/eidbi-hero-parent-child.jpg"
-                  alt="Parent supporting child during therapy session"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 45vw"
-                />
-              </div>
-
-              {/* Floating Calendar Icon */}
+          {/* Right Column - Animated Images */}
+          <div className="relative">
+            <div className="relative w-full aspect-square max-w-md sm:max-w-lg md:max-w-xl mx-auto">
+              {/* Layer 1: Opaque Blue Triangle - Bottom */}
               <motion.div
-                className="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 shadow-lg"
-                animate={{
-                  y: [0, -10, 0],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
+                initial={{ opacity: 0, scale: 0.9, x: -200, y: '-1%' }}
+                whileInView={{ opacity: 1, scale: 0.9, x: '-1%', y: '-1%' }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+                className="absolute inset-0 flex items-center justify-center z-0 scale-90 md:scale-100"
               >
-                <Calendar className="w-8 h-8 text-pacific-cyan" />
+                <Image
+                  src={blueTriangleOpaque}
+                  alt=""
+                  className="w-full h-full object-contain"
+                  width={550}
+                  height={550}
+                  loading="lazy"
+                  aria-hidden="true"
+                />
+              </motion.div>
+
+              {/* Layer 2: Solid Blue Triangle - Middle */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8, x: 200 }}
+                whileInView={{ opacity: 1, scale: 0.8, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="absolute inset-0 flex items-center justify-center z-[5] scale-80 md:scale-90"
+              >
+                <Image
+                  src={blueTriangle}
+                  alt=""
+                  className="w-full h-full object-contain"
+                  width={450}
+                  height={450}
+                  loading="lazy"
+                  aria-hidden="true"
+                />
+              </motion.div>
+
+              {/* Layer 3: Girl with Sunglasses Image - Top */}
+              <motion.div
+                initial={{ opacity: 0, x: '20%', y: '5.5%', scale: 1.0 }}
+                whileInView={{ opacity: 1, x: '20%', y: '5.5%', scale: 1.0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+                className="absolute inset-0 flex items-center justify-center z-10 scale-115 md:scale-125"
+              >
+                <Image
+                  src={girlWithSunglasses}
+                  alt="Child with sunglasses during EIDBI therapy session"
+                  className="w-full h-full object-contain"
+                  width={500}
+                  height={500}
+                  priority
+                  quality={85}
+                />
               </motion.div>
             </div>
-          </motion.div>
+            
+            {/* Decorative floating icons */}
+            <motion.div
+              className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 text-secondary"
+              animate={{ y: [0, -12, 0], rotate: [0, 8, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              aria-hidden
+            >
+              <Puzzle className="w-6 h-6 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-16 lg:h-16" />
+            </motion.div>
+            <motion.div
+              className="absolute -bottom-1 -left-1 sm:-bottom-2 sm:-left-2 text-primary"
+              animate={{ y: [0, 14, 0], rotate: [0, -8, 0] }}
+              transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut" }}
+              aria-hidden
+            >
+              <Pencil className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20" />
+            </motion.div>
+            <motion.div
+              className="absolute top-8 left-1 sm:top-10 sm:left-2 text-xanthous"
+              animate={{ y: [0, 10, 0], rotate: [0, 6, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              aria-hidden
+            >
+              <Star className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 lg:w-14 lg:h-14" fill="currentColor" />
+            </motion.div>
+            <motion.div
+              className="absolute -bottom-1 right-2 sm:-bottom-2 sm:right-4 text-secondary"
+              animate={{ y: [0, -10, 0], rotate: [0, -6, 0] }}
+              transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut" }}
+              aria-hidden
+            >
+              <Smile className="w-6 h-6 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-16 lg:h-16" />
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

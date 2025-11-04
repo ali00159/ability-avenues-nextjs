@@ -166,7 +166,6 @@ const IntakeProcess = () => {
   const subtitleRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Reset elements to ensure clean state
     if (titleRef.current) {
       gsap.set(titleRef.current, { opacity: 1, y: 0 });
     }
@@ -201,7 +200,6 @@ const IntakeProcess = () => {
       '-=0.4'
     );
 
-    // Cleanup function to reset on unmount
     return () => {
       if (titleRef.current) {
         gsap.set(titleRef.current, { clearProps: 'all' });
@@ -215,27 +213,25 @@ const IntakeProcess = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      {/* Hero Section */}
       <section className="relative pt-24 md:pt-32 pb-0 md:pb-8">
-        {/* Content */}
         <div className="container mx-auto px-4 z-10 relative">
           <div className="max-w-4xl mx-auto text-center relative">
             {/* Floating Icons */}
             <motion.div
-              className="absolute top-5 right-5 text-pacific-cyan hidden lg:block"
+              className="absolute top-12 right-0 text-pacific-cyan hidden lg:block"
               animate={{ y: [0, -12, 0], rotate: [0, 8, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               aria-hidden
             >
-              <ClipboardCheck className="w-16 h-16" />
+              <ClipboardCheck className="w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16" />
             </motion.div>
             <motion.div
-              className="absolute top-10 -left-4 text-yellow-green hidden lg:block"
+              className="absolute top-4 -left-20 text-yellow-green hidden lg:block"
               animate={{ y: [0, 14, 0], rotate: [0, -8, 0] }}
               transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut" }}
               aria-hidden
             >
-              <Calendar className="w-20 h-20" />
+              <Calendar className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20" />
             </motion.div>
             <motion.div
               className="absolute -bottom-10 right-20 text-xanthous hidden lg:block"
@@ -243,7 +239,7 @@ const IntakeProcess = () => {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               aria-hidden
             >
-              <FileText className="w-14 h-14" />
+              <FileText className="w-8 h-8 md:w-12 md:h-12 lg:w-14 lg:h-14" />
             </motion.div>
             <motion.div
               className="absolute bottom-5 -left-20 text-pacific-cyan hidden lg:block"
@@ -251,8 +247,9 @@ const IntakeProcess = () => {
               transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut" }}
               aria-hidden
             >
-              <Target className="w-16 h-16" />
+              <Target className="w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16" />
             </motion.div>
+
             <h1
               ref={titleRef}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight"
@@ -268,7 +265,6 @@ const IntakeProcess = () => {
                 here to guide you every step of the way.
               </p>
 
-              {/* Two CTAs */}
               <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
                 <Link href="/contact">
                   <Button

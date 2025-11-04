@@ -6,6 +6,7 @@
 
 import AutoScroll from "embla-carousel-auto-scroll";
 import Image from "next/image";
+import shieldIcon from "@/assets/shield-icon.svg";
 
 import {
   Carousel,
@@ -32,37 +33,37 @@ const Logos3 = ({
     {
       id: "logo-1",
       description: "Blue Cross Blue Shield",
-      image: "/shield-icon.svg",
+      image: shieldIcon,
       className: "h-12 w-auto",
     },
     {
       id: "logo-2",
       description: "Medica",
-      image: "/shield-icon.svg",
+      image: shieldIcon,
       className: "h-12 w-auto",
     },
     {
       id: "logo-3",
       description: "HealthPartners",
-      image: "/shield-icon.svg",
+      image: shieldIcon,
       className: "h-12 w-auto",
     },
     {
       id: "logo-4",
       description: "Ucare",
-      image: "/shield-icon.svg",
+      image: shieldIcon,
       className: "h-12 w-auto",
     },
     {
       id: "logo-5",
       description: "Humana",
-      image: "/shield-icon.svg",
+      image: shieldIcon,
       className: "h-12 w-auto",
     },
     {
       id: "logo-6",
       description: "UnitedHealthcare",
-      image: "/shield-icon.svg",
+      image: shieldIcon,
       className: "h-12 w-auto",
     },
   ],

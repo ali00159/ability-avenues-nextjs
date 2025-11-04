@@ -107,7 +107,7 @@ const Hero = () => {
           <div className="relative z-20 max-w-2xl w-full flex flex-col">
             <h1
               ref={titleRef}
-              className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-normal tracking-tight drop-shadow"
+              className="hero-title text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-normal tracking-tight drop-shadow"
               style={{ lineHeight: '1.5' }}
             >
               Empowering Children with Autism to Enable{" "}
@@ -126,7 +126,7 @@ const Hero = () => {
 
             <p
               ref={subtitleRef}
-              className="text-xl md:text-2xl text-foreground mb-8 leading-relaxed font-normal"
+              className="text-lg md:text-2xl text-foreground mb-8 leading-relaxed font-normal"
             >
               Evidence-based Applied Behavior Analysis (ABA). Center-based and in-home therapy for ages 1-18. We accept EIDBI and most insurance plans.
             </p>

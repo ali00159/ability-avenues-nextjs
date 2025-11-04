@@ -2,10 +2,12 @@
 
 import { lazy, Suspense } from "react";
 import { usePathname } from 'next/navigation';
+import Image from "next/image";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Printer } from "lucide-react";
+import greenYellowDocumentIcon from "@/assets/green-yellow-document-icon.svg";
 
 const CareerForm = lazy(() => import("@/components/contact/CareerForm"));
 
@@ -28,11 +30,54 @@ const Careers = () => {
             >
               {/* Decorative Icon */}
               <div className="mb-8 flex justify-center">
-                <div className="relative w-24 h-24">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-12 bg-yellow-green/30 rounded-2xl rotate-12"></div>
-                  <div className="absolute top-6 left-1/2 -translate-x-1/2 w-16 h-12 bg-yellow-green/40 rounded-2xl -rotate-6"></div>
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-14 bg-secondary/30 rounded-2xl rotate-3"></div>
-                </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 50, scale: 0.8, rotate: -10 }}
+                  whileInView={{ 
+                    opacity: 1, 
+                    y: 0,
+                    scale: 1,
+                    rotate: 0,
+                    transition: { 
+                      duration: 0.8, 
+                      delay: 0.3,
+                      ease: "easeOut"
+                    }
+                  }}
+                  viewport={{ once: true }}
+                  animate={{
+                    y: [0, -12, 0],
+                    rotate: [0, 3, -3, 3, 0],
+                    scale: [1, 1.02, 1],
+                  }}
+                  transition={{
+                    y: {
+                      delay: 1.1,
+                      duration: 3.5,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    },
+                    rotate: {
+                      delay: 1.1,
+                      duration: 3.5,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    },
+                    scale: {
+                      delay: 1.1,
+                      duration: 3.5,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }
+                  }}
+                >
+                  <Image 
+                    src={greenYellowDocumentIcon} 
+                    alt="Careers" 
+                    className="w-40 h-40 md:w-52 md:h-52 lg:w-64 lg:h-64" 
+                    width={256} 
+                    height={256} 
+                  />
+                </motion.div>
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-raisin-black mb-6">

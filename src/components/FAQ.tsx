@@ -18,7 +18,8 @@ import {
   Award, 
   TrendingUp,
   FileCheck,
-  HelpCircle
+  HelpCircle,
+  Home
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -34,7 +35,11 @@ interface FAQItem {
 const FAQ_ITEMS: FAQItem[] = [
   {
     question: "What is ABA therapy?",
-    answer: "Applied Behavior Analysis (ABA) is a scientific approach to understanding and changing behavior. It focuses on teaching meaningful skills and reducing challenging behaviors through evidence-based techniques. ABA therapy is highly individualized and adapts to each child's unique needs and learning style.",
+    answer: (
+      <>
+        Applied Behavior Analysis (ABA) is a scientific approach to understanding and changing behavior. It focuses on teaching meaningful skills and reducing challenging behaviors through evidence-based techniques. ABA therapy is highly individualized and adapts to each child&apos;s unique needs and learning style. We offer both <Link href="/in-home-therapy" className="underline text-primary hover:text-primary/80">in-home therapy</Link> and <Link href="/center-based-therapy" className="underline text-primary hover:text-primary/80">center-based therapy</Link> options to meet your family&apos;s needs.
+      </>
+    ),
     icon: BookOpen,
     iconColor: "text-pacific-cyan"
   },
@@ -65,6 +70,16 @@ const FAQ_ITEMS: FAQItem[] = [
     iconColor: "text-xanthous"
   },
   {
+    question: "What's the difference between in-home and center-based therapy?",
+    answer: (
+      <>
+        <Link href="/in-home-therapy" className="underline text-primary hover:text-primary/80">In-home therapy</Link> brings ABA services directly to your home, offering flexibility and the ability to practice skills in your child&apos;s natural environment with family involvement. <Link href="/center-based-therapy" className="underline text-primary hover:text-primary/80">Center-based therapy</Link> takes place in our specialized facility and provides structured peer interactions, specialized equipment, and a distraction-free learning environment. Both options offer individualized treatment plans supervised by BCBAs. The choice depends on your child&apos;s needs, family schedule, and learning preferences. Our team can help you determine which option is best for your family during the <Link href="/intake-process" className="underline text-primary hover:text-primary/80">intake process</Link>.
+      </>
+    ),
+    icon: Home,
+    iconColor: "text-yellow-green"
+  },
+  {
     question: "How do I get started?",
     answer: (
       <>
@@ -76,7 +91,11 @@ const FAQ_ITEMS: FAQItem[] = [
   },
   {
     question: "What should I expect during the first visit?",
-    answer: "During the first visit, you'll meet with our clinical team for a comprehensive assessment. We'll observe your child, gather information about their strengths and challenges, and discuss your family's goals. This helps us create an individualized treatment plan tailored to your child's needs.",
+    answer: (
+      <>
+        During the first visit, you&apos;ll meet with our clinical team for a comprehensive assessment. We&apos;ll observe your child, gather information about their strengths and challenges, and discuss your family&apos;s goals. This helps us create an individualized treatment plan tailored to your child&apos;s needs. Learn more about our <Link href="/intake-process" className="underline text-primary hover:text-primary/80">intake process</Link> to understand what to expect.
+      </>
+    ),
     icon: FileText,
     iconColor: "text-pacific-cyan"
   },
@@ -106,13 +125,21 @@ const FAQ_ITEMS: FAQItem[] = [
   },
   {
     question: "What does an individualized treatment plan look like?",
-    answer: "A Board Certified Behavior Analyst develops a treatment plan that focuses on your child's goals and needs. It uses information from diagnostic records, any past therapy, the CMDE, a parent interview, and direct observation. The plan sets clear goals for skill building and behavior support. It is updated often as progress happens or needs change. A full review takes place every six months with another observation and parent interview. Families receive updates so you always know what your child is working on and why.",
+    answer: (
+      <>
+        A Board Certified Behavior Analyst develops a treatment plan that focuses on your child&apos;s goals and needs. It uses information from diagnostic records, any past therapy, the CMDE, a parent interview, and direct observation. The plan sets clear goals for skill building and behavior support. It is updated often as progress happens or needs change. A full review takes place every six months with another observation and parent interview. Families receive updates so you always know what your child is working on and why. Learn more about how we develop these plans during our <Link href="/intake-process" className="underline text-primary hover:text-primary/80">intake process</Link>.
+      </>
+    ),
     icon: FileText,
     iconColor: "text-pacific-cyan"
   },
   {
     question: "What is a CMDE?",
-    answer: "A CMDE is a Comprehensive Multidisciplinary Evaluation used in Minnesota for children receiving EIDBI services. It confirms a diagnosis related to autism or a related condition. A CMDE provider completes the evaluation, such as an LICSW, LPCC, LMFT, or an Advanced Practice Registered Nurse. They complete training to run the assessment and confirm medical necessity for ABA services. The CMDE includes review of records, parent input, and observation of the child. It guides decisions for services and provides the information needed to build an individualized treatment plan.",
+    answer: (
+      <>
+        A CMDE is a Comprehensive Multidisciplinary Evaluation used in Minnesota for children receiving <Link href="/eidbi" className="underline text-primary hover:text-primary/80">EIDBI services</Link>. It confirms a diagnosis related to autism or a related condition. A CMDE provider completes the evaluation, such as an LICSW, LPCC, LMFT, or an Advanced Practice Registered Nurse. They complete training to run the assessment and confirm medical necessity for ABA services. The CMDE includes review of records, parent input, and observation of the child. It guides decisions for services and provides the information needed to build an individualized treatment plan.
+      </>
+    ),
     icon: FileCheck,
     iconColor: "text-yellow-green"
   },
@@ -124,7 +151,11 @@ const FAQ_ITEMS: FAQItem[] = [
   },
   {
     question: "What is EIDBI versus ABA?",
-    answer: "EIDBI is a Minnesota program through Medical Assistance that pays for therapy for children and young people under 21 with autism or related conditions. ABA is one of the approved therapies inside the EIDBI program. Other approaches include DIR, Early Start Denver Model, and Relationship Development Intervention. Families receive a treatment plan based on goals that fit the child, and the provider selects the approach that best supports those goals. EIDBI pays for services when the treatment meets Medical Assistance rules for medical necessity. Minnesota families find more details on the DHS Early Intensive Developmental and Behavioral Intervention webpage and the Minnesota Autism Resource Portal.",
+    answer: (
+      <>
+        <Link href="/eidbi" className="underline text-primary hover:text-primary/80">EIDBI</Link> is a Minnesota program through Medical Assistance that pays for therapy for children and young people under 21 with autism or related conditions. ABA is one of the approved therapies inside the EIDBI program. Other approaches include DIR, Early Start Denver Model, and Relationship Development Intervention. Families receive a treatment plan based on goals that fit the child, and the provider selects the approach that best supports those goals. EIDBI pays for services when the treatment meets Medical Assistance rules for medical necessity. Minnesota families find more details on the DHS Early Intensive Developmental and Behavioral Intervention webpage and the Minnesota Autism Resource Portal.
+      </>
+    ),
     icon: HelpCircle,
     iconColor: "text-pacific-cyan"
   },
