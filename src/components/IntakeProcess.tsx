@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import { useEffect, useRef } from 'react';
 import { motion } from "framer-motion";
-import { Phone, ClipboardCheck, FileText, UserCheck, Calendar, ArrowRight, CheckCircle, MailQuestion, MessageCircleQuestion } from "lucide-react";
+import { Phone, ClipboardCheck, FileText, UserCheck, Calendar, ArrowRight, CheckCircle, MessageCircleQuestion, Target } from "lucide-react";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import { Button } from "@/components/ui/button";
@@ -216,107 +216,100 @@ const IntakeProcess = () => {
     <div className="min-h-screen bg-background">
       <Header />
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] md:min-h-[70vh] pt-24 md:pt-32 pb-0 md:pb-8">
-        {/* Animated Background Shapes */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <motion.div
-            className="absolute top-20 right-20 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-yellow-green/10 rounded-full blur-3xl"
-            animate={{
-              scale: [1, 1.1, 1],
-              x: [0, 30, 0],
-              y: [0, 20, 0],
-            }}
-            transition={{
-              duration: 30,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-            style={{ willChange: 'transform' }}
-            aria-hidden="true"
-          />
-        </div>
-
+      <section className="relative pt-24 md:pt-32 pb-0 md:pb-8">
         {/* Content */}
         <div className="container mx-auto px-4 z-10 relative">
-          <div className="grid lg:grid-cols-[55fr_45fr] gap-12 lg:gap-16 items-center">
-            {/* Left Column - Text Content */}
-            <div className="relative z-20 max-w-2xl w-full">
-              <h1
-                ref={titleRef}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight"
-              >
-                Intake Process{' '}
-                <span className="text-yellow-green">Made Simple</span>
-              </h1>
-
-              <div ref={subtitleRef} className="space-y-4">
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                  Starting your journey with Ability Avenues is easy. Our streamlined intake process 
-                  is designed to get your child the support they need quickly and efficiently. We're 
-                  here to guide you every step of the way.
-                </p>
-
-                {/* Two CTAs */}
-                <div className="flex flex-wrap items-center gap-4 pt-6">
-                  <Link href="/contact">
-                    <Button
-                      size="lg"
-                      className="group bg-yellow-green hover:bg-yellow-green/90 text-raisin-black font-semibold shadow-lg text-base md:text-lg px-6 md:px-8 py-6"
-                    >
-                      Contact Us
-                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
-                  <Link href="/faq" className="group">
-                    <Button
-                      variant="outline"
-                      size="lg"
-                      className="text-base md:text-lg px-6 md:px-8 py-6 bg-white hover:bg-gray-50 border-2"
-                    >
-                      <MessageCircleQuestion className="w-5 h-5 mr-2" />
-                      More Questions?
-                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
-                </div>
-
-                {/* Trust Line */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.2, duration: 0.8 }}
-                  className="pt-8 flex flex-wrap items-center gap-6 md:gap-8 text-sm"
-                >
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-green flex-shrink-0" />
-                    <span className="text-muted-foreground">Streamlined 5-step process</span>
-                  </div>
-                  <div className="h-6 w-px bg-border hidden sm:block" />
-                  <div className="flex items-center gap-2">
-                    <Phone className="w-5 h-5 text-yellow-green flex-shrink-0" />
-                    <span className="text-muted-foreground">Support every step of the way</span>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-
-            {/* Right Column - Placeholder */}
+          <div className="max-w-4xl mx-auto text-center relative">
+            {/* Floating Icons */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="relative lg:ml-auto"
+              className="absolute top-5 right-5 text-pacific-cyan hidden lg:block"
+              animate={{ y: [0, -12, 0], rotate: [0, 8, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              aria-hidden
             >
-              <div className="relative w-full max-w-lg mx-auto">
-                {/* Placeholder */}
-                <div className="relative z-10 aspect-square rounded-lg overflow-hidden bg-gradient-to-br from-yellow-green/20 to-yellow-green/10 border-2 border-border/30 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <ClipboardCheck className="w-24 h-24 md:w-32 md:h-32 text-yellow-green/40 mx-auto mb-4" />
-                    <p className="text-sm md:text-base text-muted-foreground">Image placeholder</p>
-                  </div>
-                </div>
-              </div>
+              <ClipboardCheck className="w-16 h-16" />
             </motion.div>
+            <motion.div
+              className="absolute top-10 -left-4 text-yellow-green hidden lg:block"
+              animate={{ y: [0, 14, 0], rotate: [0, -8, 0] }}
+              transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut" }}
+              aria-hidden
+            >
+              <Calendar className="w-20 h-20" />
+            </motion.div>
+            <motion.div
+              className="absolute -bottom-10 right-20 text-xanthous hidden lg:block"
+              animate={{ y: [0, 10, 0], rotate: [0, 6, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              aria-hidden
+            >
+              <FileText className="w-14 h-14" />
+            </motion.div>
+            <motion.div
+              className="absolute bottom-5 -left-20 text-pacific-cyan hidden lg:block"
+              animate={{ y: [0, -10, 0], rotate: [0, -6, 0] }}
+              transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut" }}
+              aria-hidden
+            >
+              <Target className="w-16 h-16" />
+            </motion.div>
+            <h1
+              ref={titleRef}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight"
+            >
+              Intake Process{' '}
+              <span className="text-yellow-green">Made Simple</span>
+            </h1>
+
+            <div ref={subtitleRef} className="space-y-4">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                Starting your journey with Ability Avenues is easy. Our streamlined intake process 
+                is designed to get your child the support they need quickly and efficiently. We're 
+                here to guide you every step of the way.
+              </p>
+
+              {/* Two CTAs */}
+              <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
+                <Link href="/contact">
+                  <Button
+                    size="lg"
+                    className="group bg-yellow-green hover:bg-yellow-green/90 text-raisin-black font-semibold shadow-lg text-base md:text-lg px-6 md:px-8 py-6"
+                  >
+                    Contact Us
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+                <Link href="/faq" className="group">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="text-base md:text-lg px-6 md:px-8 py-6 bg-white hover:bg-gray-50 border-2"
+                  >
+                    <MessageCircleQuestion className="w-5 h-5 mr-2" />
+                    More Questions?
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+              </div>
+
+              {/* Trust Line */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2, duration: 0.8 }}
+                className="pt-8 flex flex-wrap items-center justify-center gap-6 md:gap-8 text-sm"
+              >
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-yellow-green flex-shrink-0" />
+                  <span className="text-muted-foreground">Streamlined 5-step process</span>
+                </div>
+                <div className="h-6 w-px bg-border hidden sm:block" />
+                <div className="flex items-center gap-2">
+                  <Phone className="w-5 h-5 text-yellow-green flex-shrink-0" />
+                  <span className="text-muted-foreground">Support every step of the way</span>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
