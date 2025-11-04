@@ -2,11 +2,11 @@ import { Metadata } from 'next';
 import Index from '@/components/Index';
 
 export const metadata: Metadata = {
-  title: 'ABA Therapy Minneapolis | Board Certified Behavior Analysts | Ability Avenues',
-  description: 'Evidence-based ABA therapy by Board Certified Behavior Analysts (BCBAs) for children with autism ages 1-18. Center-based and in-home therapy in Minneapolis, Minnesota. We accept EIDBI (Minnesota Medicaid) and most insurance plans.',
+  title: 'ABA Therapy Center in Minneapolis, Minnesota | Ability Avenues',
+  description: 'Evidence-based ABA therapy by Board Certified Behavior Analysts (BCBAs) for children with autism ages 1-18. Center-based and in-home therapy in Minneapolis, Minnesota. We provide EIDBI services and accept Minnesota Medicaid/Medical Assistance and most insurance plans.',
   openGraph: {
-    title: 'ABA Therapy Minneapolis | Board Certified Behavior Analysts | Ability Avenues',
-    description: 'Evidence-based ABA therapy by Board Certified Behavior Analysts (BCBAs) for children with autism ages 1-18. Center-based and in-home therapy in Minneapolis, Minnesota. We accept EIDBI (Minnesota Medicaid) and most insurance plans.',
+    title: 'ABA Therapy Center in Minneapolis, Minnesota | Ability Avenues',
+    description: 'Evidence-based ABA therapy by Board Certified Behavior Analysts (BCBAs) for children with autism ages 1-18. Center-based and in-home therapy in Minneapolis, Minnesota. We provide EIDBI services and accept Minnesota Medicaid/Medical Assistance and most insurance plans.',
     url: 'https://abilityavenues.com',
     siteName: 'Ability Avenues',
     images: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
         url: '/images/opengraph-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Ability Avenues - ABA Therapy Minneapolis',
+        alt: 'Ability Avenues - ABA Therapy Center in Minneapolis, Minnesota',
       },
     ],
     locale: 'en_US',
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ABA Therapy Minneapolis | Board Certified Behavior Analysts | Ability Avenues',
-    description: 'Evidence-based ABA therapy by Board Certified Behavior Analysts (BCBAs) for children with autism ages 1-18. Center-based and in-home therapy in Minneapolis, Minnesota. We accept EIDBI (Minnesota Medicaid) and most insurance plans.',
+    title: 'ABA Therapy Center in Minneapolis, Minnesota | Ability Avenues',
+    description: 'Evidence-based ABA therapy by Board Certified Behavior Analysts (BCBAs) for children with autism ages 1-18. Center-based and in-home therapy in Minneapolis, Minnesota. We provide EIDBI services and accept Minnesota Medicaid/Medical Assistance and most insurance plans.',
     images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
