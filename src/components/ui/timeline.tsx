@@ -56,7 +56,7 @@ export const Timeline = ({ data }: TimelineProps) => {
       ref={containerRef}
       className="w-full bg-background font-sans px-6 md:px-20 lg:px-32 overflow-hidden"
     >
-      <div className="relative max-w-7xl mx-auto pt-0 pb-20">
+      <div className="relative max-w-7xl mx-auto pt-12 md:pt-16 pb-20">
         {/* Animated connecting line */}
         <div className="absolute left-8 top-12 md:top-20 w-[2px] bg-gradient-to-b from-transparent via-border to-transparent">
           <div

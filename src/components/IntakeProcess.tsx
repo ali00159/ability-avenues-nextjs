@@ -213,7 +213,7 @@ const IntakeProcess = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <section className="relative pt-24 md:pt-32 pb-0 md:pb-8">
+      <section className="relative pt-24 md:pt-32 pb-12 md:pb-20">
         <div className="container mx-auto px-4 z-10 relative">
           <div className="max-w-4xl mx-auto text-center relative">
             {/* Floating Icons */}
