@@ -77,6 +77,30 @@ export default function BlogPage() {
                 height: 630,
               },
             },
+            blogPost: [
+              {
+                '@type': 'BlogPosting',
+                headline: 'EIDBI vs ABA: How Minnesota\'s Program Helps Families Access ABA Therapy',
+                url: 'https://abilityavenues.com/blog/eidbi-vs-aba-minnesota',
+                datePublished: '2025-11-05T00:00:00.000Z',
+                dateModified: '2025-11-05T00:00:00.000Z',
+                author: {
+                  '@type': 'Organization',
+                  name: 'Ability Avenues Team',
+                },
+              },
+              {
+                '@type': 'BlogPosting',
+                headline: 'In-Home vs Center-Based ABA in the Twin Cities: Which Fits Your Family?',
+                url: 'https://abilityavenues.com/blog/in-home-vs-center-based-aba-minneapolis',
+                datePublished: '2025-11-05T00:00:00.000Z',
+                dateModified: '2025-11-05T00:00:00.000Z',
+                author: {
+                  '@type': 'Organization',
+                  name: 'Ability Avenues Team',
+                },
+              },
+            ],
           }),
         }}
       />

@@ -153,7 +153,14 @@ const ComprehensiveServices = () => {
                   {/* Learn More Link - Positioned at bottom */}
                   <div className="mt-6">
                     <Link
-                      href="#"
+                      href="#cta"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const ctaSection = document.getElementById('cta');
+                        if (ctaSection) {
+                          ctaSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                      }}
                       className="group inline-flex items-center gap-2 font-medium hover:gap-3 transition-all duration-300"
                       style={{ color: `hsl(var(--${service.iconColor}))` }}
                     >

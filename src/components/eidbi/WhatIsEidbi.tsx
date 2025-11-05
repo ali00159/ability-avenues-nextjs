@@ -110,19 +110,19 @@ const WhatIsEidbi = () => {
           </motion.div>
 
           {/* Right Column - Animated Images */}
-          <div className="relative flex items-center justify-center min-h-[500px] lg:min-h-[600px]">
+          <div className="relative w-full aspect-square max-w-md sm:max-w-lg md:max-w-xl mx-auto">
             {/* Green Square Background */}
             <motion.div
-              initial={{ opacity: 0, scale: 1.2, x: '-50%', y: '0%' }}
-              whileInView={{ opacity: 1, scale: 1.2, x: '0%', y: '0%' }}
+              initial={{ opacity: 0, scale: 1.2, x: '-20%', y: '-6%' }}
+              whileInView={{ opacity: 1, scale: 1.2, x: '-5%', y: '-6%' }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-              className="absolute inset-0 flex items-center justify-center z-0"
+              className="absolute inset-0 flex items-center justify-center z-0 scale-110 md:scale-125"
             >
               <Image
                 src={greenSquareIcon}
                 alt=""
-                className="w-[110%] h-[110%] object-contain"
+                className="w-full h-full object-contain"
                 width={550}
                 height={550}
                 loading="lazy"
@@ -132,11 +132,11 @@ const WhatIsEidbi = () => {
 
             {/* Girl with Glasses Image - On Top */}
             <motion.div
-              initial={{ opacity: 0, scale: 1.6, x: '-37.5%', y: '-6.6%' }}
-              whileInView={{ opacity: 1, scale: 1.6, x: '-37.5%', y: '-6.6%' }}
+              initial={{ opacity: 0, x: '-20%', y: '-11.3%', scale: 1.5 }}
+              whileInView={{ opacity: 1, x: '-40%', y: '-11.3%', scale: 1.5 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-              className="absolute inset-0 flex items-center justify-center z-10"
+              className="absolute inset-0 flex items-center justify-center z-10 scale-90 md:scale-95"
             >
               <Image
                 src={girlGlasses}

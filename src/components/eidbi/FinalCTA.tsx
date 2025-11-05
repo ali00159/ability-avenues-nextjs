@@ -7,7 +7,7 @@ import { ArrowRight, Calendar } from 'lucide-react';
 
 const FinalCTA = () => {
   return (
-    <section className="pt-6 md:pt-12 pb-12 md:pb-24 bg-white">
+    <section id="cta" className="pt-6 md:pt-12 pb-12 md:pb-24 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 70 }}

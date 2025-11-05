@@ -1,6 +1,8 @@
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import { Blog7 } from "@/components/ui/blog7";
+import centerBasedImage from "@/assets/center-based-vs-in-home-blog-cover.jpg";
+import eidbiImage from "@/assets/eidbi-blog-cover.jpg";
 
 const Blog = () => {
   const blogData = {
@@ -12,40 +14,28 @@ const Blog = () => {
     buttonUrl: "/blog",
     posts: [
       {
-        id: "post-1",
-        title: "Understanding ABA Therapy: A Parent's Guide",
+        id: "eidbi-vs-aba-minnesota",
+        title: "EIDBI vs ABA: How Minnesota's Program Helps Families Access ABA Therapy",
         summary:
-          "Learn the fundamentals of Applied Behavior Analysis and how it can help your child develop essential skills through positive reinforcement and evidence-based interventions.",
+          "Confused by EIDBI vs ABA? See how Minnesota's EIDBI benefit helps families access ABA therapy, what's covered, and simple next steps in Minneapolis.",
         label: "Education",
-        badge: "ABA Therapy",
-        author: "STEP Program Team",
-        published: "15 Jan 2025",
-        url: "/blog/understanding-aba-therapy",
-        image: "/images/therapy-session.jpg",
+        badge: "EIDBI",
+        author: "Ability Avenues Team",
+        published: "5 Nov 2025",
+        url: "/blog/eidbi-vs-aba-minnesota",
+        image: eidbiImage,
       },
       {
-        id: "post-2",
-        title: "The Benefits of Center-Based Therapy Programs",
+        id: "in-home-vs-center-based-aba-minneapolis",
+        title: "In-Home vs Center-Based ABA in the Twin Cities: Which Fits Your Family?",
         summary:
-          "Discover why center-based therapy offers unique advantages for children with autism, including structured environments, peer interaction, and comprehensive support services.",
-        label: "Programs",
-        badge: "Center-Based",
-        author: "STEP Program Team",
-        published: "10 Jan 2025",
-        url: "/blog/center-based-therapy-benefits",
-        image: "/images/team-collaboration.jpg",
-      },
-      {
-        id: "post-3",
-        title: "Building Social Skills Through Play",
-        summary:
-          "Explore how therapeutic play activities can enhance communication, emotional regulation, and social interaction skills in children on the autism spectrum.",
-        label: "Development",
-        badge: "Social Skills",
-        author: "STEP Program Team",
-        published: "5 Jan 2025",
-        url: "/blog/social-skills-through-play",
-        image: "/images/hero-family-therapy.jpg",
+          "We compare in-home vs center-based ABA in the Twin Cities—pros/cons, who thrives where, and a simple checklist to choose what fits your family.",
+        label: "Education",
+        badge: "ABA Services",
+        author: "Ability Avenues Team",
+        published: "5 Nov 2025",
+        url: "/blog/in-home-vs-center-based-aba-minneapolis",
+        image: centerBasedImage,
       },
     ],
   };

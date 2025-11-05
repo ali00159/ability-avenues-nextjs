@@ -1,8 +1,11 @@
 'use client';
 
+import Link from 'next/link';
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { BookOpen, Lightbulb, Users, Target } from "lucide-react";
+import Image from "next/image";
+import type { StaticImageData } from "next/image";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -22,7 +25,7 @@ interface Post {
   author: string;
   published: string;
   url: string;
-  image: string;
+  image: string | StaticImageData;
 }
 
 interface Blog7Props {
@@ -151,24 +154,25 @@ const Blog7 = ({
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 w-full">
           {posts.map((post, index) => (
             <Card key={post.id} className="grid grid-rows-[auto_auto_auto_1fr_auto]">
-              <div className="aspect-[16/9] w-full">
-                <a
-                  href="javascript:void(0)"
+              <div className="aspect-[16/9] w-full relative">
+                <Link
+                  href={post.url}
                   className="transition-opacity duration-200 fade-in hover:opacity-70"
                 >
-                  <img
+                  <Image
                     src={post.image}
                     alt={post.title}
-                    className="h-full w-full object-cover object-center"
+                    fill
+                    className="object-cover object-center"
                   />
-                </a>
+                </Link>
               </div>
               <div className="px-6 pt-6">
                 <Badge 
                   className={`h-5 rounded-full px-3 font-normal ${
-                    index === 0 ? 'bg-pacific-cyan/20 text-pacific-cyan border-pacific-cyan/30' :
-                    index === 1 ? 'bg-yellow-green/20 text-yellow-green border-yellow-green/30' :
-                    'bg-xanthous/20 text-xanthous border-xanthous/30'
+                    index === 0 ? 'bg-pacific-cyan/20 text-pacific-cyan border-pacific-cyan/30 hover:bg-pacific-cyan/20' :
+                    index === 1 ? 'bg-yellow-green/20 text-yellow-green border-yellow-green/30 hover:bg-yellow-green/20' :
+                    'bg-xanthous/20 text-xanthous border-xanthous/30 hover:bg-xanthous/20'
                   }`}
                 >
                   {post.badge}
@@ -176,22 +180,22 @@ const Blog7 = ({
               </div>
               <CardHeader className="pt-3">
                 <h3 className="text-lg font-semibold hover:underline md:text-xl">
-                  <a href="javascript:void(0)">
+                  <Link href={post.url}>
                     {post.title}
-                  </a>
+                  </Link>
                 </h3>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">{post.summary}</p>
               </CardContent>
               <CardFooter>
-                <a
-                  href="javascript:void(0)"
+                <Link
+                  href={post.url}
                   className="flex items-center text-foreground hover:underline"
                 >
                   Read more
                   <ArrowRight className="ml-2 size-4" />
-                </a>
+                </Link>
               </CardFooter>
             </Card>
           ))}
