@@ -266,8 +266,8 @@ const Hero = () => {
             <div className="relative w-full aspect-square max-w-sm sm:max-w-md md:max-w-md mx-auto overflow-visible">
               {/* Layer 1: Yellow Circle Opaque - Larger, Bottom Layer */}
               <motion.div
-                initial={{ opacity: 0, x: 200, scale: 1.5225, y: '-10%' }}
-                whileInView={{ opacity: 1, x: '-3%', scale: 1.5225, y: '-10%' }}
+                initial={{ opacity: 0, x: 200, scale: 1.5, y: '-6%' }}
+                whileInView={{ opacity: 1, x: '-1%', scale: 1.5, y: '-6%' }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
                 className="absolute inset-0 flex items-center justify-center"
@@ -285,8 +285,8 @@ const Hero = () => {
 
               {/* Layer 2: Yellow Semicircle - Larger, Middle Layer */}
               <motion.div
-                initial={{ opacity: 0, x: -200, scale: 1.134, y: '25%' }}
-                whileInView={{ opacity: 1, x: 0, scale: 1.134, y: '15%' }}
+                initial={{ opacity: 0, x: -200, scale: 1.2, y: '15%' }}
+                whileInView={{ opacity: 1, x: 0, scale: 1.2, y: '15%' }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, ease: "easeOut" }}
                 className="absolute inset-0 flex items-center justify-center"
@@ -304,8 +304,8 @@ const Hero = () => {
 
               {/* Layer 3: Girl Holding Toy - Slightly Smaller, Top Layer */}
               <motion.div
-                initial={{ opacity: 0, y: '-8%', scale: 1.1025 }}
-                whileInView={{ opacity: 1, y: '-8%', scale: 1.1025 }}
+                initial={{ opacity: 0, y: '-2.8%', scale: 1.0 }}
+                whileInView={{ opacity: 1, y: '-2.8%', scale: 1.0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
                 className="absolute inset-0 flex items-center justify-center z-10"
