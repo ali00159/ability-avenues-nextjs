@@ -52,7 +52,7 @@ const InHomeVsCenterPost = () => {
           {/* Hero Section */}
           <header className="mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-raisin-black mb-6 leading-tight">
-              In-Home vs Center-Based ABA in the Twin Cities: Which Fits Your Family?
+              What's the Difference Between In-Home and Center-Based ABA Therapy?
             </h1>
             <div className="flex flex-wrap gap-4 text-muted-foreground mb-8">
               <span className="text-base">Ability Avenues Team</span>
@@ -60,7 +60,7 @@ const InHomeVsCenterPost = () => {
               <time dateTime="2025-11-05" className="text-base">November 5, 2025</time>
             </div>
             <p className="text-lg text-gray-700 italic leading-relaxed">
-              For Minneapolis–St. Paul families sorting through options, here's a clear, parent-first guide to how ABA can look at home versus in a center—and how to choose what's right for your child, your schedule, and your goals.
+              For families sorting through options, here's a clear, parent-first guide to how ABA can look at home versus in a center—and how to choose what's right for your child, your schedule, and your goals.
             </p>
           </header>
 
@@ -80,7 +80,7 @@ const InHomeVsCenterPost = () => {
             <div className="bg-pacific-cyan/10 border-l-4 border-pacific-cyan p-6 mb-8 rounded-r-lg">
               <h2 className="text-2xl font-bold text-raisin-black mb-4">Quick overview (what this post covers)</h2>
               <p className="text-raisin-black">
-                You'll learn what happens in each setting, the pros and cons, who typically thrives where, how insurance/logistics differ, and a simple decision checklist. We'll keep it plain-English, specific to the Twin Cities, and focused on your day-to-day reality.
+                You'll learn what happens in each setting, the pros and cons, who typically thrives where, how insurance/logistics differ, and a simple decision checklist. We'll keep it plain-English and focused on your day-to-day reality.
               </p>
             </div>
 
@@ -88,7 +88,7 @@ const InHomeVsCenterPost = () => {
 
             {/* In-Home ABA Section */}
             <section className="mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-raisin-black mb-6">What "in-home ABA" looks like in the Twin Cities</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-raisin-black mb-6">What "in-home ABA" looks like</h2>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
                 In-home ABA brings therapy to you. A behavior technician (BT/RBT) works with your child in your natural routines—mornings before school, after school, evenings, or weekends depending on availability. A supervising clinician (often a BCBA) designs the plan, coaches the team and caregivers, and monitors progress.
               </p>
@@ -121,7 +121,7 @@ const InHomeVsCenterPost = () => {
 
             {/* Center-Based ABA Section */}
             <section className="mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-raisin-black mb-6">What "center-based ABA" looks like in the Twin Cities</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-raisin-black mb-6">What "center-based ABA" looks like</h2>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
                 Center-based ABA happens at a clinic designed for therapy: dedicated rooms, teaching materials, simulated classroom spaces, and opportunities for small-group learning.
               </p>
@@ -239,7 +239,7 @@ const InHomeVsCenterPost = () => {
             <section className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-raisin-black mb-6">Can you mix both? (Yes—many families do.)</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                A common Twin Cities path is <strong>hybrid care</strong>: <Link href="/center-based-therapy" className="text-pacific-cyan hover:underline font-medium">center-based</Link> sessions for structured learning + <Link href="/in-home-therapy" className="text-pacific-cyan hover:underline font-medium">in-home</Link> sessions to generalize results (especially for routines, siblings, or community safety). Blending can also help with staffing/schedule coverage and keep motivation high.
+                A common path is <strong>hybrid care</strong>: <Link href="/center-based-therapy" className="text-pacific-cyan hover:underline font-medium">center-based</Link> sessions for structured learning + <Link href="/in-home-therapy" className="text-pacific-cyan hover:underline font-medium">in-home</Link> sessions to generalize results (especially for routines, siblings, or community safety). Blending can also help with staffing/schedule coverage and keep motivation high.
               </p>
             </section>
 
@@ -289,7 +289,7 @@ const InHomeVsCenterPost = () => {
 
             {/* Real Scenarios Section */}
             <section className="mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-raisin-black mb-6">Real Twin Cities scenarios (examples)</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-raisin-black mb-6">Real scenarios (examples)</h2>
               
               <div className="space-y-6">
                 <div>
@@ -441,7 +441,7 @@ const InHomeVsCenterPost = () => {
             <section className="mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-raisin-black mb-6">How Ability Avenues can help</h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                We offer <Link href="/in-home-therapy" className="text-pacific-cyan hover:underline font-medium">in-home</Link> and <Link href="/center-based-therapy" className="text-pacific-cyan hover:underline font-medium">center-based</Link> ABA in the Twin Cities and can design a <strong>hybrid</strong> plan if that's the best fit. During intake, we'll review your goals, schedule, and coverage, then recommend a setting (or blend) designed for fast, meaningful progress in your real life.
+                We offer <Link href="/in-home-therapy" className="text-pacific-cyan hover:underline font-medium">in-home</Link> and <Link href="/center-based-therapy" className="text-pacific-cyan hover:underline font-medium">center-based</Link> ABA and can design a <strong>hybrid</strong> plan if that's the best fit. During intake, we'll review your goals, schedule, and coverage, then recommend a setting (or blend) designed for fast, meaningful progress in your real life.
               </p>
               
               <h3 className="text-xl font-bold text-raisin-black mb-4">Next steps</h3>

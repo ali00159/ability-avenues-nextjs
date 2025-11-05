@@ -27,9 +27,9 @@ const Blog = () => {
       },
       {
         id: "in-home-vs-center-based-aba-minneapolis",
-        title: "In-Home vs Center-Based ABA in the Twin Cities: Which Fits Your Family?",
+        title: "What's the Difference Between In-Home and Center-Based ABA Therapy?",
         summary:
-          "We compare in-home vs center-based ABA in the Twin Cities—pros/cons, who thrives where, and a simple checklist to choose what fits your family.",
+          "We compare in-home vs center-based ABA—pros/cons, who thrives where, and a simple checklist to choose what fits your family.",
         label: "Education",
         badge: "ABA Services",
         author: "Ability Avenues Team",

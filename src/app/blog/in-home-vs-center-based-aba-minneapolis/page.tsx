@@ -2,11 +2,11 @@ import { Metadata } from 'next';
 import InHomeVsCenterPost from '@/components/blog/InHomeVsCenterPost';
 
 export const metadata: Metadata = {
-  title: 'In-Home vs Center-Based ABA in Minneapolis | Guide',
-  description: 'We compare in-home vs center-based ABA in the Twin Cities—pros/cons, who thrives where, and a simple checklist to choose what fits your family.',
+  title: "What's the Difference Between In-Home and Center-Based ABA Therapy? | Guide",
+  description: 'We compare in-home vs center-based ABA—pros/cons, who thrives where, and a simple checklist to choose what fits your family.',
   openGraph: {
-    title: 'In-Home vs Center-Based ABA in Minneapolis | Guide',
-    description: 'We compare in-home vs center-based ABA in the Twin Cities—pros/cons, who thrives where, and a simple checklist to choose what fits your family.',
+    title: "What's the Difference Between In-Home and Center-Based ABA Therapy? | Guide",
+    description: 'We compare in-home vs center-based ABA—pros/cons, who thrives where, and a simple checklist to choose what fits your family.',
     url: 'https://abilityavenues.com/blog/in-home-vs-center-based-aba-minneapolis',
     siteName: 'Ability Avenues',
     images: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
         url: '/images/center-based-vs-in-home-blog-cover.jpg',
         width: 1200,
         height: 630,
-        alt: 'In-Home vs Center-Based ABA in the Twin Cities: Which Fits Your Family?',
+        alt: "What's the Difference Between In-Home and Center-Based ABA Therapy?",
       },
     ],
     locale: 'en_US',
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'In-Home vs Center-Based ABA in Minneapolis | Guide',
-    description: 'We compare in-home vs center-based ABA in the Twin Cities—pros/cons, who thrives where, and a simple checklist to choose what fits your family.',
+    title: "What's the Difference Between In-Home and Center-Based ABA Therapy? | Guide",
+    description: 'We compare in-home vs center-based ABA—pros/cons, who thrives where, and a simple checklist to choose what fits your family.',
     images: ['/images/center-based-vs-in-home-blog-cover.jpg'],
   },
   alternates: {
@@ -59,7 +59,7 @@ export default function InHomeVsCenterPostPage() {
               {
                 '@type': 'ListItem',
                 position: 3,
-                name: 'In-Home vs Center-Based ABA in the Twin Cities: Which Fits Your Family?',
+                name: "What's the Difference Between In-Home and Center-Based ABA Therapy?",
                 item: 'https://abilityavenues.com/blog/in-home-vs-center-based-aba-minneapolis',
               },
             ],
@@ -72,8 +72,8 @@ export default function InHomeVsCenterPostPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BlogPosting',
-            headline: 'In-Home vs Center-Based ABA in the Twin Cities: Which Fits Your Family?',
-            description: 'We compare in-home vs center-based ABA in the Twin Cities—pros/cons, who thrives where, and a simple checklist to choose what fits your family.',
+            headline: "What's the Difference Between In-Home and Center-Based ABA Therapy?",
+            description: 'We compare in-home vs center-based ABA—pros/cons, who thrives where, and a simple checklist to choose what fits your family.',
             image: 'https://abilityavenues.com/images/center-based-vs-in-home-blog-cover.jpg',
             datePublished: '2025-11-05T00:00:00.000Z',
             dateModified: '2025-11-05T00:00:00.000Z',
@@ -97,7 +97,7 @@ export default function InHomeVsCenterPostPage() {
               '@type': 'WebPage',
               '@id': 'https://abilityavenues.com/blog/in-home-vs-center-based-aba-minneapolis',
             },
-            keywords: 'ABA therapy, in-home ABA, center-based ABA, autism therapy, Twin Cities, Minneapolis, ABA services, autism treatment',
+            keywords: 'ABA therapy, in-home ABA, center-based ABA, autism therapy, ABA services, autism treatment',
             articleSection: 'Education',
             inLanguage: 'en-US',
           }),

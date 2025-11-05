@@ -138,7 +138,7 @@ const EidbiVsAbaPost = () => {
 
               <blockquote className="border-l-4 border-xanthous bg-xanthous/10 p-6 my-8 rounded-r-lg">
                 <p className="text-lg text-raisin-black italic">
-                  <strong>Modalities:</strong> EIDBI recognizes multiple treatment modalities (ABA is one), and DHS periodically updates this list. Providers match the clinical approach to the CMDE and ITP—not one-size-fits-all.
+                  <strong>Modalities:</strong> EIDBI recognizes multiple treatment modalities (ABA is one), and DHS periodically updates this list.
                 </p>
               </blockquote>
             </section>
