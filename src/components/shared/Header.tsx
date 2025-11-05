@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname, useSearchParams, useRouter } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import { useState, useEffect, memo, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Heart, ChevronDown, Stethoscope, BookOpen, Building2, Share2 } from "lucide-react";
@@ -20,7 +20,6 @@ const Header = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isReady, setIsReady] = useState(false);
   const pathname = usePathname();
-  const router = useRouter();
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -84,7 +83,7 @@ const Header = () => {
       const servicesSection = document.getElementById("services");
       servicesSection?.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
-    router.push("/#services");
+      window.location.href = "/#services";
     }
   };
 
