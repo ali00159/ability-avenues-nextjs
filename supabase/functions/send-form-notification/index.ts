@@ -18,6 +18,7 @@ interface FormNotificationRequest {
   zipCode: string;
   insurance: string;
   insuranceOther?: string;
+  preferredSetting: string[];
   receiveSms: boolean;
 }
 
@@ -166,6 +167,10 @@ const handler = async (req: Request): Promise<Response> => {
               </div>
               ` : ''}
               <div class="field">
+                <span class="field-label">Preferred Setting:</span>
+                <span class="field-value">${formData.preferredSetting && formData.preferredSetting.length > 0 ? formData.preferredSetting.join(", ") : "Not provided"}</span>
+              </div>
+              <div class="field">
                 <span class="field-label">SMS Updates:</span>
                 <span class="badge ${formData.receiveSms ? "badge-yes" : "badge-no"}">
                   ${formData.receiveSms ? "Yes" : "No"}
@@ -192,8 +197,8 @@ const handler = async (req: Request): Promise<Response> => {
     `;
 
     const emailResponse = await resend.emails.send({
-      from: "Ability Avenues <onboarding@resend.dev>",
-      to: ["mohamed07ali23@gmail.com"],
+      from: "Ability Avenues <contact@abilityavenues.com>",
+      to: ["info@abilityavenues.com"],
       subject: `New Contact Form Submission - ${formData.parentFirstName} ${formData.parentLastName}`,
       html: htmlContent,
     });

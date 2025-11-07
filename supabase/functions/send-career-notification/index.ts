@@ -52,10 +52,11 @@ const handler = async (req: Request): Promise<Response> => {
       padding: 20px;
     }
     .header {
+      background: #0EA5E9;
       background: linear-gradient(135deg, #0EA5E9 0%, #06B6D4 100%);
       color: white;
       padding: 30px;
-      border-radius: 10px 10px 0 0;
+      border-radius: 12px 12px 0 0;
       text-align: center;
     }
     .header h1 {
@@ -65,7 +66,7 @@ const handler = async (req: Request): Promise<Response> => {
     .content {
       background: #f8f9fa;
       padding: 30px;
-      border-radius: 0 0 10px 10px;
+      border-radius: 0 0 12px 12px;
     }
     .section {
       background: white;
@@ -76,39 +77,26 @@ const handler = async (req: Request): Promise<Response> => {
     }
     .section h2 {
       color: #0EA5E9;
-      margin-top: 0;
-      font-size: 20px;
-      border-bottom: 2px solid #e9ecef;
-      padding-bottom: 10px;
+      font-size: 18px;
+      margin: 0 0 15px 0;
+      border-bottom: 2px solid #0EA5E9;
+      padding-bottom: 8px;
     }
     .field {
-      margin: 12px 0;
-      display: flex;
-      align-items: start;
+      margin-bottom: 12px;
+      padding: 8px 0;
     }
     .field-label {
       font-weight: 600;
+      color: #4b5563;
+      display: inline-block;
       min-width: 180px;
-      color: #495057;
     }
     .field-value {
-      color: #212529;
-    }
-    .resume-link {
-      display: inline-block;
-      background: #0EA5E9;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      margin-top: 10px;
-    }
-    .resume-link:hover {
-      background: #0284C7;
+      color: #1f2937;
     }
     ul {
-      margin: 0;
+      margin: 10px 0;
       padding-left: 20px;
     }
   </style>
@@ -152,19 +140,15 @@ const handler = async (req: Request): Promise<Response> => {
       </div>
       <div class="field">
         <span class="field-label">Days Available:</span>
-        <span class="field-value">
-          <ul>
-            ${formData.daysAvailable.map(day => `<li>${day}</li>`).join('')}
-          </ul>
-        </span>
+        <ul style="margin-top: 5px;">
+          ${formData.daysAvailable.map(day => `<li>${day}</li>`).join('')}
+        </ul>
       </div>
       <div class="field">
         <span class="field-label">Times Available:</span>
-        <span class="field-value">
-          <ul>
-            ${formData.timesAvailable.map(time => `<li>${time}</li>`).join('')}
-          </ul>
-        </span>
+        <ul style="margin-top: 5px;">
+          ${formData.timesAvailable.map(time => `<li>${time}</li>`).join('')}
+        </ul>
       </div>
       <div class="field">
         <span class="field-label">Employment Type:</span>
@@ -205,8 +189,8 @@ const handler = async (req: Request): Promise<Response> => {
     `;
 
     const emailResponse = await resend.emails.send({
-      from: "Ability Avenues Careers <onboarding@resend.dev>",
-      to: ["mohamed07ali23@gmail.com"],
+      from: "Ability Avenues Careers <careers@abilityavenues.com>",
+      to: ["murad.ali@abilityavenues.com"],
       subject: `New Career Application: ${formData.firstName} ${formData.lastName} - ${formData.position}`,
       html: emailHtml,
     });

@@ -51,8 +51,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send notification email to Ability Avenues
     const emailResponse = await resend.emails.send({
-      from: "Ability Avenues Referrals <onboarding@resend.dev>",
-      to: ["mohamed07ali23@gmail.com"],
+      from: "Ability Avenues Referrals <referrals@abilityavenues.com>",
+      to: ["info@abilityavenues.com"],
       subject: `New Referral from ${formData.providerName} - ${formData.clinicName}`,
       html: `
         <!DOCTYPE html>

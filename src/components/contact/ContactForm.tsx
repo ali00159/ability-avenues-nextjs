@@ -24,6 +24,7 @@ const ContactForm = () => {
     zipCode: "",
     insurance: "",
     insuranceOther: "",
+    preferredSetting: [] as string[],
     receiveSms: false,
   });
 
@@ -34,6 +35,7 @@ const ContactForm = () => {
     phone: z.string().trim().regex(/^\(?([0-9]{3})\)?[-.\s]?([0-9]{3})[-.\s]?([0-9]{4})$/, "Please enter a valid 10-digit phone number"),
     zipCode: z.string().trim().regex(/^\d{5}$/, "ZIP code must be exactly 5 digits"),
     insurance: z.string().min(1, "Please select an insurance provider"),
+    preferredSetting: z.array(z.string()).min(1, "Please select at least one preferred setting"),
     childAge: z.string().trim().regex(/^\d+$/, "Age must be a number").refine((val) => {
       const num = parseInt(val);
       return num >= 0 && num <= 18;
@@ -54,6 +56,7 @@ const ContactForm = () => {
         phone: formData.phone,
         zipCode: formData.zipCode,
         insurance: formData.insurance,
+        preferredSetting: formData.preferredSetting,
       });
 
       // Save to database
@@ -95,6 +98,7 @@ const ContactForm = () => {
         zipCode: "",
         insurance: "",
         insuranceOther: "",
+        preferredSetting: [],
         receiveSms: false,
       });
     } catch (error) {
@@ -107,8 +111,19 @@ const ContactForm = () => {
     }
   };
 
-  const updateField = (field: keyof typeof formData, value: string | boolean) => {
+  const updateField = (field: keyof typeof formData, value: string | boolean | string[]) => {
     setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const togglePreferredSetting = (value: string) => {
+    setFormData(prev => {
+      const current = prev.preferredSetting;
+      const exists = current.includes(value);
+      return {
+        ...prev,
+        preferredSetting: exists ? current.filter(item => item !== value) : [...current, value],
+      };
+    });
   };
 
   return (
@@ -285,6 +300,30 @@ const ContactForm = () => {
                     />
                   </div>
                 )}
+
+                {/* Preferred Setting */}
+                <div className="space-y-3">
+                  <Label>
+                    Preferred Setting<span className="text-destructive">*</span>
+                  </Label>
+                  <div className="space-y-2">
+                    {[
+                      { value: "in-home", label: "In-Home" },
+                      { value: "center", label: "Center-Based" },
+                    ].map(option => (
+                      <div key={option.value} className="flex items-center space-x-2">
+                        <Checkbox
+                          id={`preferred-${option.value}`}
+                          checked={formData.preferredSetting.includes(option.label)}
+                          onCheckedChange={() => togglePreferredSetting(option.label)}
+                        />
+                        <Label htmlFor={`preferred-${option.value}`} className="cursor-pointer">
+                          {option.label}
+                        </Label>
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
                 {/* SMS Checkbox */}
                 <div className="flex items-center space-x-2">
