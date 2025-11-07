@@ -42,13 +42,13 @@ const CTASection = () => {
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform flex-shrink-0" />
                   </Button>
                 </Link>
-                <Link href="/contact" className="w-full sm:w-auto">
+                <Link href="/faq" className="w-full sm:w-auto">
                   <Button
                     variant="outline"
                     size="lg"
                     className="bg-white text-emerald-700 border-white hover:bg-white/90 w-full justify-center whitespace-normal sm:whitespace-nowrap"
                   >
-                    Learn More About ABA
+                    More Questions?
                   </Button>
                 </Link>
               </div>
