@@ -4,25 +4,29 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Navigation, Clock, Map } from "lucide-react";
 import Link from 'next/link';
+import type { Route } from 'next';
 
 const MinneapolisLocation = () => {
-  const cities = [
-    'Minneapolis',
-    'St. Paul',
-    'Bloomington',
-    'Brooklyn Park',
-    'Plymouth',
-    'Lakeville',
-    'Eagan',
-    'Maple Grove',
-    'Eden Prairie',
-    'Burnsville',
-    'Apple Valley',
-    'Minnetonka',
-    'Edina',
-    'St. Louis Park',
-    'Shakopee',
-    'Maplewood',
+  const serviceAreas: { name: string; href?: Route }[] = [
+    { name: 'Minneapolis', href: '/contact' },
+    { name: 'St. Paul', href: '/contact/st-paul' },
+    { name: 'Bloomington', href: '/contact/bloomington' },
+    { name: 'Chaska', href: '/contact/chaska' },
+    { name: 'Chanhassen', href: '/contact/chanhassen' },
+    { name: 'Brooklyn Park' },
+    { name: 'Golden Valley', href: '/contact/golden-valley' },
+    { name: 'Plymouth', href: '/contact/plymouth' },
+    { name: 'Lakeville', href: '/contact/lakeville' },
+    { name: 'Eagan' },
+    { name: 'Maple Grove' },
+    { name: 'Eden Prairie', href: '/contact/eden-prairie' },
+    { name: 'Burnsville' },
+    { name: 'Apple Valley' },
+    { name: 'Minnetonka', href: '/contact/minnetonka' },
+    { name: 'Edina', href: '/contact/edina' },
+    { name: 'St. Louis Park', href: '/contact/st-louis-park' },
+    { name: 'Shakopee', href: '/contact/shakopee' },
+    { name: 'Maplewood' },
   ];
 
   return (
@@ -62,10 +66,21 @@ const MinneapolisLocation = () => {
                   We proudly serve families from the following Twin Cities metro communities:
                 </p>
                 <div className="grid grid-cols-2 gap-3">
-                  {cities.map((city, index) => (
-                    <div key={index} className="flex items-center gap-2">
+                  {serviceAreas.map(({ name, href }) => (
+                    <div key={name} className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-pacific-cyan rounded-full" />
-                      <span className="text-sm text-muted-foreground">{city}</span>
+                      {href ? (
+                        <Link
+                          href={href}
+                          aria-label={`Contact Ability Avenues in ${name}`}
+                          title={`Contact Ability Avenues in ${name}`}
+                          className="text-sm text-muted-foreground hover:text-secondary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 rounded-sm"
+                        >
+                          {name}
+                        </Link>
+                      ) : (
+                        <span className="text-sm text-muted-foreground">{name}</span>
+                      )}
                     </div>
                   ))}
                 </div>
