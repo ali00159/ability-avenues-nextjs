@@ -44,7 +44,10 @@ export default function IndexPage() {
             name: 'Ability Avenues',
             url: 'https://abilityavenues.com',
             logo: 'https://abilityavenues.com/images/opengraph-image.jpg',
-            description: 'Evidence-based ABA therapy by Board Certified Behavior Analysts (BCBAs) for children with autism ages 1-18 in Minneapolis, Minnesota.',
+            image: ['https://abilityavenues.com/images/opengraph-image.jpg'],
+            description:
+              'Evidence-based ABA therapy by Board Certified Behavior Analysts (BCBAs) for children with autism ages 1-18 in Minneapolis, Minnesota.',
+            email: 'info@abilityavenues.com',
             address: {
               '@type': 'PostalAddress',
               streetAddress: '6385 Old Shady Oak Rd Suite 250',
@@ -53,18 +56,47 @@ export default function IndexPage() {
               postalCode: '55344',
               addressCountry: 'US',
             },
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: 44.9778,
+              longitude: -93.265,
+            },
+            openingHoursSpecification: [
+              {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                opens: '08:00',
+                closes: '18:00',
+              },
+              {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: ['Saturday', 'Sunday'],
+                opens: '10:00',
+                closes: '16:00',
+              },
+            ],
             areaServed: {
               '@type': 'City',
               name: 'Minneapolis',
             },
             telephone: '+1-952-900-2344',
+            contactPoint: [
+              {
+                '@type': 'ContactPoint',
+                telephone: '+1-952-900-2344',
+                contactType: 'customer service',
+                email: 'info@abilityavenues.com',
+                availableLanguage: ['English'],
+                areaServed: 'US',
+              },
+            ],
             priceRange: '$$',
             aggregateRating: {
               '@type': 'AggregateRating',
-              ratingValue: '4.8',
-              reviewCount: '150',
-              bestRating: '5',
-              worstRating: '1'
+              ratingValue: 4.8,
+              reviewCount: 150,
+              bestRating: 5,
+              worstRating: 1,
             },
             hasOfferCatalog: {
               '@type': 'OfferCatalog',
@@ -75,27 +107,30 @@ export default function IndexPage() {
                   itemOffered: {
                     '@type': 'Service',
                     name: 'Center-Based ABA Therapy',
-                    description: 'Comprehensive, play-based therapy in a preschool-like setting for children with autism spectrum disorder.'
-                  }
+                    description:
+                      'Comprehensive, play-based therapy in a preschool-like setting for children with autism spectrum disorder.',
+                  },
                 },
                 {
                   '@type': 'Offer',
                   itemOffered: {
                     '@type': 'Service',
                     name: 'In-Home ABA Therapy',
-                    description: 'Personalized one-on-one Applied Behavior Analysis delivered in the comfort of your home.'
-                  }
+                    description:
+                      'Personalized one-on-one Applied Behavior Analysis delivered in the comfort of your home.',
+                  },
                 },
                 {
                   '@type': 'Offer',
                   itemOffered: {
                     '@type': 'Service',
                     name: 'Early Intensive Developmental & Behavioral Intervention',
-                    description: 'Comprehensive early intervention services for children ages 1-18 with developmental delays and autism spectrum disorder.'
-                  }
-                }
-              ]
-            }
+                    description:
+                      'Comprehensive early intervention services for children ages 1-18 with developmental delays and autism spectrum disorder.',
+                  },
+                },
+              ],
+            },
           }),
         }}
       />
@@ -105,8 +140,19 @@ export default function IndexPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'WebSite',
+            '@id': 'https://abilityavenues.com/#website',
             name: 'Ability Avenues',
             url: 'https://abilityavenues.com',
+            inLanguage: 'en-US',
+            publisher: {
+              '@type': 'Organization',
+              name: 'Ability Avenues',
+              url: 'https://abilityavenues.com',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://abilityavenues.com/images/opengraph-image.jpg',
+              },
+            },
           }),
         }}
       />
