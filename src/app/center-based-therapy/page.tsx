@@ -2,19 +2,29 @@ import { Metadata } from 'next';
 import CenterBasedTherapy from '@/components/CenterBasedTherapy';
 
 export const metadata: Metadata = {
-  title: 'Center-Based ABA Therapy in Minneapolis, Minnesota',
-  description: 'Evidence-based center-based ABA therapy for children and teens with autism ages 1-18 in Minneapolis. BCBA-supervised programs, EIDBI accepted ages 1-18. Tour our autism center today.',
+  title: 'Center-Based ABA Therapy in Minneapolis | Ability Avenues Autism Programs',
+  description:
+    'Explore Ability Avenues’ center-based ABA therapy in Minneapolis: four age-specific tracks (1-18), BCBA-led care teams, daily skill-building schedules, and EIDBI-friendly onboarding for Minnesota families.',
+  keywords: [
+    'center-based ABA',
+    'ABA therapy Minneapolis',
+    'autism center Minnesota',
+    'BCBA supervised programs',
+    'EIDBI ABA coverage',
+    'Ability Avenues',
+  ],
   openGraph: {
-    title: 'Center-Based ABA Therapy in Minneapolis, Minnesota',
-    description: 'Evidence-based center-based ABA therapy for children and teens with autism ages 1-18 in Minneapolis, Minnesota. BCBA-supervised programs, EIDBI accepted ages 1-18.',
+    title: 'Center-Based ABA Therapy in Minneapolis | Ability Avenues Autism Programs',
+    description:
+      'Tour a bright, BCBA-led center offering four age-specific ABA programs, daily group learning, and EIDBI-friendly support for Minnesota families.',
     url: 'https://abilityavenues.com/center-based-therapy',
     siteName: 'Ability Avenues',
     images: [
       {
-        url: '/images/opengraph-image.jpg',
+        url: 'https://abilityavenues.com/images/hero-family-therapy.jpg',
         width: 1200,
         height: 630,
-        alt: 'Center-based ABA therapy at Ability Avenues in Minneapolis',
+        alt: 'Family celebrating progress at Ability Avenues center-based ABA therapy in Minneapolis',
       },
     ],
     locale: 'en_US',
@@ -22,9 +32,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Center-Based ABA Therapy in Minneapolis, Minnesota',
-    description: 'Evidence-based center-based ABA therapy for children and teens with autism ages 1-18 in Minneapolis, Minnesota.',
-    images: ['/images/opengraph-image.jpg'],
+    title: 'Center-Based ABA Therapy in Minneapolis | Ability Avenues Autism Programs',
+    description:
+      'See Ability Avenues’ center-based ABA therapy tracks for ages 1-18, BCBA-led teams, and EIDBI onboarding support in Minneapolis.',
+    images: ['https://abilityavenues.com/images/hero-family-therapy.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/center-based-therapy',
@@ -40,11 +51,18 @@ export default function CenterBasedTherapyPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
-            name: 'Ability Avenues',
-            image: 'https://abilityavenues.com/images/opengraph-image.jpg',
-            '@id': 'https://abilityavenues.com',
-            url: 'https://abilityavenues.com',
+            name: 'Ability Avenues Center-Based ABA Therapy',
+            image: 'https://abilityavenues.com/images/hero-family-therapy.jpg',
+            '@id': 'https://abilityavenues.com/center-based-therapy#business',
+            url: 'https://abilityavenues.com/center-based-therapy',
+            telephone: '+1-952-900-2344',
+            email: 'info@abilityavenues.com',
             priceRange: '$$',
+            paymentAccepted: 'EIDBI Medicaid Benefit, Major Insurance Plans',
+            areaServed: {
+              '@type': 'City',
+              name: 'Minneapolis',
+            },
             address: {
               '@type': 'PostalAddress',
               streetAddress: '6385 Old Shady Oak Rd Suite 250',
@@ -52,6 +70,44 @@ export default function CenterBasedTherapyPage() {
               addressRegion: 'MN',
               postalCode: '55344',
               addressCountry: 'US',
+            },
+            hasOfferCatalog: {
+              '@type': 'OfferCatalog',
+              name: 'Center-Based ABA Programs',
+              itemListElement: [
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Early Steps (Ages 1-3)',
+                    description: 'Play-based ABA therapy focused on early communication, joint attention, and caregiver coaching for toddlers.',
+                  },
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Foundations (Ages 4-7)',
+                    description: 'School-readiness ABA program featuring group learning, daily routines, and visual supports.',
+                  },
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Skills Builder (Ages 8-12)',
+                    description: 'Functional living skill development, social coaching, and regulation support for elementary-age learners.',
+                  },
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Transition (Ages 13-18)',
+                    description: 'Teen-focused ABA therapy emphasizing independence, community readiness, and vocational strengths.',
+                  },
+                },
+              ],
             },
             geo: {
               '@type': 'GeoCoordinates',
@@ -87,9 +143,12 @@ export default function CenterBasedTherapyPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'MedicalBusiness',
-            name: 'Ability Avenues',
-            description: 'Center-based ABA therapy for children and teens with autism ages 1-18 in Minneapolis',
+            name: 'Ability Avenues Center-Based ABA Therapy',
+            description:
+              'Center-based ABA therapy for children and teens with autism ages 1-18 in Minneapolis with BCBA-led care teams and daily small-group learning.',
             url: 'https://abilityavenues.com/center-based-therapy',
+            medicalSpecialty: 'BehavioralTherapy',
+            isAcceptingNewPatients: true,
             address: {
               '@type': 'PostalAddress',
               streetAddress: '6385 Old Shady Oak Rd Suite 250',
@@ -98,6 +157,27 @@ export default function CenterBasedTherapyPage() {
               postalCode: '55344',
               addressCountry: 'US',
             },
+            availableService: [
+              {
+                '@type': 'TherapeuticProcedure',
+                name: 'Center-Based Applied Behavior Analysis (ABA)',
+                description: 'Individualized ABA sessions with BCBA oversight, data-driven goals, and parent collaboration.',
+              },
+              {
+                '@type': 'MedicalTherapy',
+                name: 'BCBA Supervision & Family Coaching',
+                description: 'Ongoing supervision, caregiver training, and interdisciplinary collaboration led by Board Certified Behavior Analysts.',
+              },
+            ],
+            healthPlanNetworkId: [
+              'EIDBI Medicaid Benefit',
+              'Blue Cross Blue Shield of Minnesota',
+              'HealthPartners',
+              'Medica',
+              'Ucare',
+              'Humana',
+              'UnitedHealthcare',
+            ],
           }),
         }}
       />
@@ -112,6 +192,14 @@ export default function CenterBasedTherapyPage() {
               '@type': 'Organization',
               name: 'Ability Avenues',
             },
+            serviceAudience: {
+              '@type': 'PeopleAudience',
+              audienceType: 'Families of children and teens with autism spectrum disorder ages 1-18',
+              healthCondition: {
+                '@type': 'MedicalCondition',
+                name: 'Autism Spectrum Disorder',
+              },
+            },
             areaServed: {
               '@type': 'City',
               name: 'Minneapolis',
@@ -120,7 +208,25 @@ export default function CenterBasedTherapyPage() {
               '@type': 'ServiceChannel',
               serviceType: 'Center-Based ABA Therapy',
               serviceName: 'Center-Based ABA Therapy for Ages 1-18',
+              hoursAvailable: [
+                {
+                  '@type': 'OpeningHoursSpecification',
+                  dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                  opens: '08:30',
+                  closes: '16:30',
+                },
+              ],
             },
+            offers: [
+              {
+                '@type': 'Offer',
+                name: 'EIDBI-Covered Center-Based ABA Therapy',
+                availability: 'https://schema.org/InStock',
+                priceCurrency: 'USD',
+                price: 0,
+                description: 'Comprehensive ABA therapy covered through Minnesota EIDBI and major insurance plans for eligible families.',
+              },
+            ],
           }),
         }}
       />

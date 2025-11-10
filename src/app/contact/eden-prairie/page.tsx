@@ -2,11 +2,11 @@ import { Metadata } from 'next';
 import ContactUs from '@/components/ContactUs';
 
 export const metadata: Metadata = {
-  title: 'Contact Us - ABA Therapy in Eden Prairie',
-  description: 'Contact Ability Avenues in Eden Prairie for ABA therapy services. Reach us by phone, email, or visit our Eden Prairie location. Get started today.',
+  title: 'ABA Therapy in Eden Prairie, Minnesota',
+  description: 'Contact Ability Avenues in Eden Prairie, Minnesota for ABA therapy services. Reach us by phone, email, or visit our Eden Prairie location. Get started today.',
   openGraph: {
-    title: 'Contact Us - ABA Therapy in Eden Prairie',
-    description: 'Contact Ability Avenues in Eden Prairie for ABA therapy services. Reach us by phone, email, or visit our Eden Prairie location.',
+    title: 'ABA Therapy in Eden Prairie, Minnesota',
+    description: 'Contact Ability Avenues in Eden Prairie, Minnesota for ABA therapy services. Reach us by phone, email, or visit our Eden Prairie location.',
     url: 'https://abilityavenues.com/contact/eden-prairie',
     siteName: 'Ability Avenues',
     images: [
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Us - ABA Therapy in Eden Prairie',
-    description: 'Contact Ability Avenues in Eden Prairie for ABA therapy services. Reach us by phone, email, or visit our location.',
+    title: 'ABA Therapy in Eden Prairie, Minnesota',
+    description: 'Contact Ability Avenues in Eden Prairie, Minnesota for ABA therapy services. Reach us by phone, email, or visit our location.',
     images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
