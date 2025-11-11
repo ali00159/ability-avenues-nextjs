@@ -13,20 +13,21 @@ const MinneapolisLocation = () => {
     { name: 'Bloomington', href: '/contact/bloomington' },
     { name: 'Chaska', href: '/contact/chaska' },
     { name: 'Chanhassen', href: '/contact/chanhassen' },
-    { name: 'Brooklyn Park' },
+    { name: 'Brooklyn Park', href: '/contact/brooklyn-park' },
     { name: 'Golden Valley', href: '/contact/golden-valley' },
     { name: 'Plymouth', href: '/contact/plymouth' },
     { name: 'Lakeville', href: '/contact/lakeville' },
-    { name: 'Eagan' },
-    { name: 'Maple Grove' },
+    { name: 'Eagan', href: '/contact/eagan' },
+    { name: 'Maple Grove', href: '/contact/maple-grove' },
     { name: 'Eden Prairie', href: '/contact/eden-prairie' },
-    { name: 'Burnsville' },
-    { name: 'Apple Valley' },
+    { name: 'Burnsville', href: '/contact/burnsville' },
+    { name: 'Apple Valley', href: '/contact/apple-valley' },
     { name: 'Minnetonka', href: '/contact/minnetonka' },
     { name: 'Edina', href: '/contact/edina' },
     { name: 'St. Louis Park', href: '/contact/st-louis-park' },
     { name: 'Shakopee', href: '/contact/shakopee' },
-    { name: 'Maplewood' },
+    { name: 'Maplewood', href: '/contact/maplewood' },
+    { name: 'Hopkins', href: '/contact/hopkins' }
   ];
 
   return (
