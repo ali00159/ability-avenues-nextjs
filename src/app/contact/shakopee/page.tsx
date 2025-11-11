@@ -11,14 +11,6 @@ export const metadata: Metadata = {
       'Contact Ability Avenues in Shakopee, Minnesota for autism therapy services. Reach us by phone, email, or visit our location.',
     url: 'https://abilityavenues.com/contact/shakopee',
     siteName: 'Ability Avenues',
-    images: [
-      {
-        url: '/images/opengraph-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Contact Ability Avenues - ABA Therapy Shakopee',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -27,7 +19,6 @@ export const metadata: Metadata = {
     title: 'ABA Therapy in Shakopee, Minnesota',
     description:
       'Contact Ability Avenues in Shakopee, Minnesota for autism therapy services. Reach us by phone, email, or visit our location.',
-    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/contact/shakopee',

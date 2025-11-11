@@ -11,14 +11,6 @@ export const metadata: Metadata = {
       'Contact Ability Avenues in Maple Grove, Minnesota for ABA therapy services. Reach us by phone, email, or visit our Maple Grove support team.',
     url: 'https://abilityavenues.com/contact/maple-grove',
     siteName: 'Ability Avenues',
-    images: [
-      {
-        url: '/images/opengraph-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Contact Ability Avenues - ABA Therapy Maple Grove',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -27,7 +19,6 @@ export const metadata: Metadata = {
     title: 'ABA Therapy in Maple Grove, Minnesota',
     description:
       'Contact Ability Avenues in Maple Grove, Minnesota for ABA therapy services. Reach our Maple Grove team by phone or email to get started.',
-    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/contact/maple-grove',

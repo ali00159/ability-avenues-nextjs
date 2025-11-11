@@ -9,14 +9,6 @@ export const metadata: Metadata = {
     description: 'Contact Ability Avenues in Minneapolis for ABA therapy services. Reach us by phone, email, or visit our Eden Prairie location.',
     url: 'https://abilityavenues.com/contact',
     siteName: 'Ability Avenues',
-    images: [
-      {
-        url: '/images/opengraph-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Contact Ability Avenues - ABA Therapy Minneapolis',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -24,7 +16,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Contact Us - ABA Therapy in Minneapolis',
     description: 'Contact Ability Avenues in Minneapolis for ABA therapy services. Reach us by phone, email, or visit our location.',
-    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/contact',

@@ -11,14 +11,6 @@ export const metadata: Metadata = {
       'Contact Ability Avenues in Brooklyn Park, Minnesota for ABA therapy services. Reach us by phone, email, or visit our Brooklyn Park support team.',
     url: 'https://abilityavenues.com/contact/brooklyn-park',
     siteName: 'Ability Avenues',
-    images: [
-      {
-        url: '/images/opengraph-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Contact Ability Avenues - ABA Therapy Brooklyn Park',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -27,7 +19,6 @@ export const metadata: Metadata = {
     title: 'ABA Therapy in Brooklyn Park, Minnesota',
     description:
       'Contact Ability Avenues in Brooklyn Park, Minnesota for ABA therapy services. Reach our Brooklyn Park team by phone or email to get started.',
-    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/contact/brooklyn-park',

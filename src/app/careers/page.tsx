@@ -9,14 +9,6 @@ export const metadata: Metadata = {
     description: 'Join the Ability Avenues team in Minneapolis. We offer rewarding careers in ABA therapy, competitive benefits, and opportunities to make a difference.',
     url: 'https://abilityavenues.com/careers',
     siteName: 'Ability Avenues',
-    images: [
-      {
-        url: '/images/opengraph-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Ability Avenues Careers - Join Our ABA Therapy Team',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -24,7 +16,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Careers - Join Our ABA Therapy Team in Minneapolis',
     description: 'Join the Ability Avenues team. We offer rewarding careers in ABA therapy, competitive benefits, and opportunities to make a difference.',
-    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/careers',

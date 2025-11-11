@@ -11,14 +11,6 @@ export const metadata: Metadata = {
       'Contact Ability Avenues in Eden Prairie, Minnesota for ABA therapy services. Reach us by phone, email, or visit our Eden Prairie support team.',
     url: 'https://abilityavenues.com/contact/eden-prairie',
     siteName: 'Ability Avenues',
-    images: [
-      {
-        url: '/images/opengraph-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Contact Ability Avenues - ABA Therapy Eden Prairie',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -27,7 +19,6 @@ export const metadata: Metadata = {
     title: 'ABA Therapy in Eden Prairie, Minnesota',
     description:
       'Contact Ability Avenues in Eden Prairie, Minnesota for ABA therapy services. Reach our Eden Prairie team by phone or email to get started.',
-    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/contact/eden-prairie',

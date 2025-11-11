@@ -9,14 +9,6 @@ export const metadata: Metadata = {
     description: 'Healthcare providers and professionals can refer patients to Ability Avenues for comprehensive ABA therapy services in Minneapolis.',
     url: 'https://abilityavenues.com/referrals',
     siteName: 'Ability Avenues',
-    images: [
-      {
-        url: '/images/opengraph-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Partner with Ability Avenues - Referrals',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -24,7 +16,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Referrals - Partner with Ability Avenues for ABA Therapy',
     description: 'Healthcare providers can refer patients to Ability Avenues for comprehensive ABA therapy services in Minneapolis.',
-    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/referrals',

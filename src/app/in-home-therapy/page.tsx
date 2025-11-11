@@ -9,14 +9,6 @@ export const metadata: Metadata = {
     description: 'Personalized in-home ABA therapy for children with autism ages 1-18 in Minneapolis, Minnesota. BCBA-supervised, flexible scheduling, family involvement, and natural environment learning.',
     url: 'https://abilityavenues.com/in-home-therapy',
     siteName: 'Ability Avenues',
-    images: [
-      {
-        url: '/images/opengraph-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'In-home ABA therapy at Ability Avenues in Minneapolis',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -24,7 +16,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'In-Home ABA Therapy Minneapolis, Minnesota',
     description: 'Personalized in-home ABA therapy for children with autism ages 1-18 in Minneapolis, Minnesota. BCBA-supervised, flexible scheduling, family involvement.',
-    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/in-home-therapy',

@@ -19,20 +19,6 @@ export const metadata: Metadata = {
       'Explore how Minnesota’s EIDBI benefit funds ABA therapy, what CMDE and TEFRA mean for coverage, and compare in-home versus center-based programs with real-world checklists.',
     url: 'https://abilityavenues.com/blog',
     siteName: 'Ability Avenues',
-    images: [
-      {
-        url: 'https://abilityavenues.com/images/eidbi-blog-cover.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Ability Avenues guide to Minnesota EIDBI and ABA therapy funding',
-      },
-      {
-        url: 'https://abilityavenues.com/images/center-based-vs-in-home-blog-cover.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Ability Avenues comparison of in-home and center-based ABA therapy',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -41,10 +27,6 @@ export const metadata: Metadata = {
     title: 'Minnesota ABA Therapy Blog | EIDBI Funding & In-Home vs Center Guides',
     description:
       'Dive into Minnesota EIDBI funding steps, CMDE checklists, and side-by-side comparisons of in-home vs center-based ABA therapy from Ability Avenues.',
-    images: [
-      'https://abilityavenues.com/images/eidbi-blog-cover.jpg',
-      'https://abilityavenues.com/images/center-based-vs-in-home-blog-cover.jpg',
-    ],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/blog',

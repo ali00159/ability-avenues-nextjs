@@ -19,14 +19,6 @@ export const metadata: Metadata = {
       'Tour a bright, BCBA-led center offering four age-specific ABA programs, daily group learning, and EIDBI-friendly support for Minnesota families.',
     url: 'https://abilityavenues.com/center-based-therapy',
     siteName: 'Ability Avenues',
-    images: [
-      {
-        url: 'https://abilityavenues.com/images/hero-family-therapy.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Family celebrating progress at Ability Avenues center-based ABA therapy in Minneapolis',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -35,7 +27,6 @@ export const metadata: Metadata = {
     title: 'Center-Based ABA Therapy in Minneapolis | Ability Avenues Autism Programs',
     description:
       'See Ability Avenues’ center-based ABA therapy tracks for ages 1-18, BCBA-led teams, and EIDBI onboarding support in Minneapolis.',
-    images: ['https://abilityavenues.com/images/hero-family-therapy.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/center-based-therapy',

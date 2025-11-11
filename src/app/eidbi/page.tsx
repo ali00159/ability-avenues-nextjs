@@ -11,14 +11,6 @@ export const metadata: Metadata = {
       'Get no-cost, evidence-based autism intervention through Minnesota\'s EIDBI program. Check eligibility and start your child\'s services today.',
     url: 'https://abilityavenues.com/eidbi',
     siteName: 'Ability Avenues',
-    images: [
-      {
-        url: '/images/opengraph-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'EIDBI Services in Minnesota - Ability Avenues',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -27,7 +19,6 @@ export const metadata: Metadata = {
     title: 'EIDBI Services in Minnesota - Comprehensive Autism Support',
     description:
       'Get no-cost, evidence-based autism intervention through Minnesota\'s EIDBI program. Check eligibility and start your child\'s services today.',
-    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/eidbi',

@@ -9,14 +9,6 @@ export const metadata: Metadata = {
     description: 'Contact Ability Avenues in Plymouth, Minnesota for autism therapy services. Reach us by phone, email, or visit our location.',
     url: 'https://abilityavenues.com/contact/plymouth',
     siteName: 'Ability Avenues',
-    images: [
-      {
-        url: '/images/opengraph-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Contact Ability Avenues - ABA Therapy Plymouth',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -24,7 +16,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'ABA Therapy in Plymouth, Minnesota',
     description: 'Contact Ability Avenues in Plymouth, Minnesota for autism therapy services. Reach us by phone, email, or visit our location.',
-    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/contact/plymouth',

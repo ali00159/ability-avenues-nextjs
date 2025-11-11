@@ -11,14 +11,6 @@ export const metadata: Metadata = {
       'Contact Ability Avenues in Burnsville, Minnesota for ABA therapy services. Reach us by phone, email, or visit our Burnsville support team.',
     url: 'https://abilityavenues.com/contact/burnsville',
     siteName: 'Ability Avenues',
-    images: [
-      {
-        url: '/images/opengraph-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Contact Ability Avenues - ABA Therapy Burnsville',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -27,7 +19,6 @@ export const metadata: Metadata = {
     title: 'ABA Therapy in Burnsville, Minnesota',
     description:
       'Contact Ability Avenues in Burnsville, Minnesota for ABA therapy services. Reach our Burnsville team by phone or email to get started.',
-    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/contact/burnsville',

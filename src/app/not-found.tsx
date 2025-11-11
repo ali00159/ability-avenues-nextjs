@@ -12,20 +12,11 @@ export const metadata: Metadata = {
     description: 'The page you are looking for does not exist.',
     siteName: 'Ability Avenues',
     type: 'website',
-    images: [
-      {
-        url: '/images/opengraph-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Ability Avenues - Page Not Found',
-      },
-    ],
   },
   twitter: {
     card: 'summary',
     title: '404 - Page Not Found',
     description: 'The page you are looking for does not exist.',
-    images: ['/images/opengraph-image.jpg'],
   },
 };
 
