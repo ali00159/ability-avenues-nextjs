@@ -6,19 +6,27 @@
 
 import AutoScroll from "embla-carousel-auto-scroll";
 import Image from "next/image";
-import shieldIcon from "@/assets/shield-icon.svg";
+import insuranceHpIcon from "@/assets/insurance-hp-icon.svg";
+import insuranceUcIcon from "@/assets/insurance-uc-icon.svg";
+import insuranceMedIcon from "@/assets/insurance-med-icon.svg";
+import insuranceUhcIcon from "@/assets/insurance-uhc-icon.svg";
+import insuranceBcbsIcon from "@/assets/insurance-bcbs-icon.svg";
+import insuranceDhsIcon from "@/assets/insurance-dhs-icon.svg";
 
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import { cn } from "@/lib/utils";
 
 interface Logo {
   id: string;
   description: string;
   image: string;
   className?: string;
+  wrapperClassName?: string;
+  itemClassName?: string;
 }
 
 interface Logos3Props {
@@ -32,39 +40,51 @@ const Logos3 = ({
   logos = [
     {
       id: "logo-1",
-      description: "Blue Cross Blue Shield",
-      image: shieldIcon,
-      className: "h-12 w-auto",
+      description: "HealthPartners",
+      image: insuranceHpIcon,
+      className: "h-10 w-auto",
+      wrapperClassName: "ml-12 mr-8",
+      itemClassName: "",
     },
     {
       id: "logo-2",
-      description: "Medica",
-      image: shieldIcon,
-      className: "h-12 w-auto",
+      description: "UCare",
+      image: insuranceUcIcon,
+      className: "h-5 w-auto",
+      wrapperClassName: "mx-8",
+      itemClassName: "",
     },
     {
       id: "logo-3",
-      description: "HealthPartners",
-      image: shieldIcon,
-      className: "h-12 w-auto",
+      description: "Medica",
+      image: insuranceMedIcon,
+      className: "h-5 w-auto",
+      wrapperClassName: "mx-8",
+      itemClassName: "",
     },
     {
       id: "logo-4",
-      description: "Ucare",
-      image: shieldIcon,
-      className: "h-12 w-auto",
+      description: "UnitedHealthcare",
+      image: insuranceUhcIcon,
+      className: "h-10 w-auto",
+      wrapperClassName: "mx-8",
+      itemClassName: "",
     },
     {
       id: "logo-5",
-      description: "Humana",
-      image: shieldIcon,
+      description: "Blue Cross Blue Shield",
+      image: insuranceBcbsIcon,
       className: "h-12 w-auto",
+      wrapperClassName: "mx-8",
+      itemClassName: "",
     },
     {
       id: "logo-6",
-      description: "UnitedHealthcare",
-      image: shieldIcon,
-      className: "h-12 w-auto",
+      description: "Minnesota Department of Human Services",
+      image: insuranceDhsIcon,
+      className: "h-10 w-auto",
+      wrapperClassName: "ml-8 mr-16",
+      itemClassName: "lg:basis-1/7 xl:basis-1/8",
     },
   ],
 }: Logos3Props) => {
@@ -96,9 +116,17 @@ const Logos3 = ({
               {duplicatedLogos.map((logo, index) => (
                 <CarouselItem
                   key={`${logo.id}-${index}`}
-                  className="flex basis-1/3 justify-center pl-0 sm:basis-1/4 md:basis-1/5 lg:basis-1/6"
+                  className={cn(
+                    "flex basis-1/3 justify-center pl-0 sm:basis-1/4 md:basis-1/5 lg:basis-1/6",
+                    logo.itemClassName,
+                  )}
                 >
-                  <div className="mx-6 flex shrink-0 items-center justify-center">
+                  <div
+                    className={cn(
+                      "mx-8 flex shrink-0 items-center justify-center",
+                      logo.wrapperClassName,
+                    )}
+                  >
                     <div>
                       <Image
                         src={logo.image}

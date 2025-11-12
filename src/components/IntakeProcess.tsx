@@ -15,146 +15,206 @@ import checkmarkIcon from "@/assets/checkmark-icon.svg";
 const IntakeProcess = () => {
   const intakeData = [
     {
-      title: "Initial Contact",
-      icon: <Phone className="w-7 h-7" />,
+      title: "Step 1: Eligibility Review",
+      icon: <ClipboardCheck className="w-7 h-7" />,
       iconBgColor: "hsl(186 87% 41%)", // pacific-cyan (teal)
       content: (
         <div className="text-center">
+          <div className="mb-4 flex justify-center">
+            <span className="inline-flex items-center rounded-full bg-pacific-cyan/10 text-pacific-cyan px-4 py-1 text-sm font-semibold">
+              1 day
+            </span>
+          </div>
           <p className="text-muted-foreground text-base md:text-lg mb-6 font-semibold">
-            Reach out to us via phone or email to express your interest in our services. Our intake coordinator will gather basic information about your child and family.
+            We gather everything needed to verify insurance eligibility and begin enrollment right away.
           </p>
           <div className="mb-4 flex flex-col items-center">
             <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg mb-3">
               <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Contact via phone or email
+              Share your child&apos;s full name
             </div>
             <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg mb-3">
               <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Discuss your child&apos;s needs
+              Provide their date of birth
+            </div>
+            <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg mb-3">
+              <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
+              Upload a copy of their insurance card
             </div>
             <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg">
               <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Receive information about our services
+              We confirm eligibility and start enrollment
             </div>
           </div>
         </div>
       ),
     },
     {
-      title: "Insurance & Documentation",
-      icon: <FileText className="w-7 h-7" />,
+      title: "Step 2: Intake Meeting",
+      icon: <Phone className="w-7 h-7" />,
       iconBgColor: "hsl(0 84% 60%)", // coral/salmon red
       content: (
         <div className="text-center">
+          <div className="mb-4 flex justify-center">
+            <span className="inline-flex items-center rounded-full bg-red-100 text-red-500 px-4 py-1 text-sm font-semibold">
+              30 minutes
+            </span>
+          </div>
           <p className="text-muted-foreground text-base md:text-lg mb-6 font-semibold">
-            We&apos;ll help you complete necessary paperwork and verify your insurance coverage. Our team will work to ensure all documentation is in order.
+            Meet with us via video to complete paperwork, understand our policies, and align on how we will partner together.
           </p>
           <div className="mb-4 flex flex-col items-center">
             <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg mb-3">
               <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Complete intake forms
+              Complete intake paperwork together
             </div>
             <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg mb-3">
               <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Verify insurance benefits
-            </div>
-            <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg mb-3">
-              <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Submit required medical records
+              Review policies and expectations
             </div>
             <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg">
               <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Provide diagnosis documentation
+              Sign a Release of Information for collaboration
             </div>
           </div>
         </div>
       ),
     },
     {
-      title: "Assessments",
-      icon: <ClipboardCheck className="w-7 h-7" />,
+      title: "Step 3: Document Collection",
+      icon: <FileText className="w-7 h-7" />,
       iconBgColor: "hsl(45 88% 52%)", // xanthous (yellow)
       content: (
         <div className="text-center">
+          <div className="mb-4 flex justify-center">
+            <span className="inline-flex items-center rounded-full bg-yellow-100 text-yellow-600 px-4 py-1 text-sm font-semibold">
+              1–2 weeks
+            </span>
+          </div>
           <p className="text-muted-foreground text-base md:text-lg mb-6 font-semibold">
-            Our Board Certified Behavior Analysts (BCBAs) will conduct a comprehensive assessment to understand your child&apos;s unique strengths and areas for growth.
+            Collect the documents that help our team understand your child&apos;s history, services, and strengths.
           </p>
           <div className="mb-4 flex flex-col items-center">
             <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg mb-3">
               <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Schedule assessment appointment
+              Medical records and physician notes
             </div>
             <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg mb-3">
               <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Meet with BCBA
+              IEP or school-based assessments
             </div>
             <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg mb-3">
               <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Comprehensive evaluation
+              Prior evaluations or treatment summaries
             </div>
             <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg">
               <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Review assessment results
+              Ongoing check-ins to support your progress
             </div>
           </div>
         </div>
       ),
     },
     {
-      title: "Treatment Planning",
-      icon: <UserCheck className="w-7 h-7" />,
+      title: "Step 4: Comprehensive Multidisciplinary Evaluation (CMDE)",
+      icon: <Target className="w-7 h-7" />,
       iconBgColor: "hsl(345 13% 45%)", // brownish gray
       content: (
         <div className="text-center">
+          <div className="mb-4 flex justify-center">
+            <span className="inline-flex items-center rounded-full bg-slate-200 text-slate-700 px-4 py-1 text-sm font-semibold">
+              1 week
+            </span>
+          </div>
           <p className="text-muted-foreground text-base md:text-lg mb-6 font-semibold">
-            Based on the assessment, we&apos;ll create a personalized treatment plan with specific, measurable goals tailored to your child&apos;s needs.
+            Our Qualified Supervising Professional (QSP) leads a holistic evaluation to map out your child&apos;s needs.
           </p>
           <div className="mb-4 flex flex-col items-center">
             <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg mb-3">
               <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Develop individualized treatment plan
+              Telehealth caregiver interview
             </div>
             <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg mb-3">
               <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Set specific goals
+              Observation in a familiar setting (can align with interview)
             </div>
             <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg mb-3">
               <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Review plan with family
+              Review of collected documents
             </div>
             <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg">
               <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Obtain necessary approvals
+              Use of standardized assessment tools
             </div>
           </div>
         </div>
       ),
     },
     {
-      title: "Starting!",
-      icon: <Calendar className="w-7 h-7" />,
+      title: "Step 5: Individualized Treatment Plan (ITP)",
+      icon: <UserCheck className="w-7 h-7" />,
       iconBgColor: "hsl(79 75% 48%)", // yellow-green
       content: (
         <div className="text-center">
+          <div className="mb-4 flex justify-center">
+            <span className="inline-flex items-center rounded-full bg-lime-100 text-lime-600 px-4 py-1 text-sm font-semibold">
+              1 week
+            </span>
+          </div>
           <p className="text-muted-foreground text-base md:text-lg mb-6 font-semibold">
-            Begin your child&apos;s therapy journey! We&apos;ll schedule sessions and match your child with the right therapist team.
+            Your BCBA designs a plan that reflects your child&apos;s goals and the CMDE findings, with your input at every step.
           </p>
           <div className="mb-4 flex flex-col items-center">
             <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg mb-3">
               <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Schedule therapy sessions
+              Telehealth caregiver interview to finalize goals
             </div>
             <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg mb-3">
               <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Meet your therapy team
+              Follow-up observation (can align with interview)
             </div>
             <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg mb-3">
               <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Begin treatment sessions
+              Integration of CMDE insights and your input
             </div>
             <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg">
               <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
-              Ongoing progress monitoring
+              A clear plan shared for your review
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Step 6: Insurance Authorization & Start of Services",
+      icon: <Calendar className="w-7 h-7" />,
+      iconBgColor: "hsl(210 70% 45%)", // calming blue
+      content: (
+        <div className="text-center">
+          <div className="mb-4 flex justify-center">
+            <span className="inline-flex items-center rounded-full bg-blue-100 text-blue-600 px-4 py-1 text-sm font-semibold">
+              1 week
+            </span>
+          </div>
+          <p className="text-muted-foreground text-base md:text-lg mb-6 font-semibold">
+            Once the plan is approved, we schedule ABA sessions so your child can begin with a trusted team.
+          </p>
+          <div className="mb-4 flex flex-col items-center">
+            <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg mb-3">
+              <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
+              Submit the treatment plan for authorization
+            </div>
+            <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg mb-3">
+              <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
+              Confirm insurance approval
+            </div>
+            <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg mb-3">
+              <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
+              Schedule ABA sessions with a Behavior Technician
+            </div>
+            <div className="flex gap-3 items-center text-muted-foreground text-base md:text-lg">
+              <Image src={checkmarkIcon} alt="" className="w-8 h-8" width={32} height={32} />
+              BCBA supervision via our secure Passage Health platform
             </div>
           </div>
         </div>
@@ -254,15 +314,15 @@ const IntakeProcess = () => {
               ref={titleRef}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight"
             >
-              Intake Process{' '}
-              <span className="text-yellow-green">Made Simple</span>
+              Our Intake Process{' '}
+              <span className="text-yellow-green">Tailored from the Start</span>
             </h1>
 
             <div ref={subtitleRef} className="space-y-4">
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Starting your journey with Ability Avenues is easy. Our streamlined intake process 
-                is designed to get your child the support they need quickly and efficiently. We're 
-                here to guide you every step of the way.
+                We follow a clear, supportive process to ensure services are tailored to your child
+                right from the beginning. Our team walks alongside your family so you always know
+                what comes next.
               </p>
 
               <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
@@ -297,12 +357,12 @@ const IntakeProcess = () => {
               >
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-yellow-green flex-shrink-0" />
-                  <span className="text-muted-foreground">Streamlined 5-step process</span>
+                  <span className="text-muted-foreground">Supportive 6-step process</span>
                 </div>
                 <div className="h-6 w-px bg-border hidden sm:block" />
                 <div className="flex items-center gap-2">
                   <Phone className="w-5 h-5 text-yellow-green flex-shrink-0" />
-                  <span className="text-muted-foreground">Support every step of the way</span>
+                  <span className="text-muted-foreground">Personalized guidance throughout intake</span>
                 </div>
               </motion.div>
             </div>

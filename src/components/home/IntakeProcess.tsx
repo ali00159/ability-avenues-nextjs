@@ -22,43 +22,98 @@ const IntakeProcess = () => {
   const steps = [
     {
       number: 1,
-      title: "Initial Contact",
-      description: "Reach out to us via phone or email to express your interest in our services. Our intake coordinator will gather basic information about your child and family.",
-      icon: Phone,
+      title: "Eligibility Review",
+      description:
+        "We gather your child’s full name, date of birth, and insurance card so we can verify insurance eligibility and begin enrollment.",
+      duration: "1 day",
+      icon: ClipboardCheck,
       color: "primary",
       bgColor: "bg-primary",
+      highlights: [
+        "Share your child’s full name",
+        "Provide their date of birth",
+        "Upload a copy of the insurance card",
+        "We verify insurance eligibility",
+      ],
     },
     {
       number: 2,
-      title: "Insurance & Documentation",
-      description: "We'll help you complete necessary paperwork and verify your insurance coverage or EIDBI eligibility (Minnesota Medicaid program covering ABA therapy). Our team will work to ensure all documentation is in order.",
-      icon: FileText,
+      title: "Intake Meeting",
+      description:
+        "We schedule a video intake meeting to complete paperwork, review policies, and sign a Release of Information for coordinated support.",
+      duration: "30 minutes",
+      icon: Phone,
       color: "secondary",
       bgColor: "bg-secondary",
+      highlights: [
+        "Video meeting with our intake coordinator",
+        "Complete intake paperwork together",
+        "Review policies and expectations",
+        "Sign a Release of Information for collaboration",
+      ],
     },
     {
       number: 3,
-      title: "Assessments",
-      description: "Our Board Certified Behavior Analysts (BCBAs) will conduct a comprehensive assessment to understand your child's unique strengths and areas for growth.",
-      icon: ClipboardCheck,
+      title: "Document Collection",
+      description:
+        "You gather key documents, such as medical records, IEP or school-based assessments, and prior evaluations or treatment summaries.",
+      duration: "1–2 weeks",
+      icon: FileText,
       color: "accent",
       bgColor: "bg-accent",
+      highlights: [
+        "Medical records or physician notes",
+        "IEP or school-based assessments",
+        "Prior evaluations or treatment summaries",
+        "Guidance from our team as you gather documents",
+      ],
     },
     {
       number: 4,
-      title: "Treatment Planning",
-      description: "Based on the assessment, we'll create a personalized treatment plan with specific, measurable goals tailored to your child's needs.",
-      icon: FileText,
+      title: "Comprehensive Multidisciplinary Evaluation (CMDE)",
+      description:
+        "Our QSP leads a comprehensive evaluation to understand your child’s strengths through interviews, observation, document review, and standardized tools.",
+      highlights: [
+        "Telehealth caregiver interview",
+        "Observation in a familiar setting (can align with interview)",
+        "Review of collected documents",
+        "Use of standardized tools",
+      ],
+      duration: "1 week",
+      icon: ClipboardCheck,
       color: "pacific-cyan",
       bgColor: "bg-pacific-cyan",
     },
     {
       number: 5,
-      title: "Starting!",
-      description: "Begin your child's therapy journey! We'll schedule sessions and match your child with the right therapist team.",
-      icon: Rocket,
+      title: "Individualized Treatment Plan (ITP)",
+      description:
+        "Your BCBA integrates CMDE findings and your priorities to design a personalized treatment plan grounded in meaningful goals.",
+      highlights: [
+        "Telehealth caregiver interview to finalize goals",
+        "Follow-up observation (can align with interview)",
+        "Integration of CMDE findings and caregiver input",
+      ],
+      duration: "1 week",
+      icon: FileText,
       color: "yellow-green",
       bgColor: "bg-yellow-green",
+    },
+    {
+      number: 6,
+      title: "Insurance Authorization & Start of Services",
+      description:
+        "Once the plan is approved, we schedule ABA sessions with a Behavior Technician and BCBA oversight delivered through our secure Passage Health platform.",
+      highlights: [
+        "Submit the treatment plan for authorization",
+        "Confirm insurance approval",
+        "Schedule ABA sessions with a Behavior Technician",
+        "BCBA supervision via Passage Health platform",
+      ],
+      duration: "1 week",
+      icon: Rocket,
+      color: "xanthous",
+      bgColor: "bg-xanthous",
     },
   ];
 
@@ -101,7 +156,7 @@ const IntakeProcess = () => {
             Get Started
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our enrollment process is designed to evaluate the needs and abilities of your child to determine the best fit.
+            We follow a clear, supportive process so services are tailored to your child from the very first conversation. Our team keeps you informed every step of the way.
           </p>
         </motion.div>
 
@@ -156,6 +211,17 @@ const IntakeProcess = () => {
                         </div>
                       </div>
 
+                      {/* Duration */}
+                      {step.duration && (
+                        <div className="mb-4">
+                          <span
+                            className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold bg-muted text-muted-foreground"
+                          >
+                            {step.duration}
+                          </span>
+                        </div>
+                      )}
+
                       {/* Icon */}
                       <div className="mb-6">
                         <div 
@@ -173,9 +239,21 @@ const IntakeProcess = () => {
                       <h3 className="text-2xl font-semibold mb-4">{step.title}</h3>
                       
                       {/* Description */}
-                      <p className="text-muted-foreground mb-6 leading-relaxed flex-1">
+                      <p className="text-muted-foreground leading-relaxed">
                         {step.description}
                       </p>
+
+                      {/* Highlights */}
+                      {step.highlights && (
+                        <ul className="mt-6 space-y-3 text-left text-sm text-muted-foreground">
+                          {step.highlights.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className={`mt-1 h-2 w-2 rounded-full ${step.bgColor}`} />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </Card>
                   </motion.div>
                 </CarouselItem>
