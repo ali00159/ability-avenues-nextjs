@@ -11,11 +11,20 @@ export const metadata: Metadata = {
     siteName: 'Ability Avenues',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/images/opengraph-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Ability Avenues - ABA Therapy in Minneapolis',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Intake Process - Simple Steps to Start ABA Therapy',
     description: 'Get started with Ability Avenues in Minneapolis. Simple 5-step intake process for ABA therapy services.',
+    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/intake-process',

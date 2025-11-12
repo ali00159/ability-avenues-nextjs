@@ -11,11 +11,20 @@ export const metadata: Metadata = {
     siteName: 'Ability Avenues',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/images/opengraph-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Ability Avenues - ABA Therapy in Minneapolis',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Contact Us - ABA Therapy in Minneapolis',
     description: 'Contact Ability Avenues in Minneapolis for ABA therapy services. Reach us by phone, email, or visit our location.',
+    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/contact',

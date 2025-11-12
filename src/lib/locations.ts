@@ -232,6 +232,16 @@ export const locations: Location[] = [
     mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9026.8!2d-93.0900!3d44.9534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b332b3b3b3b3b3%3A0x0000000000000000!2sSt%20Paul%2C%20MN!5e0!3m2!1sen!2sus!4v1735000000&z=11',
     mapTitle: 'St. Paul Service Area Map',
   },
+  {
+    name: 'Savage',
+    slug: 'savage',
+    metaDescription: 'Contact Ability Avenues in Savage, Minnesota for ABA therapy services. Reach us by phone, email, or visit our Savage support team. Start your intake today.',
+    ogDescription: 'Contact Ability Avenues in Savage, Minnesota for ABA therapy services. Reach us by phone, email, or visit our Savage support team.',
+    twitterDescription: 'Contact Ability Avenues in Savage, Minnesota for ABA therapy services. Reach our Savage team by phone or email to get started.',
+    jsonLdDescription: 'Contact Ability Avenues in Savage for ABA therapy services. Reach us by phone, email, or connect with our Savage intake team.',
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23456!2d-93.3366!3d44.7797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f6352e8e8e8e8e%3A0x0000000000000000!2sSavage%2C%20MN!5e0!3m2!1sen!2sus!4v1735000000&z=11',
+    mapTitle: 'Savage Service Area Map',
+  },
 ];
 
 export function getLocationBySlug(slug: string): Location | undefined {

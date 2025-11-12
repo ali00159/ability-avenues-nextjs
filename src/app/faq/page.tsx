@@ -11,11 +11,20 @@ export const metadata: Metadata = {
     siteName: 'Ability Avenues',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/images/opengraph-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Ability Avenues - ABA Therapy in Minneapolis',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'FAQ - Common Questions About ABA Therapy & Autism Services',
     description: 'Get answers to frequently asked questions about ABA therapy, autism services, and getting started with Ability Avenues.',
+    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/faq',

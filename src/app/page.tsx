@@ -16,17 +16,26 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'ABA Therapy in Minneapolis | Center & In-Home Autism Services | Ability Avenues',
     description:
-      'Discover Ability Avenues’ BCBA-led ABA therapy across Minneapolis—center-based classrooms, in-home support, and EIDBI guidance tailored for ages 1-18.',
+      'Discover Ability Avenues\' BCBA-led ABA therapy across Minneapolis—center-based classrooms, in-home support, and EIDBI guidance tailored for ages 1-18.',
     url: 'https://abilityavenues.com',
     siteName: 'Ability Avenues',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/images/opengraph-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Ability Avenues - ABA Therapy in Minneapolis',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'ABA Therapy in Minneapolis | Center & In-Home Autism Services | Ability Avenues',
     description:
       'Explore center-based and in-home ABA therapy with BCBA-led teams, family coaching, and EIDBI support throughout the Twin Cities.',
+    images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com',

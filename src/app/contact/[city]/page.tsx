@@ -12,8 +12,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { city: string } }): Promise<Metadata> {
-  const location = getLocationBySlug(params.city);
+export async function generateMetadata({ params }: { params: Promise<{ city: string }> }): Promise<Metadata> {
+  const { city } = await params;
+  const location = getLocationBySlug(city);
   
   if (!location) {
     return {
@@ -24,8 +25,9 @@ export async function generateMetadata({ params }: { params: { city: string } })
   return generateContactMetadata(location);
 }
 
-export default function ContactCityPage({ params }: { params: { city: string } }) {
-  const location = getLocationBySlug(params.city);
+export default async function ContactCityPage({ params }: { params: Promise<{ city: string }> }) {
+  const { city } = await params;
+  const location = getLocationBySlug(city);
 
   if (!location) {
     notFound();
