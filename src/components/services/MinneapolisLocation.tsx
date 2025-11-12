@@ -5,29 +5,16 @@ import { Card } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Navigation, Clock, Map } from "lucide-react";
 import Link from 'next/link';
 import type { Route } from 'next';
+import { locations } from '@/lib/locations';
 
 const MinneapolisLocation = () => {
+  // Generate service areas from centralized locations data
   const serviceAreas: { name: string; href?: Route }[] = [
     { name: 'Minneapolis', href: '/contact' },
-    { name: 'St. Paul', href: '/contact/st-paul' },
-    { name: 'Bloomington', href: '/contact/bloomington' },
-    { name: 'Chaska', href: '/contact/chaska' },
-    { name: 'Chanhassen', href: '/contact/chanhassen' },
-    { name: 'Brooklyn Park', href: '/contact/brooklyn-park' },
-    { name: 'Golden Valley', href: '/contact/golden-valley' },
-    { name: 'Plymouth', href: '/contact/plymouth' },
-    { name: 'Lakeville', href: '/contact/lakeville' },
-    { name: 'Eagan', href: '/contact/eagan' },
-    { name: 'Maple Grove', href: '/contact/maple-grove' },
-    { name: 'Eden Prairie', href: '/contact/eden-prairie' },
-    { name: 'Burnsville', href: '/contact/burnsville' },
-    { name: 'Apple Valley', href: '/contact/apple-valley' },
-    { name: 'Minnetonka', href: '/contact/minnetonka' },
-    { name: 'Edina', href: '/contact/edina' },
-    { name: 'St. Louis Park', href: '/contact/st-louis-park' },
-    { name: 'Shakopee', href: '/contact/shakopee' },
-    { name: 'Maplewood', href: '/contact/maplewood' },
-    { name: 'Hopkins', href: '/contact/hopkins' }
+    ...locations.map(location => ({
+      name: location.name,
+      href: `/contact/${location.slug}` as Route
+    }))
   ];
 
   return (
