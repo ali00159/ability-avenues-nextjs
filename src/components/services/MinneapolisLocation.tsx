@@ -9,13 +9,11 @@ import { locations } from '@/lib/locations';
 
 const MinneapolisLocation = () => {
   // Generate service areas from centralized locations data
-  const serviceAreas: { name: string; href?: Route }[] = [
-    { name: 'Minneapolis', href: '/contact' },
-    ...locations.map(location => ({
-      name: location.name,
-      href: `/contact/${location.slug}` as Route
-    }))
-  ];
+  const serviceAreas: { name: string; slug: string; href: Route }[] = locations.map(({ name, slug }) => ({
+    name,
+    slug,
+    href: (slug === 'minneapolis' ? '/contact' : `/contact/${slug}`) as Route
+  }));
 
   return (
     <section className="py-24 bg-white relative overflow-hidden">
@@ -54,8 +52,8 @@ const MinneapolisLocation = () => {
                   We proudly serve families from the following Twin Cities metro communities:
                 </p>
                 <div className="grid grid-cols-2 gap-3">
-                  {serviceAreas.map(({ name, href }) => (
-                    <div key={name} className="flex items-center gap-2">
+                  {serviceAreas.map(({ name, href, slug }) => (
+                    <div key={slug} className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-pacific-cyan rounded-full" />
                       {href ? (
                         <Link
