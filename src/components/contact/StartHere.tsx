@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
@@ -14,6 +15,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import yellowCanvasIcon from '@/assets/yellow-canvas-icon.svg';
 
 const steps = [
   {
@@ -145,11 +147,27 @@ const StartHere = () => {
           transition={{ duration: 0.55 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <span className="text-primary font-semibold uppercase tracking-wider text-sm">
+          <motion.div
+            initial={{ opacity: 0, rotate: 0 }}
+            whileInView={{ opacity: 1, rotate: [0, -8, 8, -6, 6, -3, 3, 0] }}
+            viewport={{ once: true, amount: 0.6 }}
+            transition={{ duration: 0.65, ease: 'easeOut' }}
+            className="flex justify-center mb-8"
+          >
+            <Image
+              src={yellowCanvasIcon}
+              alt=""
+              width={190}
+              height={190}
+              className="w-36 h-36 md:w-44 md:h-44 drop-shadow-xl"
+              priority
+            />
+          </motion.div>
+          <span className="text-xanthous font-semibold uppercase tracking-wider text-sm">
             Getting Started
           </span>
           <h2 className="mt-4 mb-6 text-3xl md:text-4xl font-bold text-raisin-black">
-            How to <span className="text-pacific-cyan">Start ABA Therapy</span>
+            How to <span className="text-xanthous">Start ABA Therapy</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             We've simplified the intake process into six supportive steps. Our team keeps you informed every step of the way.

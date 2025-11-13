@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { Home, Building2, Users, School } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { Program } from '@/lib/locations';
@@ -18,37 +19,23 @@ const iconMap = {
   'School Collaboration': School,
 };
 
+const accentStyles = [
+  { color: 'pacific-cyan' },
+  { color: 'yellow-green' },
+  { color: 'primary' },
+  { color: 'xanthous' },
+];
+
 const ProgramsSection = ({ programs, cityName }: ProgramsSectionProps) => {
-  const layoutClasses = [
-    'lg:col-span-7 lg:row-start-1',
-    'lg:col-span-5 lg:row-start-1',
-    'lg:col-span-5 lg:row-start-2',
-    'lg:col-span-7 lg:row-start-2',
-  ];
-
-  const accentGradients = [
-    'from-pacific-cyan/25 via-primary/5 to-transparent',
-    'from-primary/20 via-white/70 to-pacific-cyan/10',
-    'from-primary/15 via-white/80 to-transparent',
-    'from-pacific-cyan/30 via-primary/10 to-transparent',
-  ];
-
-  const glassBackgrounds = [
-    'bg-white/80',
-    'bg-white/75',
-    'bg-white/70',
-    'bg-white/80',
-  ];
-
   return (
-    <section className="py-24 bg-gradient-to-br from-muted/30 via-white to-primary/5">
+    <section className="py-24 bg-gradient-to-br from-muted/20 via-white to-primary/5">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.55 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="mb-16 max-w-3xl mx-auto text-center"
         >
           <span className="text-primary font-semibold uppercase tracking-wider text-sm">
             Our Programs
@@ -62,14 +49,14 @@ const ProgramsSection = ({ programs, cityName }: ProgramsSectionProps) => {
         </motion.div>
 
         {/* Programs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 auto-rows-[minmax(240px,1fr)] lg:grid-rows-2 lg:auto-rows-[minmax(260px,1fr)] gap-6 lg:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4 max-w-6xl mx-auto">
           {programs.map((program, index) => {
             const IconComponent = iconMap[program.title as keyof typeof iconMap] || Home;
-            const layoutClass =
-              layoutClasses[index] ?? 'lg:col-span-6 lg:row-auto';
-            const gradientClass = accentGradients[index % accentGradients.length];
-            const glassClass = glassBackgrounds[index % glassBackgrounds.length];
-            
+            const accent = accentStyles[index % accentStyles.length];
+            const color = `hsl(var(--${accent.color}))`;
+            const colorSoft = `hsl(var(--${accent.color}) / 0.08)`;
+            const colorBorder = `hsl(var(--${accent.color}) / 0.25)`;
+
             return (
               <motion.div
                 key={program.title}
@@ -77,30 +64,24 @@ const ProgramsSection = ({ programs, cityName }: ProgramsSectionProps) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={cn('group relative h-full', layoutClass, 'md:col-span-1')}
+                className="h-full"
               >
                 <Card
                   className={cn(
-                    'relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-white/40 p-8 shadow-lg transition-all duration-300',
-                    'hover:-translate-y-1 hover:shadow-xl hover:border-primary/20',
-                    glassClass
+                    'group flex h-full flex-col rounded-3xl border-2 border-transparent bg-white p-8 transition-all duration-300 hover-lift hover:shadow-lg',
+                    'hover:border-primary/20'
                   )}
                 >
-                  <div
-                    className={cn(
-                      'pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br opacity-80 transition duration-300 group-hover:opacity-100',
-                      gradientClass
-                    )}
-                  />
-
-                  <div className="absolute -top-24 -right-20 h-48 w-48 rounded-full bg-pacific-cyan/10 blur-3xl transition duration-300 group-hover:bg-pacific-cyan/20" />
-                  <div className="absolute -bottom-20 left-10 h-40 w-40 rounded-full bg-primary/10 blur-3xl transition duration-300 group-hover:bg-primary/20" />
-
                   {/* Icon */}
-                  <div className="mb-8">
-                    <div className="relative inline-flex items-center justify-center rounded-3xl bg-white/70 p-4 shadow-inner ring-1 ring-white/50 transition duration-300 group-hover:shadow-lg group-hover:ring-white/70">
-                      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/70 to-white/40 blur-sm" />
-                      <IconComponent className="relative z-10 h-10 w-10 text-pacific-cyan group-hover:text-primary transition-colors duration-300" />
+                  <div className="mb-6">
+                    <div
+                      className="inline-flex h-14 w-14 items-center justify-center rounded-2xl transition-all duration-300 group-hover:shadow-md"
+                      style={{ backgroundColor: colorSoft }}
+                    >
+                      <IconComponent
+                        className="h-7 w-7 transition-colors duration-300"
+                        style={{ color }}
+                      />
                     </div>
                   </div>
 
@@ -109,9 +90,17 @@ const ProgramsSection = ({ programs, cityName }: ProgramsSectionProps) => {
                     <h3 className="text-2xl font-semibold text-raisin-black md:text-3xl">
                       {program.title}
                     </h3>
-                    <p className="inline-flex items-center rounded-full bg-pacific-cyan/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-pacific-cyan">
-                      Ages {program.ageRange}
-                    </p>
+                    <Badge
+                      variant="outline"
+                      className="px-4 py-1 text-xs font-semibold uppercase tracking-wide border-2"
+                      style={{
+                        borderColor: colorBorder,
+                        backgroundColor: colorSoft,
+                        color,
+                      }}
+                    >
+                      {program.ageRange || 'All Ages'}
+                    </Badge>
                   </div>
 
                   {/* Description */}
@@ -120,13 +109,16 @@ const ProgramsSection = ({ programs, cityName }: ProgramsSectionProps) => {
                   </p>
 
                   {/* Bullets */}
-                  <ul className="mt-8 space-y-3">
+                  <ul className="mt-6 space-y-3">
                     {program.bullets.map((bullet, idx) => (
                       <li
                         key={idx}
-                        className="flex items-start gap-3 text-sm text-muted-foreground transition duration-300 group-hover:text-raisin-black/80"
+                        className="flex items-start gap-3 text-sm text-muted-foreground transition-colors duration-300 group-hover:text-foreground"
                       >
-                        <span className="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-pacific-cyan/80 ring-4 ring-pacific-cyan/10 transition duration-300 group-hover:bg-primary group-hover:ring-primary/20" />
+                        <span
+                          className="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full transition-colors duration-300"
+                          style={{ backgroundColor: color }}
+                        />
                         <span>{bullet}</span>
                       </li>
                     ))}

@@ -73,7 +73,7 @@ export const organizationInfo: OrganizationInfo = {
 export const basePrograms: Program[] = [
   {
     title: 'In-Home ABA Therapy',
-    ageRange: '18 months - 10 years',
+    ageRange: 'All Ages',
     description: 'One-on-one ABA therapy delivered in the comfort of your home, allowing your child to learn in their natural environment while involving the whole family.',
     bullets: [
       'Personalized therapy in familiar settings',
@@ -84,7 +84,7 @@ export const basePrograms: Program[] = [
   },
   {
     title: 'Center-Based ABA Therapy',
-    ageRange: '2 - 10 years',
+    ageRange: 'All Ages',
     description: 'Structured ABA therapy in our welcoming centers, providing opportunities for peer interaction, school-readiness skills, and intensive support.',
     bullets: [
       'Dedicated therapy space with specialized materials',
@@ -95,7 +95,7 @@ export const basePrograms: Program[] = [
   },
   {
     title: 'Caregiver Coaching',
-    ageRange: 'All ages',
+    ageRange: 'All ages and parents',
     description: 'Empowering parents and caregivers with strategies and techniques to support their child\'s development throughout daily routines and activities.',
     bullets: [
       'Evidence-based behavior management strategies',

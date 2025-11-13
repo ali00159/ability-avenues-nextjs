@@ -31,11 +31,11 @@ const ServiceAreaSection = ({ neighborhoods, zipCodes, cityName, nearbyCities }:
               transition={{ duration: 0.55 }}
               className="text-center max-w-3xl mx-auto mb-12"
             >
-              <span className="text-xanthous font-semibold uppercase tracking-wider text-sm">
+              <span className="text-yellow-green font-semibold uppercase tracking-wider text-sm">
                 Service Area
               </span>
               <h2 className="mt-4 mb-6 text-3xl md:text-4xl font-bold text-raisin-black">
-                Serving <span className="text-xanthous">{cityName}</span> and Surrounding Areas
+                Serving <span className="text-yellow-green">{cityName}</span> and Surrounding Areas
               </h2>
               <p className="text-lg text-muted-foreground">
                 We provide in-home and center-based ABA therapy throughout {cityName} and neighboring communities in the Twin Cities metro area.
