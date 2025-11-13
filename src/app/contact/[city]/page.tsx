@@ -36,11 +36,7 @@ export default async function ContactCityPage({ params }: { params: Promise<{ ci
   return (
     <>
       <ContactJsonLd location={location} />
-      <ContactUs
-        cityName={location.name}
-        mapEmbedUrl={location.mapEmbedUrl}
-        mapTitle={location.mapTitle}
-      />
+      <ContactUs location={location} />
     </>
   );
 }

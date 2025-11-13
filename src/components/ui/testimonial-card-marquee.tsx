@@ -7,13 +7,15 @@ import logoIcon from "@/assets/ability-avenues-full-color-icon.svg"
 
 export interface TestimonialMarqueeProps extends React.HTMLAttributes<HTMLDivElement> {
   name: string
-  role: string
+  role?: string
   testimonial: string
   rating?: number
+  location?: string
+  outcome?: string
 }
 
 const TestimonialCardMarquee = React.forwardRef<HTMLDivElement, TestimonialMarqueeProps>(
-  ({ name, role, testimonial, rating = 5, className, ...props }, ref) => {
+  ({ name, role, testimonial, rating = 5, location, outcome, className, ...props }, ref) => {
     return (
       <div
         ref={ref}
@@ -54,9 +56,26 @@ const TestimonialCardMarquee = React.forwardRef<HTMLDivElement, TestimonialMarqu
         </p>
 
         {/* Author info */}
-        <div className="mt-auto">
+        <div className="mt-auto space-y-2">
+          <div>
           <h3 className="font-semibold text-foreground">{name}</h3>
-          <p className="text-xs text-muted-foreground">{role}</p>
+            {role && <p className="text-xs text-muted-foreground">{role}</p>}
+          </div>
+
+          {(location || outcome) && (
+            <div className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-wide text-muted-foreground">
+              {location && (
+                <span className="rounded-full border border-primary/20 bg-primary/10 px-2 py-1 text-primary">
+                  {location}
+                </span>
+              )}
+              {outcome && (
+                <span className="rounded-full border border-yellow-400/40 bg-yellow-400/10 px-2 py-1 text-yellow-600">
+                  {outcome}
+                </span>
+              )}
+            </div>
+          )}
         </div>
       </div>
     )

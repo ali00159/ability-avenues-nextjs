@@ -6,8 +6,48 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, Phone } from "lucide-react";
 import Link from 'next/link';
 import Image from 'next/image';
-import { Logos3 } from "@/components/ui/logos3";
+import { GradientHeading } from "@/components/ui/gradient-heading";
+import { LogoCarousel, type Logo } from "@/components/ui/logo-carousel";
 import shieldIcon from "@/assets/shield-icon.svg";
+import insuranceHpIcon from "@/assets/insurance-hp-icon.svg";
+import insuranceUcIcon from "@/assets/insurance-uc-icon.svg";
+import insuranceMedIcon from "@/assets/insurance-med-icon.svg";
+import insuranceUhcIcon from "@/assets/insurance-uhc-icon.svg";
+import insuranceBcbsIcon from "@/assets/insurance-bcbs-icon.svg";
+import insuranceDhsIcon from "@/assets/insurance-dhs-icon.svg";
+
+const insuranceLogos: Logo[] = [
+  {
+    id: 1,
+    name: "HealthPartners",
+    image: insuranceHpIcon,
+  },
+  {
+    id: 2,
+    name: "UCare",
+    image: insuranceUcIcon,
+  },
+  {
+    id: 3,
+    name: "Medica",
+    image: insuranceMedIcon,
+  },
+  {
+    id: 4,
+    name: "UnitedHealthcare",
+    image: insuranceUhcIcon,
+  },
+  {
+    id: 5,
+    name: "Blue Cross Blue Shield",
+    image: insuranceBcbsIcon,
+  },
+  {
+    id: 6,
+    name: "Minnesota Department of Human Services",
+    image: insuranceDhsIcon,
+  },
+];
 
 const InsuranceCoverage = () => {
   const scrollToContact = () => {
@@ -201,12 +241,29 @@ const InsuranceCoverage = () => {
             </div>
 
             {/* Logo Carousel */}
-            <div className="overflow-hidden rounded-2xl">
-              <Logos3 />
+            <div className="mt-12 sm:mt-16">
+              <div className="flex flex-col items-center gap-3 text-center">
+                <GradientHeading
+                  variant="secondary"
+                  size="sm"
+                  className="text-balance"
+                >
+                  Accepted Insurance Providers
+                </GradientHeading>
+                <p className="max-w-2xl text-sm text-muted-foreground sm:text-base">
+                  We proudly partner with trusted carriers so your family can
+                  focus on growth while we handle coverage details.
+                </p>
+              </div>
+              <LogoCarousel
+                columnCount={3}
+                logos={insuranceLogos}
+                className="mt-10 md:mt-20 gap-y-10 pb-16"
+              />
             </div>
 
             {/* Coverage Note */}
-            <div className="mb-8">
+            <div className="mt-6 mb-8 sm:mt-10">
               <Card className="p-6 bg-yellow-green/5 border-2 border-yellow-green/20">
                 <p className="text-center text-raisin-black leading-relaxed mb-3">
                   <strong>Coverage varies by plan.</strong> We recommend contacting us to verify your specific insurance benefits. 

@@ -1,12 +1,16 @@
 import { Metadata } from 'next';
 import ContactUs from '@/components/ContactUs';
+import { getLocationBySlug } from '@/lib/locations';
+
+// Get Minneapolis location data
+const minneapolisLocation = getLocationBySlug('minneapolis');
 
 export const metadata: Metadata = {
-  title: 'Contact Us - ABA Therapy in Minneapolis',
-  description: 'Contact Ability Avenues in Minneapolis for ABA therapy services. Reach us by phone, email, or visit our Eden Prairie location. Get started today.',
+  title: 'Contact Us - ABA Therapy in Minneapolis, MN | Ability Avenues',
+  description: 'Contact Ability Avenues in Minneapolis for ABA therapy services. Center-based & in-home ABA. EIDBI/MA accepted. Transparent wait times. Call or schedule today.',
   openGraph: {
-    title: 'Contact Us - ABA Therapy in Minneapolis',
-    description: 'Contact Ability Avenues in Minneapolis for ABA therapy services. Reach us by phone, email, or visit our Eden Prairie location.',
+    title: 'Contact Us - ABA Therapy in Minneapolis, MN | Ability Avenues',
+    description: 'Contact Ability Avenues in Minneapolis for ABA therapy services. Center-based & in-home options. EIDBI provider.',
     url: 'https://abilityavenues.com/contact',
     siteName: 'Ability Avenues',
     locale: 'en_US',
@@ -22,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Us - ABA Therapy in Minneapolis',
-    description: 'Contact Ability Avenues in Minneapolis for ABA therapy services. Reach us by phone, email, or visit our location.',
+    title: 'Contact Us - ABA Therapy in Minneapolis, MN',
+    description: 'Contact Ability Avenues in Minneapolis for ABA therapy services. EIDBI/MA accepted.',
     images: ['/images/opengraph-image.jpg'],
   },
   alternates: {
@@ -32,6 +36,10 @@ export const metadata: Metadata = {
 };
 
 export default function ContactUsPage() {
+  if (!minneapolisLocation) {
+    throw new Error('Minneapolis location not found');
+  }
+
   return (
     <>
       <script
@@ -93,11 +101,7 @@ export default function ContactUsPage() {
           }),
         }}
       />
-       <ContactUs 
-        cityName="Minneapolis"
-        mapEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9051!2d-93.2650!3d44.9778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b333909377bbbd%3A0x939fcb2fcf22d956!2sMinneapolis%2C%20MN!5e0!3m2!1sen!2sus!4v1735000000&z=11"
-        mapTitle="Minneapolis Service Area Map"
-      />
+      <ContactUs location={minneapolisLocation} />
     </>
   );
 }

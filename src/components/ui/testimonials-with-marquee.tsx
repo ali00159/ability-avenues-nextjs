@@ -6,9 +6,11 @@ import { cn } from "@/lib/utils"
 
 export interface Testimonial {
   name: string
-  role: string
+  role?: string
   testimonial: string
   rating?: number
+  location?: string
+  outcome?: string
 }
 
 interface TestimonialsWithMarqueeProps extends React.HTMLAttributes<HTMLDivElement> {

@@ -2,22 +2,29 @@
 
 import { lazy, Suspense } from "react";
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import Image from "next/image";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Printer } from "lucide-react";
+import { Card } from "@/components/ui/card";
 import whiteBlueMailIcon from "@/assets/white-blue-mail-icon.svg";
+import { type Location } from "@/lib/locations";
 
+// Lazy load form and new sections for better performance
 const ContactForm = lazy(() => import("@/components/contact/ContactForm"));
+const ProgramsSection = lazy(() => import("@/components/contact/ProgramsSection"));
+const StartHere = lazy(() => import("@/components/contact/StartHere"));
+const ServiceAreaSection = lazy(() => import("@/components/contact/ServiceAreaSection"));
+const TestimonialsSection = lazy(() => import("@/components/contact/TestimonialsSection"));
+const FAQsSection = lazy(() => import("@/components/contact/FAQsSection"));
 
 interface ContactUsProps {
-  cityName: string;
-  mapEmbedUrl: string;
-  mapTitle: string;
+  location: Location;
 }
 
-const ContactUs = ({ cityName, mapEmbedUrl, mapTitle }: ContactUsProps) => {
+const ContactUs = ({ location }: ContactUsProps) => {
   const pathname = usePathname();
   
   return (
@@ -78,7 +85,7 @@ const ContactUs = ({ cityName, mapEmbedUrl, mapTitle }: ContactUsProps) => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-raisin-black mb-6">
                 Get in touch with{" "}
                 <span className="text-pacific-cyan">Ability Avenues</span>{" "}
-                <span className="text-raisin-black">in {cityName}, Minnesota</span>
+                <span className="text-raisin-black">in {location.name}, Minnesota</span>
               </h1>
               
               <p className="text-lg text-muted-foreground leading-relaxed mb-6 max-w-3xl mx-auto">
@@ -204,14 +211,14 @@ const ContactUs = ({ cityName, mapEmbedUrl, mapTitle }: ContactUsProps) => {
               >
                 <div className="relative w-full h-[500px] rounded-2xl overflow-hidden border-2 border-gray-100">
                   <iframe
-                    src={mapEmbedUrl}
+                    src={location.mapEmbedUrl}
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title={mapTitle}
+                    title={location.mapTitle}
                     className="w-full h-full"
                   />
                 </div>
@@ -220,9 +227,43 @@ const ContactUs = ({ cityName, mapEmbedUrl, mapTitle }: ContactUsProps) => {
           </div>
         </section>
 
+        {/* NEW ENHANCED SECTIONS BELOW MAP */}
+        
+        {/* Programs Section */}
+        <Suspense fallback={<div className="h-96 bg-muted/10" />}>
+          <ProgramsSection programs={location.programs} cityName={location.name} />
+        </Suspense>
+
+        {/* Start Here (Intake Process) Section */}
+        <Suspense fallback={<div className="h-96 bg-muted/10" />}>
+          <StartHere />
+        </Suspense>
+
+        {/* Service Area Section */}
+        <Suspense fallback={<div className="h-96 bg-muted/10" />}>
+          <ServiceAreaSection 
+            neighborhoods={location.neighborhoods}
+            zipCodes={location.zipCodes}
+            cityName={location.name}
+            nearbyCities={location.nearbyCities}
+          />
+        </Suspense>
+
+        {/* Testimonials Section */}
+        <Suspense fallback={<div className="h-96 bg-muted/10" />}>
+          <TestimonialsSection testimonials={location.testimonials} cityName={location.name} />
+        </Suspense>
+
+        {/* FAQs Section */}
+        <Suspense fallback={<div className="h-96 bg-muted/10" />}>
+          <FAQsSection faqs={location.faqs} cityName={location.name} />
+        </Suspense>
+
         {/* Contact Form Section */}
         <Suspense fallback={<div className="h-screen" />}>
-          <ContactForm />
+          <div id="contact-form">
+            <ContactForm />
+          </div>
         </Suspense>
       </main>
       
