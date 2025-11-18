@@ -3,7 +3,6 @@ import Footer from "@/components/shared/Footer";
 import { Blog7 } from "@/components/ui/blog7";
 import centerBasedImage from "@/assets/center-based-vs-in-home-blog-cover.jpg";
 import eidbiImage from "@/assets/eidbi-blog-cover.jpg";
-import whatIsEidbiImage from "@/assets/what-is-eidbi-blog.jpg";
 
 const Blog = () => {
   const blogData = {
@@ -24,7 +23,7 @@ const Blog = () => {
         author: "Ability Avenues Team",
         published: "15 Jan 2025",
         url: "/blog/what-is-eidbi-minnesota",
-        image: whatIsEidbiImage,
+        image: "/images/what-is-eidbi-blog.jpg",
       },
       {
         id: "eidbi-vs-aba-minnesota",

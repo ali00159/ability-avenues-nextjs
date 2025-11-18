@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
-import whatIsEidbiImage from '@/assets/what-is-eidbi-blog.jpg';
 
 const WhatIsEidbiPost = () => {
   return (
@@ -27,9 +26,11 @@ const WhatIsEidbiPost = () => {
           {/* Hero Image */}
           <div className="mb-12">
             <Image
-              src={whatIsEidbiImage}
+              src="/images/what-is-eidbi-blog.jpg"
               alt="What Is EIDBI in Minnesota? A Plain-English Guide for Minneapolis Families"
               className="w-full h-auto rounded-xl object-cover"
+              width={1200}
+              height={630}
               priority
             />
           </div>
