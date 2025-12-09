@@ -6,6 +6,7 @@ import { memo } from "react";
 import { Instagram, Linkedin, Mail, MapPin, Phone, Printer } from "lucide-react";
 import Image from 'next/image';
 import logoFullLight from "@/assets/logo-full-light.svg";
+import mdwLogo from "@/assets/mdw-full-logo.svg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -157,11 +158,32 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-cornsilk/60">
-          <div>© {currentYear} Ability Avenues. All rights reserved.</div>
-          <div className="flex gap-6">
-            <span className="text-cornsilk/60">Privacy Policy</span>
-            <span className="text-cornsilk/60">Terms of Service</span>
+        <div className="border-t border-white/10 pt-8 flex flex-col lg:flex-row justify-between items-center gap-4 text-sm text-cornsilk/60">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+            <div>© {currentYear} Ability Avenues. All rights reserved.</div>
+            <div className="flex gap-6">
+              <span className="text-cornsilk/60">Privacy Policy</span>
+              <span className="text-cornsilk/60">Terms of Service</span>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="opacity-80">Designed by</span>
+            <a 
+              href="https://malidesign.works"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-cornsilk transition-colors group"
+            >
+              <span className="font-medium">Mali Design Works</span>
+              <Image 
+                src={mdwLogo} 
+                alt="Mali Design Works Logo" 
+                className="h-4 w-auto opacity-70 group-hover:opacity-100 transition-opacity -translate-y-[3px]" 
+                width={70} 
+                height={16}
+              />
+            </a>
           </div>
         </div>
       </div>
