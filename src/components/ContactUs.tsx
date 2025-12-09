@@ -14,7 +14,6 @@ import { type Location } from "@/lib/locations";
 
 // Lazy load form and new sections for better performance
 const ContactForm = lazy(() => import("@/components/contact/ContactForm"));
-const ProgramsSection = lazy(() => import("@/components/contact/ProgramsSection"));
 const StartHere = lazy(() => import("@/components/contact/StartHere"));
 const ServiceAreaSection = lazy(() => import("@/components/contact/ServiceAreaSection"));
 const TestimonialsSection = lazy(() => import("@/components/contact/TestimonialsSection"));
@@ -198,6 +197,13 @@ const ContactUs = ({ location }: ContactUsProps) => {
           </div>
         </section>
 
+        {/* Contact Form Section */}
+        <Suspense fallback={<div className="h-screen" />}>
+          <div id="contact-form">
+            <ContactForm />
+          </div>
+        </Suspense>
+
         {/* Map Section */}
         <section className="pt-8 pb-12 bg-white">
           <div className="container mx-auto px-4">
@@ -227,13 +233,6 @@ const ContactUs = ({ location }: ContactUsProps) => {
           </div>
         </section>
 
-        {/* NEW ENHANCED SECTIONS BELOW MAP */}
-        
-        {/* Programs Section */}
-        <Suspense fallback={<div className="h-96 bg-muted/10" />}>
-          <ProgramsSection programs={location.programs} cityName={location.name} />
-        </Suspense>
-
         {/* Start Here (Intake Process) Section */}
         <Suspense fallback={<div className="h-96 bg-muted/10" />}>
           <StartHere />
@@ -257,13 +256,6 @@ const ContactUs = ({ location }: ContactUsProps) => {
         {/* FAQs Section */}
         <Suspense fallback={<div className="h-96 bg-muted/10" />}>
           <FAQsSection faqs={location.faqs} cityName={location.name} />
-        </Suspense>
-
-        {/* Contact Form Section */}
-        <Suspense fallback={<div className="h-screen" />}>
-          <div id="contact-form">
-            <ContactForm />
-          </div>
         </Suspense>
       </main>
       
