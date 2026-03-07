@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
-import eidbiHeroImage from '@/assets/eidbi-blog-cover.jpg';
 
 const EidbiVsAbaPost = () => {
   return (
@@ -27,9 +26,11 @@ const EidbiVsAbaPost = () => {
           {/* Hero Image */}
           <div className="mb-12">
             <Image
-              src={eidbiHeroImage}
+              src="/images/eidbi-blog-cover.jpg"
               alt="EIDBI vs ABA: How Minnesota's Program Helps Families Access ABA Therapy"
               className="w-full h-auto rounded-xl object-cover"
+              width={1200}
+              height={630}
               priority
             />
           </div>

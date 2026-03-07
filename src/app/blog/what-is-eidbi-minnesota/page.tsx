@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: 'Ability Avenues',
     images: [
       {
-        url: '/images/what-is-eidbi-blog.jpg',
+        url: '/images/what-is-eidbi-blog.png',
         width: 1200,
         height: 630,
         alt: 'What Is EIDBI in Minnesota? A Plain-English Guide for Minneapolis Families',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'What Is EIDBI? Minnesota\'s Autism Benefit Explained',
     description: 'Wondering what EIDBI is in Minnesota? Learn how this autism benefit works, who qualifies, and how it helps Minneapolis families access ABA and related supports.',
-    images: ['/images/what-is-eidbi-blog.jpg'],
+    images: ['/images/what-is-eidbi-blog.png'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/blog/what-is-eidbi-minnesota',
@@ -74,7 +74,7 @@ export default function WhatIsEidbiPostPage() {
             '@type': 'BlogPosting',
             headline: 'What Is EIDBI in Minnesota? A Plain-English Guide for Minneapolis Families',
             description: 'Wondering what EIDBI is in Minnesota? Learn how this autism benefit works, who qualifies, and how it helps Minneapolis families access ABA and related supports.',
-            image: 'https://abilityavenues.com/images/what-is-eidbi-blog.jpg',
+            image: 'https://abilityavenues.com/images/what-is-eidbi-blog.png',
             datePublished: '2025-01-15T00:00:00.000Z',
             dateModified: '2025-01-15T00:00:00.000Z',
             author: {

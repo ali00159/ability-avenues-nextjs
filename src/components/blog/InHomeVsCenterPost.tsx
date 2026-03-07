@@ -7,7 +7,6 @@ import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
-import centerBasedHeroImage from '@/assets/center-based-vs-in-home-blog-cover.jpg';
 
 const CHECKLIST_STORAGE_KEY = 'aba-decision-checklist';
 
@@ -67,9 +66,11 @@ const InHomeVsCenterPost = () => {
           {/* Hero Image */}
           <div className="mb-12">
             <Image
-              src={centerBasedHeroImage}
+              src="/images/center-based-vs-in-home-blog-cover.jpg"
               alt="In-Home vs Center-Based ABA Therapy"
               className="w-full h-auto rounded-xl object-cover"
+              width={1200}
+              height={630}
               priority
             />
           </div>

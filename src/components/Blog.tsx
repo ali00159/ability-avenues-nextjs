@@ -1,9 +1,6 @@
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import { Blog7 } from "@/components/ui/blog7";
-import centerBasedImage from "@/assets/center-based-vs-in-home-blog-cover.jpg";
-import eidbiImage from "@/assets/eidbi-blog-cover.jpg";
-
 const Blog = () => {
   const blogData = {
     tagline: "Latest Updates",
@@ -14,6 +11,18 @@ const Blog = () => {
     buttonUrl: "/blog",
     posts: [
       {
+        id: "early-signs-autism-toddlers-minnesota",
+        title: "Early Signs of Autism in Toddlers: A Minnesota Parent's Guide",
+        summary:
+          "Learn the early signs of autism in toddlers, when to talk to your pediatrician, and how Minnesota families can access screening, evaluation, and support.",
+        label: "Education",
+        badge: "Autism Awareness",
+        author: "Ability Avenues Team",
+        published: "7 Mar 2026",
+        url: "/blog/early-signs-autism-toddlers-minnesota",
+        image: "/images/early-signs-blog-cover.png",
+      },
+      {
         id: "what-is-eidbi-minnesota",
         title: "What Is EIDBI in Minnesota? A Plain-English Guide for Minneapolis Families",
         summary:
@@ -23,7 +32,7 @@ const Blog = () => {
         author: "Ability Avenues Team",
         published: "15 Jan 2025",
         url: "/blog/what-is-eidbi-minnesota",
-        image: "/images/what-is-eidbi-blog.jpg",
+        image: "/images/what-is-eidbi-blog.png",
       },
       {
         id: "eidbi-vs-aba-minnesota",
@@ -35,7 +44,7 @@ const Blog = () => {
         author: "Ability Avenues Team",
         published: "5 Nov 2025",
         url: "/blog/eidbi-vs-aba-minnesota",
-        image: eidbiImage,
+        image: "/images/eidbi-blog-cover.jpg",
       },
       {
         id: "in-home-vs-center-based-aba-minneapolis",
@@ -47,7 +56,7 @@ const Blog = () => {
         author: "Ability Avenues Team",
         published: "5 Nov 2025",
         url: "/blog/in-home-vs-center-based-aba-minneapolis",
-        image: centerBasedImage,
+        image: "/images/center-based-vs-in-home-blog-cover.jpg",
       },
     ],
   };
