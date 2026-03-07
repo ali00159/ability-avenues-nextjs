@@ -14,6 +14,18 @@ const Blog = () => {
     buttonUrl: "/blog",
     posts: [
       {
+        id: "early-signs-autism-toddlers-minnesota",
+        title: "Early Signs of Autism in Toddlers: A Minnesota Parent's Guide",
+        summary:
+          "Learn the early signs of autism in toddlers, when to talk to your pediatrician, and how Minnesota families can access screening, evaluation, and support.",
+        label: "Education",
+        badge: "Autism Awareness",
+        author: "Ability Avenues Team",
+        published: "7 Mar 2026",
+        url: "/blog/early-signs-autism-toddlers-minnesota",
+        image: "/images/blog-placeholder.jpg",
+      },
+      {
         id: "what-is-eidbi-minnesota",
         title: "What Is EIDBI in Minnesota? A Plain-English Guide for Minneapolis Families",
         summary:
