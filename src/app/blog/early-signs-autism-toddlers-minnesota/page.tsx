@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: 'Ability Avenues',
     images: [
       {
-        url: '/images/blog-placeholder.jpg',
+        url: '/images/early-signs-blog-cover.png',
         width: 1200,
         height: 630,
         alt: 'Early Signs of Autism in Toddlers: A Minnesota Parent\'s Guide',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Early Signs of Autism in Toddlers: A Minnesota Parent\'s Guide',
     description: 'Learn the early signs of autism in toddlers, when to talk to your pediatrician, and how Minnesota families can access screening, evaluation, and support.',
-    images: ['/images/blog-placeholder.jpg'],
+    images: ['/images/early-signs-blog-cover.png'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/blog/early-signs-autism-toddlers-minnesota',
@@ -74,7 +74,7 @@ export default function EarlySignsAutismPostPage() {
             '@type': 'BlogPosting',
             headline: 'Early Signs of Autism in Toddlers: A Minnesota Parent\'s Guide',
             description: 'Learn the early signs of autism in toddlers, when to talk to your pediatrician, and how Minnesota families can access screening, evaluation, and support.',
-            image: 'https://abilityavenues.com/images/blog-placeholder.jpg',
+            image: 'https://abilityavenues.com/images/early-signs-blog-cover.png',
             datePublished: '2026-03-07T00:00:00.000Z',
             dateModified: '2026-03-07T00:00:00.000Z',
             author: {

@@ -24,7 +24,7 @@ const EarlySignsAutismPost = () => {
 
           <div className="mb-12">
             <Image
-              src="/images/blog-placeholder.jpg"
+              src="/images/early-signs-blog-cover.png"
               alt="Early signs of autism in toddlers — a parent's guide for Minnesota families"
               className="w-full h-auto rounded-xl object-cover"
               width={1200}

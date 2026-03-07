@@ -26,7 +26,7 @@ const WhatIsEidbiPost = () => {
           {/* Hero Image */}
           <div className="mb-12">
             <Image
-              src="/images/what-is-eidbi-blog.jpg"
+              src="/images/what-is-eidbi-blog.png"
               alt="What Is EIDBI in Minnesota? A Plain-English Guide for Minneapolis Families"
               className="w-full h-auto rounded-xl object-cover"
               width={1200}
