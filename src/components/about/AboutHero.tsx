@@ -24,6 +24,7 @@ const AboutHero = () => {
 
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' }, delay: 0.3 });
     
+    
     tl.fromTo(
       titleRef.current,
       {
