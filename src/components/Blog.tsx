@@ -11,6 +11,18 @@ const Blog = () => {
     buttonUrl: "/blog",
     posts: [
       {
+        id: "how-to-choose-aba-provider-minnesota",
+        title: "How to Choose an ABA Therapy Provider in Minnesota: A Parent's Checklist",
+        summary:
+          "Learn how to choose the right ABA therapy provider in Minnesota. A parent's guide to credentials, insurance, EIDBI, and key questions to ask before starting.",
+        label: "Education",
+        badge: "ABA Services",
+        author: "Ability Avenues Team",
+        published: "13 Mar 2026",
+        url: "/blog/how-to-choose-aba-provider-minnesota",
+        image: "/images/blog-placeholder.jpg",
+      },
+      {
         id: "early-signs-autism-toddlers-minnesota",
         title: "Early Signs of Autism in Toddlers: A Minnesota Parent's Guide",
         summary:
