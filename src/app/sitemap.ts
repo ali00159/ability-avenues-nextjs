@@ -37,6 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/blog/how-to-choose-aba-provider-minnesota`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/early-signs-autism-toddlers-minnesota`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
