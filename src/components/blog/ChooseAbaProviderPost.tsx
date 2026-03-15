@@ -24,7 +24,7 @@ const ChooseAbaProviderPost = () => {
 
           <div className="mb-12">
             <Image
-              src="/images/blog-placeholder.jpg"
+              src="/images/how-to-choose-a-provider-blog-cover.png"
               alt="How to choose the right ABA therapy provider in Minnesota — a checklist for parents"
               className="w-full h-auto rounded-xl object-cover"
               width={1200}

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: 'Ability Avenues',
     images: [
       {
-        url: '/images/blog-placeholder.jpg',
+        url: '/images/how-to-choose-a-provider-blog-cover.png',
         width: 1200,
         height: 630,
         alt: 'How to Choose an ABA Therapy Provider in Minnesota: A Parent\'s Checklist',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'How to Choose an ABA Therapy Provider in Minnesota',
     description: 'Learn how to choose the right ABA therapy provider in Minnesota. A parent\'s guide to credentials, insurance, EIDBI, and key questions to ask before starting.',
-    images: ['/images/blog-placeholder.jpg'],
+    images: ['/images/how-to-choose-a-provider-blog-cover.png'],
   },
   alternates: {
     canonical: 'https://abilityavenues.com/blog/how-to-choose-aba-provider-minnesota',
@@ -74,7 +74,7 @@ export default function ChooseAbaProviderPage() {
             '@type': 'BlogPosting',
             headline: 'How to Choose an ABA Therapy Provider in Minnesota: A Parent\'s Checklist',
             description: 'Learn how to choose the right ABA therapy provider in Minnesota. A parent\'s guide to credentials, insurance, EIDBI, and key questions to ask before starting.',
-            image: 'https://abilityavenues.com/images/blog-placeholder.jpg',
+            image: 'https://abilityavenues.com/images/how-to-choose-a-provider-blog-cover.png',
             datePublished: '2026-03-13T00:00:00.000Z',
             dateModified: '2026-03-13T00:00:00.000Z',
             author: {

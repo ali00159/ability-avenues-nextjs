@@ -20,7 +20,7 @@ const Blog = () => {
         author: "Ability Avenues Team",
         published: "13 Mar 2026",
         url: "/blog/how-to-choose-aba-provider-minnesota",
-        image: "/images/blog-placeholder.jpg",
+        image: "/images/how-to-choose-a-provider-blog-cover.png",
       },
       {
         id: "early-signs-autism-toddlers-minnesota",
